@@ -12,6 +12,10 @@
     background: #000;
     background: #FDA51D;
 }
+/*隱藏無法顯示的箭頭*/
+.flex-direction-nav a {
+    display: none; 
+}
 /*flexslider-expertise專長欄位*/
 div.flexslider-expertise div.flexslider{
     width: 50%;

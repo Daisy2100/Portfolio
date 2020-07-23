@@ -1,19 +1,19 @@
 //================================返回首頁動畫功能================================
 $(function(){
   $("#about").click(function(){
-    $("html, body").animate({scrollTop:0}, 100);
+    $("html, body").animate({scrollTop:0}, 600);
     return false;
   })
 });
 $(function(){
   $("#portfolio").click(function(){
-    $("html, body").animate({scrollTop:0}, 100);
+    $("html, body").animate({scrollTop:0}, 600);
     return false;
   })
 });
 $(function(){
   $("#other").click(function(){
-    $("html, body").animate({scrollTop:0}, 100);
+    $("html, body").animate({scrollTop:0}, 600);
     return false;
   })
 });
@@ -40,5 +40,16 @@ $(document).ready(function() {
       $(activeTab).fadeIn(); //使內容消失 
       return false;  
   });  
-
 }); 
+//================================視窗彈跳================================
+$(function(){
+  var isOpened=true;
+  //-------------------------------------
+  $('.portfolio_img').mouseenter(function(){
+      $(this).stop().animate({top:-10}, {duration:400, easing:'easeOutBounce'});
+  });
+
+  $('.portfolio_img').mouseleave(function(){
+      $(this).stop().animate({top:0}, {duration:50});
+  });
+});

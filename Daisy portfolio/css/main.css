@@ -111,6 +111,7 @@ hr.home{
     hr.home{
         margin: -7rem 0 0 10% ;
         width: 14rem;
+        height: 0.2rem;
     }
 }
 div.content_home a{
@@ -338,6 +339,7 @@ div.portfolio_img{
     float: left;
     width: 28vw;
     display: inline-block;
+    position: relative;
 }
 div.portfolio_img img{
     margin: 0;
@@ -352,6 +354,14 @@ div.portfolio_img p{
     text-align: center;
     font-size: 1rem;
 }
+div.tab_container a{
+    color: #000000;
+    text-decoration: none;
+}
+div.tab_container a:hover{
+    color: #c78118;
+}
+
 @media screen and (max-width: 1000px){
     div.portfolio_img{
         margin: 2rem 0rem 0 9rem;
