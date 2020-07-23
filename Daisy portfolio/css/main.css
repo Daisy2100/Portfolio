@@ -361,7 +361,10 @@ div.tab_container a{
 div.tab_container a:hover{
     color: #c78118;
 }
-
+div.tab_container a.active{
+    color: #000000;
+    text-decoration: none;
+}
 @media screen and (max-width: 1000px){
     div.portfolio_img{
         margin: 2rem 0rem 0 9rem;
