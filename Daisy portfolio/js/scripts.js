@@ -1,4 +1,33 @@
-//================================返回首頁動畫功能================================
+//================================跳轉指定位置================================
+$(function(){
+  $(".about-click").click(function(){
+    var position = $('#about').offset().top;
+    $("html, body").animate({scrollTop:position}, 600);
+    return false; //值不回傳給首頁
+  })
+});
+$(function(){
+  $("#top_about").click(function(){
+    var position = $('#about').offset().top;
+    $("html, body").animate({scrollTop:position}, 600);
+    return false;
+  })
+});
+$(function(){
+  $("#top_portfolio").click(function(){
+    var position = $('#portfolio').offset().top;
+    $("html, body").animate({scrollTop:position}, 600);
+    return false;
+  })
+});
+$(function(){
+  $("#top_other").click(function(){
+    var position = $('#other').offset().top;
+    $("html, body").animate({scrollTop:position}, 600);
+    return false;
+  })
+});
+//================================返回首頁================================
 $(function(){
   $("#about").click(function(){
     $("html, body").animate({scrollTop:0}, 600);
@@ -25,30 +54,21 @@ $(window).load(function() {
 });
 //================================tab切換================================
 $(document).ready(function() {  
-  
-  //預設active 
-  $(".tab_content").hide(); //隱藏全部的tab菜單內容
-  $("ul.tabs li:first").addClass("active").show(); //對第一個li標簽添加class="active屬性"  
+  $(".tab_content").hide(); //隱藏全部的tab內容
   $(".tab_content:first").show(); //顯示第一個tab內容  
-    
-  //點擊事件 
   $("ul.tabs li").click(function() {  
-      $("ul.tabs li").removeClass("active"); //移除class="active"屬性
-      $(this).addClass("active"); //添加class="active"到選擇標簽中 
-      $(".tab_content").hide(); //隱藏全部標簽內容  
-      var activeTab = $(this).find("a").attr("href"); //找到所屬屬性值來識別活躍選項卡和內容  
-      $(activeTab).fadeIn(); //使內容消失 
-      return false;  
-  });  
+      $(".tab_content").hide();
+      var activeTab = $(this).find("a").attr("href"); //找到點選的<a>裡的href  
+      $(activeTab).fadeIn(); //淡入，用於已隱藏元素顯示 
+      return false;  //值不回傳給首頁
+  }); 
 }); 
 //================================視窗彈跳================================
 $(function(){
-  var isOpened=true;
   //-------------------------------------
   $('.portfolio_img').mouseenter(function(){
       $(this).stop().animate({top:-10}, {duration:400, easing:'easeOutBounce'});
   });
-
   $('.portfolio_img').mouseleave(function(){
       $(this).stop().animate({top:0}, {duration:50});
   });
