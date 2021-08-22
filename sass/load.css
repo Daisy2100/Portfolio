@@ -7,19 +7,6 @@
   left: 0;
   z-index: 888;
 }
-#load p {
-  top: 35%;
-  left: 30%;
-  position: absolute;
-  font-size: 3rem;
-  color: #fff;
-  animation: textMove 5s;
-  /*IE*/
-  -moz-animation: textMove 5s;
-  /*FireFox*/
-  -webkit-animation: textMove 5s;
-  /*Chrome, Safari*/
-}
 #load .bg1 {
   width: 100vw;
   height: 100vh;
@@ -29,6 +16,26 @@
   left: 0;
   background-size: cover;
   z-index: 0;
+}
+#load p {
+  animation: textMove 4s;
+  /*IE*/
+  -moz-animation: textMove 4s;
+  /*FireFox*/
+  -webkit-animation: textMove 4s;
+  /*Chrome, Safari*/
+}
+
+#load P, .topText {
+  top: 35%;
+  left: 30%;
+  position: absolute;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.topText {
+  z-index: 10;
 }
 
 /*========== Animation ==========*/
@@ -60,6 +67,46 @@
   100% {
     left: 30%;
     color: #fff;
+  }
+}
+/*==================== rwd ====================*/
+@media (max-width: 768px) {
+  #load p, .topText {
+    font-size: 3rem;
+    top: 30%;
+    left: 15%;
+  }
+
+  /*========== Animation ==========*/
+  @keyframes textMove {
+    0% {
+      left: -20%;
+      color: #000;
+    }
+    100% {
+      left: 15%;
+      color: #fff;
+    }
+  }
+  @-moz-keyframes textMove {
+    0% {
+      left: -20%;
+      color: #000;
+    }
+    100% {
+      left: 15%;
+      color: #fff;
+    }
+  }
+  @-webkit-keyframes textMove {
+    0% {
+      left: -20%;
+      color: #000;
+    }
+    100% {
+      left: 15%;
+      color: #fff;
+    }
   }
 }
 

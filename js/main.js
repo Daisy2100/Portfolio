@@ -7,7 +7,7 @@ $(window).scroll(function () {
   var scroolNow = $(window).scrollTop();
   var opacityVal = scroolNow / scrollEnd;
 
-  document.getElementsByClassName("bg1")[0].style.opacity = 1 - opacityVal;
+  document.getElementsByClassName("bg1")[1].style.opacity = (1 - opacityVal);
   document.getElementsByClassName("bg2")[0].style.opacity = opacityVal;
 });
 
@@ -16,5 +16,7 @@ $(document).ready(function () {
   setTimeout(function () {
     document.getElementById("load").style.display = "none";
     document.getElementById("container").style.display = "block";
-  }, 7000);
+  }, 5000);
 });
+// document.getElementById("load").style.display = "none";
+// document.getElementById("container").style.display = "contents";
