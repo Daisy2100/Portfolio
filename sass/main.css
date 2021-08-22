@@ -110,7 +110,7 @@ nav .nav-link {
   content: "";
   position: absolute;
   left: 50%;
-  width: 1px;
+  width: 2px;
   background: #FFF;
   animation: pathmove 3.4s ease-in-out infinite;
   opacity: 0;
@@ -163,6 +163,9 @@ footer {
 
   .contents #top {
     height: 120vh;
+  }
+  .contents #top::after {
+    width: 1px;
   }
 
   @keyframes pathmove {

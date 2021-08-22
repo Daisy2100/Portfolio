@@ -26,15 +26,15 @@ document.getElementById('closebtn').addEventListener('click',function(){
   document.getElementById('over').style.display = "none";
 })
 
-// $(document).ready(function () {
-//   document.getElementById("container").style.display = "none";
-//   setTimeout(function () {
-//     document.getElementById("load").style.display = "none";
-//     document.getElementById("container").style.display = "block";
-//   }, 4000);
-// });
+$(document).ready(function () {
+  document.getElementById("container").style.display = "none";
+  setTimeout(function () {
+    document.getElementById("load").style.display = "none";
+    document.getElementById("container").style.display = "block";
+  }, 4000);
+});
 
-document.getElementById("load").style.display = "none";
-document.getElementById("container").style.display = "block";
+// document.getElementById("load").style.display = "none";
+// document.getElementById("container").style.display = "block";
 
 
