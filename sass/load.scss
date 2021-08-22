@@ -1,25 +1,23 @@
 /*========== Load ==========*/
 #load {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 888;
-  }
-  
-  #load > p {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 888;
+
+  p{
     top: 35%;
     left: 30%;
     position: absolute;
     font-size: 3rem;
-    color: #FFF;
+    color: #fff;
     animation: textMove 5s; /*IE*/
     -moz-animation: textMove 5s; /*FireFox*/
     -webkit-animation: textMove 5s; /*Chrome, Safari*/
   }
-  
-  #load > .bg1 {
+  .bg1 {
     width: 100vw;
     height: 100vh;
     background: url("../images/background/pexels-kristina-paukshtite-1591252-1.jpg")
@@ -30,37 +28,36 @@
     background-size: cover;
     z-index: 0;
   }
-  
-  /*========== Animation ==========*/
-  @keyframes textMove {
-    0% {
-      left: -20%;
-      color: #000;
-    }
-    100% {
-      left: 30%;
-      color: #fff;
-    }
+}
+
+/*========== Animation ==========*/
+@keyframes textMove {
+  0% {
+    left: -20%;
+    color: #000;
   }
-  @-moz-keyframes textMove {
-    0% {
-      left: -20%;
-      color: #000;
-    }
-    100% {
-      left: 30%;
-      color: #fff;
-    }
+  100% {
+    left: 30%;
+    color: #fff;
   }
-  @-webkit-keyframes textMove {
-    0% {
-      left: -20%;
-      color: #000;
-    }
-    100% {
-      left: 30%;
-      color: #fff;
-    }
+}
+@-moz-keyframes textMove {
+  0% {
+    left: -20%;
+    color: #000;
   }
-  
-  
+  100% {
+    left: 30%;
+    color: #fff;
+  }
+}
+@-webkit-keyframes textMove {
+  0% {
+    left: -20%;
+    color: #000;
+  }
+  100% {
+    left: 30%;
+    color: #fff;
+  }
+}

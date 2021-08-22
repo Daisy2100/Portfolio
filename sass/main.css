@@ -13,63 +13,56 @@ body {
   text-align: justify;
 }
 
-/*========== Background ==========*/
-#container > .bg1 {
+#container {
+  /*========== background image ==========*/
+}
+#container .bg1,
+#container .bg2,
+#container .bg3 {
   width: 100vw;
   height: 100vh;
-  background: url("../images/background/pexels-kristina-paukshtite-1591252-1.jpg") no-repeat center bottom;
   position: fixed;
   top: 0;
   left: 0;
+}
+#container .bg1 {
+  background: url("../images/background/pexels-kristina-paukshtite-1591252-1.jpg") no-repeat center bottom;
   background-size: cover;
   z-index: 1;
   opacity: 1;
 }
-
-#container > .bg2 {
-  width: 100vw;
-  height: 100vh;
+#container .bg2 {
   background: url("../images/background/pexels-kristina-paukshtite-1591252-3.jpg") no-repeat center bottom;
-  position: fixed;
-  top: 0;
-  left: 0;
   background-size: cover;
   z-index: 2;
   opacity: 0;
 }
-
-#container > .bg3 {
-  width: 100vw;
-  height: 100vh;
+#container .bg3 {
   background: url("../images/background/pexels-kristina-paukshtite-1591252-2.jpg") no-repeat center bottom;
-  position: fixed;
-  top: 0;
-  left: 0;
   background-size: cover;
   z-index: 0;
 }
-
-/*========== Nav ==========*/
-nav {
-  z-index: 100;
-}
-
-/*========== Contents ==========*/
-.topText {
+#container .topText {
   top: 35%;
   left: 30%;
   position: absolute;
   font-size: 3rem;
-  color: #FFF;
+  color: #fff;
   z-index: 4;
 }
 
+/*========== nav ==========*/
+nav {
+  z-index: 100;
+}
+
+/*========== contents ==========*/
 .contents {
   position: relative;
   z-index: 3;
 }
 
-/*========== Footer ==========*/
+/*========== footer ==========*/
 footer {
   position: relative;
   z-index: 10;

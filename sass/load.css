@@ -7,13 +7,12 @@
   left: 0;
   z-index: 888;
 }
-
-#load > p {
+#load p {
   top: 35%;
   left: 30%;
   position: absolute;
   font-size: 3rem;
-  color: #FFF;
+  color: #fff;
   animation: textMove 5s;
   /*IE*/
   -moz-animation: textMove 5s;
@@ -21,8 +20,7 @@
   -webkit-animation: textMove 5s;
   /*Chrome, Safari*/
 }
-
-#load > .bg1 {
+#load .bg1 {
   width: 100vw;
   height: 100vh;
   background: url("../images/background/pexels-kristina-paukshtite-1591252-1.jpg") no-repeat center bottom;
