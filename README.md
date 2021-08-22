@@ -2,6 +2,20 @@
 
 https://bootstrap5.hexschool.com/docs/5.0/getting-started/introduction/
 
+# fontawesome
+
+https://fontawesome.com/v5.15/icons?d=gallery&p=2
+
+### 大小範例
+
+```
+<i class="fa fa-thumbs-o-up fa-lg"></i>
+<i class="fa fa-thumbs-o-up fa-2x"></i>
+<i class="fa fa-thumbs-o-up fa-3x"></i>
+<i class="fa fa-thumbs-o-up fa-4x"></i>
+<i class="fa fa-thumbs-o-up fa-5x"></i>
+```
+
 ---
 
 # Sass 建置筆記與指令

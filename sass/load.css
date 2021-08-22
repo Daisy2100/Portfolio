@@ -18,11 +18,11 @@
   z-index: 0;
 }
 #load p {
-  animation: textMove 4s;
+  animation: textMove 3s;
   /*IE*/
-  -moz-animation: textMove 4s;
+  -moz-animation: textMove 3s;
   /*FireFox*/
-  -webkit-animation: textMove 4s;
+  -webkit-animation: textMove 3s;
   /*Chrome, Safari*/
 }
 
@@ -31,7 +31,6 @@
   left: 30%;
   position: absolute;
   font-size: 3rem;
-  color: #fff;
 }
 
 .topText {

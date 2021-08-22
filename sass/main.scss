@@ -12,6 +12,7 @@ body {
   font-family: "Baskerville-Old-Face-Caps", "Libre Baskerville",
     "NotoSans-BlackItalic", serif;
   text-align: justify;
+  color: #FFF;
 }
 
 #container {
@@ -69,8 +70,43 @@ nav{
   .nav-link {
     color: #FFF !important;
   }
+
+}
+.nav-sp{
+  position: fixed;
+  right: 0;
+
+  .navbar-toggler{
+    color: #FFF;
+    border-color: #FFF;
+  }
 }
 
+.over{
+  position: fixed;
+  background-color: #FFF;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0.85;
+  p{
+    color: #000;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 3.5rem;
+  }
+  p:nth-child(1){
+    margin-top: 20vh;
+  }
+  p:hover{
+    background-color: #CCC;
+  }
+  .over-btn{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.2rem;
+  }
+}
 
 /*========== contents ==========*/
 .contents {
@@ -78,7 +114,7 @@ nav{
   z-index: 3;
   #top{
     position: relative;
-    height: 70vh;
+    height: 80vh;
     top: 0;
   }
   // 直線動畫
@@ -92,12 +128,7 @@ nav{
     opacity: 0;
     height: calc(80/1100 * 100vw);
   }
-
-  .pp{
-    height: 100%;
-  }
 }
-
 @keyframes pathmove {
   0% {
       height: 0;
@@ -115,9 +146,37 @@ nav{
   }
 }
 
+/*========== School & Experience ==========*/
+
+.contents {
+  h3{
+    text-align: center;
+    font-size: 4rem;
+    margin: 3rem 0;
+    opacity: 0.85;
+  }
+}
+
+
+
 /*========== footer ==========*/
 
 footer {
   position: relative;
   z-index: 10;
+}
+
+
+
+/*==================== rwd ====================*/
+.sp{
+  display: none;
+}
+@media(max-width:768px){
+  .pc{
+    display: none;
+  }
+  .sp{
+    display: block;
+  }
 }

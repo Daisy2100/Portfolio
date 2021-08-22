@@ -11,6 +11,7 @@ body {
   margin: 0;
   font-family: "Baskerville-Old-Face-Caps", "Libre Baskerville", "NotoSans-BlackItalic", serif;
   text-align: justify;
+  color: #FFF;
 }
 
 #container {
@@ -60,6 +61,41 @@ nav .nav-link {
   color: #FFF !important;
 }
 
+.nav-sp {
+  position: fixed;
+  right: 0;
+}
+.nav-sp .navbar-toggler {
+  color: #FFF;
+  border-color: #FFF;
+}
+
+.over {
+  position: fixed;
+  background-color: #FFF;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0.85;
+}
+.over p {
+  color: #000;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 3.5rem;
+}
+.over p:nth-child(1) {
+  margin-top: 20vh;
+}
+.over p:hover {
+  background-color: #CCC;
+}
+.over .over-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.2rem;
+}
+
 /*========== contents ==========*/
 .contents {
   position: relative;
@@ -67,7 +103,7 @@ nav .nav-link {
 }
 .contents #top {
   position: relative;
-  height: 70vh;
+  height: 80vh;
   top: 0;
 }
 .contents #top::before {
@@ -79,9 +115,6 @@ nav .nav-link {
   animation: pathmove 3.4s ease-in-out infinite;
   opacity: 0;
   height: calc(80/1100 * 100vw);
-}
-.contents .pp {
-  height: 100%;
 }
 
 @keyframes pathmove {
@@ -100,10 +133,33 @@ nav .nav-link {
     opacity: 0;
   }
 }
+/*========== School & Experience ==========*/
+.contents h3 {
+  text-align: center;
+  font-size: 4rem;
+  margin: 3rem 0;
+  opacity: 0.85;
+}
+
 /*========== footer ==========*/
 footer {
   position: relative;
   z-index: 10;
+}
+
+/*==================== rwd ====================*/
+.sp {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .pc {
+    display: none;
+  }
+
+  .sp {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

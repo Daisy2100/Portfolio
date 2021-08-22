@@ -11,12 +11,25 @@ $(window).scroll(function () {
   document.getElementsByClassName("bg2")[0].style.opacity = opacityVal;
 });
 
-$(document).ready(function () {
-  document.getElementById("container").style.display = "none";
-  setTimeout(function () {
-    document.getElementById("load").style.display = "none";
-    document.getElementById("container").style.display = "block";
-  }, 5000);
-});
-// document.getElementById("load").style.display = "none";
-// document.getElementById("container").style.display = "contents";
+document.getElementById('over').style.display="none";
+
+document.getElementById('openbtn').addEventListener('click',function(){
+  document.getElementById('over').style.display="block"
+  document.getElementById('openbtn').style.display = "none";
+})
+document.getElementById('closebtn').addEventListener('click',function(){
+  document.getElementById('openbtn').style.display="block"
+  document.getElementById('over').style.display = "none";
+})
+
+// $(document).ready(function () {
+//   document.getElementById("container").style.display = "none";
+//   setTimeout(function () {
+//     document.getElementById("load").style.display = "none";
+//     document.getElementById("container").style.display = "block";
+//   }, 4000);
+// });
+document.getElementById("load").style.display = "none";
+document.getElementById("container").style.display = "block";
+
+
