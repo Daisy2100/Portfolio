@@ -47,7 +47,6 @@ body {
 /*========== nav ==========*/
 nav {
   z-index: 8888;
-  margin: 1rem;
   font-size: 1.5rem;
   height: 30vh;
 }
@@ -56,6 +55,9 @@ nav .navbar-collapse {
   flex-basis: auto;
   flex-direction: column;
   align-items: flex-end;
+  position: fixed;
+  top: 0;
+  right: 1rem;
 }
 nav .nav-link {
   color: #FFF !important;
@@ -63,7 +65,8 @@ nav .nav-link {
 
 .nav-sp {
   position: fixed;
-  right: 0;
+  top: 1rem;
+  right: 1rem;
 }
 .nav-sp .navbar-toggler {
   color: #FFF;
@@ -94,6 +97,13 @@ nav .nav-link {
   position: absolute;
   top: 1.5rem;
   right: 1.2rem;
+  color: #15558D;
+}
+.over .nav-link {
+  color: #15558D;
+}
+.over #closebtn {
+  color: #15558D;
 }
 
 /*========== contents ==========*/
@@ -138,12 +148,14 @@ nav .nav-link {
   text-align: center;
   font-size: 4rem;
   margin: 3rem 0;
-  opacity: 0.85;
 }
 .contents .SE, .contents .work, .contents .contact {
   position: relative;
   text-align: center;
   height: 100vh;
+}
+.contents .SE .row, .contents .work .row, .contents .contact .row {
+  margin-right: 0 !important;
 }
 .contents .SE .text, .contents .work .text, .contents .contact .text {
   font-size: 1.1rem;
@@ -152,7 +164,7 @@ nav .nav-link {
   margin: 0 auto;
   font-family: serif;
 }
-.contents .SE .text p, .contents .work .text p, .contents .contact .text p {
+.contents .SE .text .SEp, .contents .work .text .SEp, .contents .contact .text .SEp {
   border-bottom-width: 1px;
   border-bottom-style: dashed;
   line-height: 3.5rem;
@@ -170,7 +182,7 @@ nav .nav-link {
 @keyframes pathmove_SE {
   0% {
     height: 0;
-    top: 80vh;
+    top: 70vh;
     opacity: 0;
   }
   30% {
@@ -179,9 +191,22 @@ nav .nav-link {
   }
   100% {
     height: 0;
-    top: 100vh;
+    top: 90vh;
     opacity: 0;
   }
+}
+.contents #contact {
+  height: 45vh;
+}
+.contents #contact p {
+  text-align: center;
+}
+.contents #contact a {
+  color: #FFF;
+  text-decoration: none;
+}
+.contents #contact a:hover {
+  color: #15558D;
 }
 
 /*========== footer ==========*/
@@ -189,8 +214,8 @@ footer {
   position: relative;
   z-index: 10;
   text-align: center;
-  line-height: 3rem;
-  font-size: 1.2rem;
+  line-height: 1rem;
+  font-size: 1rem;
 }
 
 /*==================== rwd ====================*/
