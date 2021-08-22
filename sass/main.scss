@@ -88,7 +88,7 @@ nav{
   width: 100%;
   height: 100%;
   z-index: 9999;
-  opacity: 0.85;
+  opacity: 0.95;
   p{
     color: #000;
     font-size: 2rem;
@@ -155,6 +155,67 @@ nav{
     margin: 3rem 0;
     opacity: 0.85;
   }
+
+  .SE, .work, .contact{
+    position: relative;
+    text-align: center;
+    height: 100vh;
+
+    .text{
+      font-size: 1.1rem;
+      text-align: left;
+      width: 70vw;
+      margin: 0 auto;
+      font-family: serif;
+
+      p{
+        border-bottom-width: 1px;
+        border-bottom-style: dashed;
+        line-height: 3.5rem;
+      }
+
+      // .now::before, .notnow::before{
+      //   content: "now";
+      //   font-size: 0.6rem;
+      //   line-height: 1rem;
+      //   margin-right: 1rem;
+      //   // background-color: initial;
+      //   // border: 1px solid initial;
+      //   // border-radius: 4px;
+      //   padding: 3px;
+      // }
+      // .notnow::before{
+      //   opacity: 0;
+      // }
+    }
+  }
+
+  .SE::after, .work::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    background: #FFF;
+    animation: pathmove_SE 3.4s ease-in-out infinite;
+    opacity: 0;
+    height: calc(80/1100 * 100vw);
+  }
+  @keyframes pathmove_SE {
+    0% {
+        height: 0;
+        top: 80vh;
+        opacity: 0;
+    }
+    30% {
+        height: 100px;
+        opacity: 1;
+    }
+    100% {
+        height: 0;
+        top: 100vh;
+        opacity: 0;
+    }
+  }
 }
 
 
@@ -164,6 +225,9 @@ nav{
 footer {
   position: relative;
   z-index: 10;
+  text-align: center;
+  line-height: 3rem;
+  font-size: 1.2rem;
 }
 
 
@@ -179,6 +243,8 @@ footer {
   .sp{
     display: block;
   }
+
+  // navbar
   .contents{
     #top{
       height: 120vh;
@@ -187,6 +253,7 @@ footer {
       width: 1px;
     }
   }
+  // 直線動畫
   @keyframes pathmove {
     0% {
         height: 0;
@@ -202,5 +269,44 @@ footer {
         top: 110vh;
         opacity: 0;
     }
+  }
+
+  // context
+  .contents{
+
+    .SE, .work, .contact{
+      height: 130vh;
+  
+      h3{
+        font-size: 2rem;
+      }
+      p{
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
+  
+    }
+  }
+    
+  @keyframes pathmove_SE {
+    0% {
+        height: 0;
+        top: 100vh;
+        opacity: 0;
+    }
+    30% {
+        height: 100px;
+        opacity: 1;
+    }
+    100% {
+        height: 0;
+        top: 115vh;
+        opacity: 0;
+    }
+  }
+
+  footer{
+    font-size: 0.7rem;
+    margin-bottom: 1.5rem;
   }
 }

@@ -5,7 +5,7 @@ $(window).scroll(function () {
   let scrollEnd = document.documentElement.scrollHeight;
 
   var scroolNow = $(window).scrollTop();
-  var opacityVal = scroolNow / scrollEnd;
+  var opacityVal = scroolNow / scrollEnd / 1.2 ;
 
   document.getElementsByClassName("bg1")[1].style.opacity = (1 - opacityVal);
   document.getElementsByClassName("bg2")[0].style.opacity = opacityVal;
@@ -26,15 +26,15 @@ document.getElementById('closebtn').addEventListener('click',function(){
   document.getElementById('over').style.display = "none";
 })
 
-$(document).ready(function () {
-  document.getElementById("container").style.display = "none";
-  setTimeout(function () {
-    document.getElementById("load").style.display = "none";
-    document.getElementById("container").style.display = "block";
-  }, 4000);
-});
+// $(document).ready(function () {
+//   document.getElementById("container").style.display = "none";
+//   setTimeout(function () {
+//     document.getElementById("load").style.display = "none";
+//     document.getElementById("container").style.display = "block";
+//   }, 5000);
+// });
 
-// document.getElementById("load").style.display = "none";
-// document.getElementById("container").style.display = "block";
+document.getElementById("load").style.display = "none";
+document.getElementById("container").style.display = "block";
 
 
