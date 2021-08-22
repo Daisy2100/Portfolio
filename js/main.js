@@ -11,8 +11,12 @@ $(window).scroll(function () {
   document.getElementsByClassName("bg2")[0].style.opacity = opacityVal;
 });
 
-document.getElementById('over').style.display="none";
 
+// nav 控制開關，預設#over關閉
+// over     = 選單展開時覆蓋整個頁面的區塊
+// openbtn  = 展開選單的按鈕
+// closebtn = 關閉選單的按鈕
+document.getElementById('over').style.display="none";
 document.getElementById('openbtn').addEventListener('click',function(){
   document.getElementById('over').style.display="block"
   document.getElementById('openbtn').style.display = "none";
@@ -29,6 +33,7 @@ document.getElementById('closebtn').addEventListener('click',function(){
 //     document.getElementById("container").style.display = "block";
 //   }, 4000);
 // });
+
 document.getElementById("load").style.display = "none";
 document.getElementById("container").style.display = "block";
 
