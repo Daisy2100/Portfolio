@@ -43,7 +43,7 @@ $(document).ready(function () {
   setTimeout(function () {
     document.getElementById("load").style.display = "none";
     document.getElementById("container").style.display = "block";
-  }, 5000);
+  }, 3000);
 });
 
 // document.getElementById("load").style.display = "none";

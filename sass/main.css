@@ -12,8 +12,6 @@ body {
   font-family: "Baskerville-Old-Face-Caps", "Libre Baskerville", "NotoSans-BlackItalic", serif;
   text-align: justify;
   color: #FFF;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
 }
 
 #container {
@@ -88,9 +86,10 @@ nav .nav-link {
   font-size: 2rem;
   text-align: center;
   line-height: 3.5rem;
+  margin: 0;
 }
 .over p:nth-child(1) {
-  margin-top: 20vh;
+  margin-top: 15vh;
 }
 .over p:hover {
   background-color: #CCC;
@@ -151,27 +150,32 @@ nav .nav-link {
   font-size: 4rem;
   margin: 3rem 0;
 }
-.contents .SE, .contents .work, .contents .contact {
+.contents .SE, .contents .work, .contents .skill, .contents .contact {
   position: relative;
   text-align: center;
   height: 100vh;
 }
-.contents .SE .row, .contents .work .row, .contents .contact .row {
+.contents .SE .row, .contents .work .row, .contents .skill .row, .contents .contact .row {
   margin-right: 0 !important;
 }
-.contents .SE .text, .contents .work .text, .contents .contact .text {
+.contents .SE .text, .contents .work .text, .contents .skill .text, .contents .contact .text {
   font-size: 1.1rem;
   text-align: left;
   width: 70vw;
   margin: 0 auto;
   font-family: serif;
 }
-.contents .SE .text .SEp, .contents .work .text .SEp, .contents .contact .text .SEp {
+.contents .SE .text .SEp, .contents .work .text .SEp, .contents .skill .text .SEp, .contents .contact .text .SEp {
   border-bottom-width: 1px;
   border-bottom-style: dashed;
   line-height: 3.5rem;
 }
-.contents .SE::after, .contents .work::after {
+.contents .SE .text .SEspan, .contents .work .text .SEspan, .contents .skill .text .SEspan, .contents .contact .text .SEspan {
+  display: block;
+  float: left;
+  width: 10rem;
+}
+.contents .SE::after, .contents .skill::after, .contents .work::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -261,15 +265,27 @@ footer {
       opacity: 0;
     }
   }
-  .contents .SE, .contents .work, .contents .contact {
+  .contents .SE, .contents .work, .contents .skill, .contents .contact {
     height: 130vh;
   }
-  .contents .SE h3, .contents .work h3, .contents .contact h3 {
+  .contents .SE h3, .contents .work h3, .contents .skill h3, .contents .contact h3 {
     font-size: 2rem;
   }
-  .contents .SE p, .contents .work p, .contents .contact p {
+  .contents .SE p, .contents .work p, .contents .skill p, .contents .contact p {
     font-size: 1rem;
     line-height: 1.2rem;
+  }
+  .contents #SE .text {
+    margin: 0 -1rem;
+  }
+  .contents #SE .SEp {
+    font-size: 0.9rem;
+    white-space: nowrap;
+    width: 90vw;
+  }
+  .contents #SE .SEspan {
+    width: 6rem;
+    font-size: 0.6rem;
   }
 
   @keyframes pathmove_SE {
