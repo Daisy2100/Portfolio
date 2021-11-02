@@ -13,6 +13,8 @@ body {
     "NotoSans-BlackItalic", serif;
   text-align: justify;
   color: #FFF;
+  overflow-y: scroll;    
+  -webkit-overflow-scrolling: touch;
 }
 
 $maincolor: #15558D;
@@ -234,7 +236,7 @@ nav{
   }
 
   #contact{
-    height: 45vh;
+    height: 70vh;
     p{
       text-align: center;
     }
@@ -244,6 +246,9 @@ nav{
     }
     a:hover{
       color: $maincolor;
+    }
+    .text{
+      margin: 15vw auto;
     }
   }
 }
@@ -258,6 +263,7 @@ footer {
   text-align: center;
   line-height: 1rem;
   font-size: 1rem;
+  padding: 2rem;
 }
 
 

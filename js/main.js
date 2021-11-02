@@ -10,11 +10,12 @@ $(window).scroll(function () {
   document.getElementsByClassName("bg1")[1].style.opacity = (1 - opacityVal);
   document.getElementsByClassName("bg2")[0].style.opacity = opacityVal;
 
-  //text-section 透明度控制
-  for (var i =0; i<document.getElementsByClassName('text-section').length; i++){
-    var textOpacity = getPosition(document.getElementsByClassName('text-section')[i])['y'];
-    document.getElementsByClassName('text-section')[i].style.opacity = scroolNow/textOpacity;
-  }
+  // text-section 透明度控制
+  // for (var i =0; i<document.getElementsByClassName('text-section').length; i++){
+  //   var textOpacity = getPosition(document.getElementsByClassName('text-section')[i])['y'];
+  //   document.getElementsByClassName('text-section')[i].style.opacity = scroolNow/textOpacity;
+  // }
+
 });
 
 

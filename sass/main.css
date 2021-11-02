@@ -12,6 +12,8 @@ body {
   font-family: "Baskerville-Old-Face-Caps", "Libre Baskerville", "NotoSans-BlackItalic", serif;
   text-align: justify;
   color: #FFF;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 #container {
@@ -196,7 +198,7 @@ nav .nav-link {
   }
 }
 .contents #contact {
-  height: 45vh;
+  height: 70vh;
 }
 .contents #contact p {
   text-align: center;
@@ -208,6 +210,9 @@ nav .nav-link {
 .contents #contact a:hover {
   color: #15558D;
 }
+.contents #contact .text {
+  margin: 15vw auto;
+}
 
 /*========== footer ==========*/
 footer {
@@ -216,6 +221,7 @@ footer {
   text-align: center;
   line-height: 1rem;
   font-size: 1rem;
+  padding: 2rem;
 }
 
 /*==================== rwd ====================*/
