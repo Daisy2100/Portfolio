@@ -18,11 +18,11 @@
   z-index: 0;
 }
 #load p {
-  animation: textMove 5s;
+  animation: textMove 3.5s;
   /*IE*/
-  -moz-animation: textMove 5s;
+  -moz-animation: textMove 3.5s;
   /*FireFox*/
-  -webkit-animation: textMove 5s;
+  -webkit-animation: textMove 3.5s;
   /*Chrome, Safari*/
 }
 
