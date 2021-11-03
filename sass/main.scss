@@ -12,14 +12,13 @@ body {
   font-family: "Baskerville-Old-Face-Caps", "Libre Baskerville",
     "NotoSans-BlackItalic", serif;
   text-align: justify;
-  color: #FFF;
+  color: #fff;
 }
 
-$maincolor: #15558D;
+$maincolor: #15558d;
 $bottmcolor: #326277;
 
 #container {
-
   /*========== background image ==========*/
   .bg1,
   .bg2,
@@ -52,13 +51,11 @@ $bottmcolor: #326277;
     background-size: cover;
     z-index: 0;
   }
-  
-  
 }
 
 /*========== nav ==========*/
 
-nav{
+nav {
   z-index: 8888;
   font-size: 1.5rem;
   height: 30vh;
@@ -73,51 +70,50 @@ nav{
     right: 1rem;
   }
   .nav-link {
-    color: #FFF !important;
+    color: #fff !important;
   }
-
 }
-.nav-sp{
+.nav-sp {
   position: fixed;
   top: 1rem;
   right: 1rem;
 
-  .navbar-toggler{
-    color: #FFF;
-    border-color: #FFF;
+  .navbar-toggler {
+    color: #fff;
+    border-color: #fff;
   }
 }
 
-.over{
+.over {
   position: fixed;
-  background-color: #FFF;
+  background-color: #fff;
   width: 100%;
   height: 100%;
   z-index: 9999;
   opacity: 0.95;
-  p{
+  p {
     color: #000;
     font-size: 2rem;
     text-align: center;
     line-height: 3.5rem;
     margin: 0;
   }
-  p:nth-child(1){
+  p:nth-child(1) {
     margin-top: 15vh;
   }
-  p:hover{
-    background-color: #CCC;
+  p:hover {
+    background-color: #ccc;
   }
-  .over-btn{
+  .over-btn {
     position: absolute;
     top: 1.5rem;
     right: 1.2rem;
     color: $maincolor;
   }
-  .nav-link{
+  .nav-link {
     color: $maincolor;
   }
-  #closebtn{
+  #closebtn {
     color: $maincolor;
   }
 }
@@ -126,72 +122,75 @@ nav{
 .contents {
   position: relative;
   z-index: 3;
-  #top{
+  #top {
     position: relative;
     height: 90vh;
     top: 0;
   }
   // 直線動畫
-  #top::before{
+  #top::before {
     content: "";
     position: absolute;
     left: 50%;
     width: 2px;
-    background: #FFF;
+    background: #fff;
     animation: pathmove 3.4s ease-in-out infinite;
     opacity: 0;
-    height: calc(80/1100 * 100vw);
+    height: calc(80 / 1100 * 100vw);
   }
 }
 @keyframes pathmove {
   0% {
-      height: 0;
-      top: 60vh;
-      opacity: 0;
+    height: 0;
+    top: 60vh;
+    opacity: 0;
   }
   30% {
-      height: 100px;
-      opacity: 1;
+    height: 100px;
+    opacity: 1;
   }
   100% {
-      height: 0;
-      top: 80vh;
-      opacity: 0;
+    height: 0;
+    top: 80vh;
+    opacity: 0;
   }
 }
 
 /*========== School & Experience ==========*/
 
 .contents {
-  h3{
+  h3 {
     text-align: center;
     font-size: 4rem;
     margin: 3rem 0;
   }
 
-  .SE, .work, .skill, .contact{
+  .SE,
+  .work,
+  .skill,
+  .contact {
     position: relative;
     text-align: center;
     height: 100vh;
 
-    .row{
+    .row {
       margin-right: 0 !important;
     }
 
-    .text{
+    .text {
       font-size: 1.1rem;
       text-align: left;
       width: 70vw;
       margin: 0 auto;
       font-family: serif;
 
-      .SEp{
+      .SEp {
         border-bottom-width: 1px;
         border-bottom-style: dashed;
         line-height: 3.5rem;
       }
 
-      .SEspan{
+      .SEspan {
         display: block;
         float: left;
         width: 10rem;
@@ -214,52 +213,109 @@ nav{
   }
 
   // 直線動畫
-  .SE::after, .skill::after, .work::after{
+  .SE::after,
+  .skill::after,
+  .work::after {
     content: "";
     position: absolute;
     left: 50%;
     width: 2px;
-    background: #FFF;
+    background: #fff;
     animation: pathmove_SE 3.4s ease-in-out infinite;
     opacity: 0;
-    height: calc(80/1100 * 100vw);
+    height: calc(80 / 1100 * 100vw);
   }
   @keyframes pathmove_SE {
     0% {
-        height: 0;
-        top: 70vh;
-        opacity: 0;
+      height: 0;
+      top: 85vh;
+      opacity: 0;
     }
     30% {
-        height: 100px;
-        opacity: 1;
+      height: 100px;
+      opacity: 1;
     }
     100% {
-        height: 0;
-        top: 90vh;
-        opacity: 0;
+      height: 0;
+      top: 105vh;
+      opacity: 0;
     }
   }
 
-  #contact{
+  #contact {
     height: 70vh;
-    p{
+    p {
       text-align: center;
     }
-    a{
-      color: #FFF;
+    a {
+      color: #fff;
       text-decoration: none;
     }
-    a:hover{
+    a:hover {
       color: $maincolor;
     }
-    .text{
+    .text {
       margin: 15vw auto;
     }
   }
 }
 
+/*========== Work ==========*/
 
+.btn{
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  color: #FFF;
+  z-index: 1;
+  width: 13rem;
+  margin: 0 auto;
+}
+.btn:before, .btn::after {
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #FFF;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+.btn:before{
+  top: -1.5rem;
+  right: -0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.btn::after{
+  top: 1.5rem;
+  right: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover{
+  color: #FFF;
+  .work-link{
+    background:#23475B;;
+  }
+}
+.btn:hover:before{
+  top: 1.5rem;
+}
+.btn:hover:after{
+  top: -1.5rem;
+}
+
+.work-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 9rem;
+  height: 3rem;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  align-items: center;
+  position: relative;
+  background: #2F586F;
+}
 
 /*========== footer ==========*/
 
@@ -270,101 +326,4 @@ footer {
   line-height: 1rem;
   font-size: 1rem;
   padding: 2rem;
-}
-
-
-
-/*==================== rwd ====================*/
-.sp{
-  display: none;
-}
-@media(max-width:768px){
-  .pc{
-    display: none;
-  }
-  .sp{
-    display: block;
-  }
-
-  // navbar
-  .contents{
-    #top{
-      height: 120vh;
-    }
-    #top::after{
-      width: 1px;
-    }
-  }
-  // 直線動畫
-  @keyframes pathmove {
-    0% {
-        height: 0;
-        top: 85vh;
-        opacity: 0;
-    }
-    30% {
-        height: 80px;
-        opacity: 1;
-    }
-    100% {
-        height: 0;
-        top: 110vh;
-        opacity: 0;
-    }
-  }
-
-  // context
-  .contents{
-
-    .SE, .work, .skill, .contact{
-      height: 130vh;
-  
-      h3{
-        font-size: 2rem;
-      }
-      p{
-        font-size: 1rem;
-        line-height: 1.2rem;
-      }
-  
-    }
-
-    #SE{
-      .text{
-        margin: 0 -1rem;
-      }
-      .SEp{
-        font-size: 0.9rem;
-        white-space: nowrap;
-        width: 90vw;
-      }
-      .SEspan{
-        width: 6rem;
-        font-size: 0.6rem;
-        
-      }
-    }
-  }
-    
-  @keyframes pathmove_SE {
-    0% {
-        height: 0;
-        top: 100vh;
-        opacity: 0;
-    }
-    30% {
-        height: 100px;
-        opacity: 1;
-    }
-    100% {
-        height: 0;
-        top: 115vh;
-        opacity: 0;
-    }
-  }
-
-  footer{
-    font-size: 0.7rem;
-    margin-bottom: 1.5rem;
-  }
 }

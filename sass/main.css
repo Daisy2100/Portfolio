@@ -11,7 +11,7 @@ body {
   margin: 0;
   font-family: "Baskerville-Old-Face-Caps", "Libre Baskerville", "NotoSans-BlackItalic", serif;
   text-align: justify;
-  color: #FFF;
+  color: #fff;
 }
 
 #container {
@@ -60,7 +60,7 @@ nav .navbar-collapse {
   right: 1rem;
 }
 nav .nav-link {
-  color: #FFF !important;
+  color: #fff !important;
 }
 
 .nav-sp {
@@ -69,13 +69,13 @@ nav .nav-link {
   right: 1rem;
 }
 .nav-sp .navbar-toggler {
-  color: #FFF;
-  border-color: #FFF;
+  color: #fff;
+  border-color: #fff;
 }
 
 .over {
   position: fixed;
-  background-color: #FFF;
+  background-color: #fff;
   width: 100%;
   height: 100%;
   z-index: 9999;
@@ -92,19 +92,19 @@ nav .nav-link {
   margin-top: 15vh;
 }
 .over p:hover {
-  background-color: #CCC;
+  background-color: #ccc;
 }
 .over .over-btn {
   position: absolute;
   top: 1.5rem;
   right: 1.2rem;
-  color: #15558D;
+  color: #15558d;
 }
 .over .nav-link {
-  color: #15558D;
+  color: #15558d;
 }
 .over #closebtn {
-  color: #15558D;
+  color: #15558d;
 }
 
 /*========== contents ==========*/
@@ -122,10 +122,10 @@ nav .nav-link {
   position: absolute;
   left: 50%;
   width: 2px;
-  background: #FFF;
+  background: #fff;
   animation: pathmove 3.4s ease-in-out infinite;
   opacity: 0;
-  height: calc(80/1100 * 100vw);
+  height: calc(80 / 1100 * 100vw);
 }
 
 @keyframes pathmove {
@@ -150,45 +150,62 @@ nav .nav-link {
   font-size: 4rem;
   margin: 3rem 0;
 }
-.contents .SE, .contents .work, .contents .skill, .contents .contact {
+.contents .SE,
+.contents .work,
+.contents .skill,
+.contents .contact {
   position: relative;
   text-align: center;
   height: 100vh;
 }
-.contents .SE .row, .contents .work .row, .contents .skill .row, .contents .contact .row {
+.contents .SE .row,
+.contents .work .row,
+.contents .skill .row,
+.contents .contact .row {
   margin-right: 0 !important;
 }
-.contents .SE .text, .contents .work .text, .contents .skill .text, .contents .contact .text {
+.contents .SE .text,
+.contents .work .text,
+.contents .skill .text,
+.contents .contact .text {
   font-size: 1.1rem;
   text-align: left;
   width: 70vw;
   margin: 0 auto;
   font-family: serif;
 }
-.contents .SE .text .SEp, .contents .work .text .SEp, .contents .skill .text .SEp, .contents .contact .text .SEp {
+.contents .SE .text .SEp,
+.contents .work .text .SEp,
+.contents .skill .text .SEp,
+.contents .contact .text .SEp {
   border-bottom-width: 1px;
   border-bottom-style: dashed;
   line-height: 3.5rem;
 }
-.contents .SE .text .SEspan, .contents .work .text .SEspan, .contents .skill .text .SEspan, .contents .contact .text .SEspan {
+.contents .SE .text .SEspan,
+.contents .work .text .SEspan,
+.contents .skill .text .SEspan,
+.contents .contact .text .SEspan {
   display: block;
   float: left;
   width: 10rem;
 }
-.contents .SE::after, .contents .skill::after, .contents .work::after {
+.contents .SE::after,
+.contents .skill::after,
+.contents .work::after {
   content: "";
   position: absolute;
   left: 50%;
   width: 2px;
-  background: #FFF;
+  background: #fff;
   animation: pathmove_SE 3.4s ease-in-out infinite;
   opacity: 0;
-  height: calc(80/1100 * 100vw);
+  height: calc(80 / 1100 * 100vw);
 }
 @keyframes pathmove_SE {
   0% {
     height: 0;
-    top: 70vh;
+    top: 85vh;
     opacity: 0;
   }
   30% {
@@ -197,7 +214,7 @@ nav .nav-link {
   }
   100% {
     height: 0;
-    top: 90vh;
+    top: 105vh;
     opacity: 0;
   }
 }
@@ -208,14 +225,76 @@ nav .nav-link {
   text-align: center;
 }
 .contents #contact a {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
 }
 .contents #contact a:hover {
-  color: #15558D;
+  color: #15558d;
 }
 .contents #contact .text {
   margin: 15vw auto;
+}
+
+/*========== Work ==========*/
+.btn {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  color: #FFF;
+  z-index: 1;
+  width: 13rem;
+  margin: 0 auto;
+}
+
+.btn:before, .btn::after {
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #FFF;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+.btn:before {
+  top: -1.5rem;
+  right: -0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn::after {
+  top: 1.5rem;
+  right: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  color: #FFF;
+}
+.btn:hover .work-link {
+  background: #23475B;
+}
+
+.btn:hover:before {
+  top: 1.5rem;
+}
+
+.btn:hover:after {
+  top: -1.5rem;
+}
+
+.work-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 9rem;
+  height: 3rem;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  align-items: center;
+  position: relative;
+  background: #2F586F;
 }
 
 /*========== footer ==========*/
@@ -226,88 +305,6 @@ footer {
   line-height: 1rem;
   font-size: 1rem;
   padding: 2rem;
-}
-
-/*==================== rwd ====================*/
-.sp {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .pc {
-    display: none;
-  }
-
-  .sp {
-    display: block;
-  }
-
-  .contents #top {
-    height: 120vh;
-  }
-  .contents #top::after {
-    width: 1px;
-  }
-
-  @keyframes pathmove {
-    0% {
-      height: 0;
-      top: 85vh;
-      opacity: 0;
-    }
-    30% {
-      height: 80px;
-      opacity: 1;
-    }
-    100% {
-      height: 0;
-      top: 110vh;
-      opacity: 0;
-    }
-  }
-  .contents .SE, .contents .work, .contents .skill, .contents .contact {
-    height: 130vh;
-  }
-  .contents .SE h3, .contents .work h3, .contents .skill h3, .contents .contact h3 {
-    font-size: 2rem;
-  }
-  .contents .SE p, .contents .work p, .contents .skill p, .contents .contact p {
-    font-size: 1rem;
-    line-height: 1.2rem;
-  }
-  .contents #SE .text {
-    margin: 0 -1rem;
-  }
-  .contents #SE .SEp {
-    font-size: 0.9rem;
-    white-space: nowrap;
-    width: 90vw;
-  }
-  .contents #SE .SEspan {
-    width: 6rem;
-    font-size: 0.6rem;
-  }
-
-  @keyframes pathmove_SE {
-    0% {
-      height: 0;
-      top: 100vh;
-      opacity: 0;
-    }
-    30% {
-      height: 100px;
-      opacity: 1;
-    }
-    100% {
-      height: 0;
-      top: 115vh;
-      opacity: 0;
-    }
-  }
-  footer {
-    font-size: 0.7rem;
-    margin-bottom: 1.5rem;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */
