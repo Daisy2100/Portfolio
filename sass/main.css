@@ -125,7 +125,7 @@ nav .nav-link {
   background: #fff;
   animation: pathmove 3.4s ease-in-out infinite;
   opacity: 0;
-  height: calc(80 / 1100 * 100vw);
+  height: 7.2727272727vw;
 }
 
 @keyframes pathmove {
@@ -144,6 +144,18 @@ nav .nav-link {
     opacity: 0;
   }
 }
+@keyframes fadeIn {
+  0% {
+    position: relative;
+    margin-top: 200px;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
 /*========== School & Experience ==========*/
 .contents h3 {
   text-align: center;
@@ -157,6 +169,7 @@ nav .nav-link {
   position: relative;
   text-align: center;
   height: 100vh;
+  margin-top: 200px;
 }
 .contents .SE .row,
 .contents .work .row,
@@ -200,7 +213,7 @@ nav .nav-link {
   background: #fff;
   animation: pathmove_SE 3.4s ease-in-out infinite;
   opacity: 0;
-  height: calc(80 / 1100 * 100vw);
+  height: 7.2727272727vw;
 }
 @keyframes pathmove_SE {
   0% {

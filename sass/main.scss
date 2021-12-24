@@ -156,6 +156,20 @@ nav {
   }
 }
 
+// 淡入動畫
+@keyframes fadeIn {
+  0% {
+    position: relative;
+    margin-top: 200px;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
 /*========== School & Experience ==========*/
 
 .contents {
@@ -172,6 +186,7 @@ nav {
     position: relative;
     text-align: center;
     height: 100vh;
+    margin-top: 200px;
 
     .row {
       margin-right: 0 !important;
