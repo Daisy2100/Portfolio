@@ -18,14 +18,14 @@ $(window).scroll(function () {
 
   //淡入動畫
   var top = document.documentElement.scrollTop || document.body.scrollTop
-  var SE = document.getElementById('SE');
+  // var SE = document.getElementById('SE');
   var skill = document.getElementById('skill');
   var work = document.getElementById('work');
-  var contact = document.getElementById('contact');
-  if (top > 200){
-    SE.style.animation = "fadeIn 3s";
-    SE.style.marginTop = "0";
-  }
+  // var contact = document.getElementById('contact');
+  // if (top > 200){
+  //   SE.style.animation = "fadeIn 3s";
+  //   SE.style.marginTop = "0";
+  // }
   if (top > (skill.offsetTop-skill.offsetHeight)){
     skill.style.animation = "fadeIn 3s";
     skill.style.marginTop = "0";
@@ -34,10 +34,10 @@ $(window).scroll(function () {
     work.style.animation = "fadeIn 3s";
     work.style.marginTop = "0";
   }
-  if (top > (contact.offsetTop-contact.offsetHeight)){
-    contact.style.animation = "fadeIn 3s";
-    contact.style.marginTop = "0";
-  }
+  // if (top > (contact.offsetTop-contact.offsetHeight)){
+  //   contact.style.animation = "fadeIn 3s";
+  //   contact.style.marginTop = "0";
+  // }
 
 });
 
