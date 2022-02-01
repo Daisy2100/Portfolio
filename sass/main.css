@@ -202,6 +202,47 @@ nav .nav-link {
   float: left;
   width: 10rem;
 }
+.contents .SE .about-mail,
+.contents .work .about-mail,
+.contents .skill .about-mail,
+.contents .contact .about-mail {
+  text-align: center;
+  margin: 0.5rem;
+}
+.contents .SE .about-mail a,
+.contents .work .about-mail a,
+.contents .skill .about-mail a,
+.contents .contact .about-mail a {
+  color: #FFF;
+  text-decoration: none;
+}
+.contents .SE .about-mail a:hover,
+.contents .work .about-mail a:hover,
+.contents .skill .about-mail a:hover,
+.contents .contact .about-mail a:hover {
+  color: #2A6F97;
+}
+.contents .SE #accordionExample,
+.contents .work #accordionExample,
+.contents .skill #accordionExample,
+.contents .contact #accordionExample {
+  margin-top: 5vw;
+  color: #2A6F97;
+}
+.contents .SE #accordionExample .accordion-body,
+.contents .work #accordionExample .accordion-body,
+.contents .skill #accordionExample .accordion-body,
+.contents .contact #accordionExample .accordion-body {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+.contents .SE #accordionExample .accordion-button:not(.collapsed),
+.contents .work #accordionExample .accordion-button:not(.collapsed),
+.contents .skill #accordionExample .accordion-button:not(.collapsed),
+.contents .contact #accordionExample .accordion-button:not(.collapsed) {
+  color: #FFF;
+  background-color: #2A6F97;
+}
 .contents .SE::after,
 .contents .skill::after {
   content: "";
@@ -258,7 +299,7 @@ nav .nav-link {
 }
 #work .work-img, #work .work-img-bg {
   width: 95%;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
 }
 #work .work-img-bg {
   display: none;
@@ -341,6 +382,7 @@ footer {
   font-size: 1rem;
   padding: 4rem;
   height: 5rem;
+  margin-top: 2rem;
 }
 footer a {
   color: #232323;

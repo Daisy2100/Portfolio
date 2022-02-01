@@ -224,6 +224,33 @@ nav {
       //   opacity: 0;
       // }
     }
+
+    .about-mail{
+      text-align: center;
+      margin: 0.5rem;
+      a {
+        color: #FFF;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #2A6F97;
+      }
+    }
+
+    #accordionExample{
+      margin-top: 5vw;
+      color: #2A6F97;
+
+      .accordion-body{
+        font-size: 1rem;
+        line-height: 2rem;
+
+      }
+      .accordion-button:not(.collapsed) {
+        color: #FFF;
+        background-color: #2A6F97;
+      }
+    }
   }
 
   // 直線動畫
@@ -286,7 +313,7 @@ nav {
   }
   .work-img, .work-img-bg {
     width: 95%;
-    margin-bottom: 1rem;
+    margin: 1rem auto;
   }
   .work-img-bg{
     display: none;
@@ -366,6 +393,7 @@ footer {
   font-size: 1rem;
   padding: 4rem;
   height: 5rem;
+  margin-top: 2rem;
 
   a {
     color: #232323;;
