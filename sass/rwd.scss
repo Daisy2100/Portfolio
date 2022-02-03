@@ -68,6 +68,14 @@
         
       }
     }
+
+    #work{
+      .sp{
+        .work-img, .work-img-bg{
+          width: 65%;
+        }
+      }
+    }
   }
     
   @keyframes pathmove_SE {

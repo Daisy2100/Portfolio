@@ -57,6 +57,9 @@
     width: 6rem;
     font-size: 0.6rem;
   }
+  .contents #work .sp .work-img, .contents #work .sp .work-img-bg {
+    width: 65%;
+  }
 
   @keyframes pathmove_SE {
     0% {
