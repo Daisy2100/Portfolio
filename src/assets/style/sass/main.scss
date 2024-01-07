@@ -1,11 +1,13 @@
 @font-face {
   font-family: "Baskerville-Old-Face-Caps";
-  src: url("../font/Baskerville-Old-Face-Caps-Regular-4.woff") format("woff");
+  src: url("../../font/Baskerville-Old-Face-Caps-Regular-4.woff") format("woff");
 }
+
 @font-face {
   font-family: "NotoSans-BlackItalic";
-  src: url("../font/NotoSans-BlackItalic.woff") format("woff");
+  src: url("../../font/NotoSans-BlackItalic.woff") format("woff");
 }
+
 html,
 body {
   margin: 0;
@@ -19,6 +21,7 @@ $maincolor: #15558d;
 $bottmcolor: #326277;
 
 #container {
+
   /*========== background image ==========*/
   .bg1,
   .bg2,
@@ -31,23 +34,21 @@ $bottmcolor: #326277;
   }
 
   .bg1 {
-    background: url("../images/background/pexels-kristina-paukshtite-1591252-1.jpg")
-      no-repeat center bottom;
+    background: url("../../images/background/pexels-kristina-paukshtite-1591252-1.jpg") no-repeat center bottom;
     background-size: cover;
     z-index: 1;
     opacity: 1;
   }
 
   .bg2 {
-    background: url("../images/background/pexels-kristina-paukshtite-1591252-3.jpg")
-      no-repeat center bottom;
+    background: url("../../images/background/pexels-kristina-paukshtite-1591252-3.jpg") no-repeat center bottom;
     background-size: cover;
     z-index: 2;
     opacity: 0;
   }
+
   .bg3 {
-    background: url("../images/background/pexels-kristina-paukshtite-1591252-2.jpg")
-      no-repeat center bottom;
+    background: url("../../images/background/pexels-kristina-paukshtite-1591252-2.jpg") no-repeat center bottom;
     background-size: cover;
     z-index: 0;
   }
@@ -69,10 +70,12 @@ nav {
     top: 0;
     right: 1rem;
   }
+
   .nav-link {
     color: #fff !important;
   }
 }
+
 .nav-sp {
   position: fixed;
   top: 1rem;
@@ -91,6 +94,7 @@ nav {
   height: 100%;
   z-index: 9999;
   opacity: 0.95;
+
   p {
     color: #000;
     font-size: 2rem;
@@ -98,21 +102,26 @@ nav {
     line-height: 3.5rem;
     margin: 0;
   }
+
   p:nth-child(1) {
     margin-top: 15vh;
   }
+
   p:hover {
     background-color: #ccc;
   }
+
   .over-btn {
     position: absolute;
     top: 1.5rem;
     right: 1.2rem;
     color: $maincolor;
   }
+
   .nav-link {
     color: $maincolor;
   }
+
   #closebtn {
     color: $maincolor;
   }
@@ -122,11 +131,13 @@ nav {
 .contents {
   position: relative;
   z-index: 3;
+
   #top {
     position: relative;
     height: 90vh;
     top: 0;
   }
+
   // 直線動畫
   #top::before {
     content: "";
@@ -139,16 +150,19 @@ nav {
     height: calc(80 / 1100 * 100vw);
   }
 }
+
 @keyframes pathmove {
   0% {
     height: 0;
     top: 60vh;
     opacity: 0;
   }
+
   30% {
     height: 100px;
     opacity: 1;
   }
+
   100% {
     height: 0;
     top: 80vh;
@@ -163,6 +177,7 @@ nav {
     margin-top: 200px;
     opacity: 0;
   }
+
   100% {
     position: relative;
     margin-top: 0px;
@@ -225,27 +240,30 @@ nav {
       // }
     }
 
-    .about-mail{
+    .about-mail {
       text-align: center;
       margin: 0.5rem;
+
       a {
         color: #FFF;
         text-decoration: none;
       }
+
       a:hover {
         color: #2A6F97;
       }
     }
 
-    #accordionExample{
+    #accordionExample {
       margin-top: 5vw;
       color: #2A6F97;
 
-      .accordion-body{
+      .accordion-body {
         font-size: 1rem;
         line-height: 2rem;
 
       }
+
       .accordion-button:not(.collapsed) {
         color: #FFF;
         background-color: #2A6F97;
@@ -255,9 +273,9 @@ nav {
 
   // 直線動畫
   .SE::after,
-  .skill::after
-  // .work::after
-  {
+  .skill::after // .work::after
+
+    {
     content: "";
     position: absolute;
     left: 50%;
@@ -267,16 +285,19 @@ nav {
     opacity: 0;
     height: calc(80 / 1100 * 100vw);
   }
+
   @keyframes pathmove_SE {
     0% {
       height: 0;
       top: 85vh;
       opacity: 0;
     }
+
     30% {
       height: 100px;
       opacity: 1;
     }
+
     100% {
       height: 0;
       top: 105vh;
@@ -286,16 +307,20 @@ nav {
 
   #contact {
     height: 70vh;
+
     p {
       text-align: center;
     }
+
     a {
       color: #fff;
       text-decoration: none;
     }
+
     a:hover {
       color: $maincolor;
     }
+
     .text {
       margin: 15vw auto;
     }
@@ -305,28 +330,36 @@ nav {
 /*========== Work ==========*/
 #work {
   height: 40%;
+
   .work-block {
     margin: 2rem 1rem;
   }
-  .work-img{
+
+  .work-img {
     display: block;
   }
-  .work-img, .work-img-bg {
+
+  .work-img,
+  .work-img-bg {
     width: 80%;
     margin: 1rem auto;
   }
-  .work-img-bg{
+
+  .work-img-bg {
     display: none;
   }
+
   .work-block:hover {
     .work-img {
       display: none;
     }
-    .work-img-bg{
+
+    .work-img-bg {
       display: block;
     }
   }
 }
+
 .btn {
   font-size: 1rem;
   display: flex;
@@ -336,6 +369,7 @@ nav {
   width: 13rem;
   margin: 1rem auto;
 }
+
 .btn:before,
 .btn::after {
   content: "";
@@ -347,25 +381,31 @@ nav {
   position: relative;
   z-index: 2;
 }
+
 .btn:before {
   top: -1.5rem;
   right: -0.5rem;
   transition: all 0.3s ease-in-out;
 }
+
 .btn::after {
   top: 1.5rem;
   right: 0.5rem;
   transition: all 0.3s ease-in-out;
 }
+
 .btn:hover {
   color: #fff;
+
   .work-link {
     background: #23475b;
   }
 }
+
 .btn:hover:before {
   top: 1.5rem;
 }
+
 .btn:hover:after {
   top: -1.5rem;
 }
@@ -396,9 +436,11 @@ footer {
   margin-top: 2rem;
 
   a {
-    color: #232323;;
+    color: #232323;
+    ;
     text-decoration: none;
   }
+
   a:hover {
     color: $maincolor;
   }
@@ -407,6 +449,6 @@ footer {
 
 /*========== nav-workpage ==========*/
 
-.nav-workpage{
+.nav-workpage {
   height: 0;
 }

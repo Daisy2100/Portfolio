@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Baskerville-Old-Face-Caps";
-  src: url("../font/Baskerville-Old-Face-Caps-Regular-4.woff") format("woff");
+  src: url("../../font/Baskerville-Old-Face-Caps-Regular-4.woff") format("woff");
 }
 @font-face {
   font-family: "NotoSans-BlackItalic";
-  src: url("../font/NotoSans-BlackItalic.woff") format("woff");
+  src: url("../../font/NotoSans-BlackItalic.woff") format("woff");
 }
 html,
 body {
@@ -27,19 +27,19 @@ body {
   left: 0;
 }
 #container .bg1 {
-  background: url("../images/background/pexels-kristina-paukshtite-1591252-1.jpg") no-repeat center bottom;
+  background: url("../src/assets/images/background/pexels-kristina-paukshtite-1591252-1.jpg") no-repeat center bottom;
   background-size: cover;
   z-index: 1;
   opacity: 1;
 }
 #container .bg2 {
-  background: url("../images/background/pexels-kristina-paukshtite-1591252-3.jpg") no-repeat center bottom;
+  background: url("../src/assets/images/background/pexels-kristina-paukshtite-1591252-3.jpg") no-repeat center bottom;
   background-size: cover;
   z-index: 2;
   opacity: 0;
 }
 #container .bg3 {
-  background: url("../images/background/pexels-kristina-paukshtite-1591252-2.jpg") no-repeat center bottom;
+  background: url("../src/assets/images/background/pexels-kristina-paukshtite-1591252-2.jpg") no-repeat center bottom;
   background-size: cover;
   z-index: 0;
 }
@@ -297,7 +297,8 @@ nav .nav-link {
 #work .work-img {
   display: block;
 }
-#work .work-img, #work .work-img-bg {
+#work .work-img,
+#work .work-img-bg {
   width: 80%;
   margin: 1rem auto;
 }
