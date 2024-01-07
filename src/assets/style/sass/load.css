@@ -10,7 +10,7 @@
 #load .bg1 {
   width: 100vw;
   height: 100vh;
-  background: url("../images/background/pexels-kristina-paukshtite-1591252-1.jpg") no-repeat center bottom;
+  background: url("../../images/background/pexels-kristina-paukshtite-1591252-1.jpg") no-repeat center bottom;
   position: fixed;
   top: 0;
   left: 0;
@@ -26,7 +26,8 @@
   /*Chrome, Safari*/
 }
 
-#load P, .topText {
+#load P,
+.topText {
   top: 35%;
   left: 30%;
   position: absolute;
@@ -70,12 +71,12 @@
 }
 /*==================== rwd ====================*/
 @media (max-width: 768px) {
-  #load p, .topText {
+  #load p,
+  .topText {
     font-size: 3rem;
     top: 30%;
     left: 15%;
   }
-
   /*========== Animation ==========*/
   @keyframes textMove {
     0% {
