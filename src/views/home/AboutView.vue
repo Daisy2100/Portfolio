@@ -103,6 +103,8 @@ const backEndDeveloperText = `- 基礎 Python
 }
 
 .text{
-  width: 50%
+  width: 50%;
+  margin: 0 auto;
 }
+
 </style>

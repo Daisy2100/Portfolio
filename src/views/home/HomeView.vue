@@ -76,9 +76,9 @@
 import { RouterLink, RouterView } from 'vue-router'
 import { ref, onMounted, computed } from 'vue'
 
-import AboutView from '../home/AboutView.vue'
-import WorkView from '../home/WorkView.vue'
-import FooterView from '../home/FooterView.vue'
+import AboutView from '@/views/home/AboutView.vue'
+import WorkView from '@/views/home/WorkView.vue'
+import FooterView from '@/views/home/FooterView.vue'
 
 const scrollEnd = ref(document.documentElement.scrollHeight)
 const scrollNow = ref(document.documentElement.scrollTop)
