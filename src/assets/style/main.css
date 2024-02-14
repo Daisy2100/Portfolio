@@ -1,7 +1,7 @@
-/* @import './base.css';
+@import './base.css';
 @import '../style/sass/main.css';
 @import '../style/sass/load.css';
-@import '../style/sass/rwd.css'; */
+@import '../style/sass/rwd.css';
 
 @tailwind base;
 @tailwind components;
