@@ -1,0 +1,10 @@
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 全域樣式 */
+@use 'assets/scss/variables' as vars;
+@use 'assets/scss/mixins' as mixins;
+
+/* 您可以在這裡加入其他全域樣式 */

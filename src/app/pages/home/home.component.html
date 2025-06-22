@@ -1,60 +1,67 @@
 <div class="hero-section">
-    <div class="hero-container">
-        <div class="hero-content">
-            <h1 class="hero-title">
-                INTO THE FUTURE.
-            </h1>
-            <p class="hero-subtitle">
-                Welcome to our portfolio showcase
-            </p>
-        </div>
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        INTO THE FUTURE.
+      </h1>
+      <p class="hero-subtitle">
+        Welcome to our portfolio showcase
+      </p>
     </div>
+  </div>
 </div>
 
 <!-- 閃爍動畫元件 -->
 <app-flash-animation></app-flash-animation>
 
 <!-- 技能展示區域 -->
-<section class="skills-section"
-         pAnimateOnScroll
-         enterClass="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000"
-         leaveClass="animate-leave fade-out-0">
-    <div class="skills-container">
-        <div class="skills-header" >
-            <h2 class="skills-title">我的技能專長</h2>
-            <p class="skills-subtitle">專業技術能力展示</p>
-        </div>
-        <div class="skills-grid">
-            <p-card *ngFor="let skill of skills; let i = index" [header]="skill.category" class="skill-card"
-               [style.animation-delay.ms]="i * 200">
 
-                <ng-template pTemplate="header">
-                    <div class="skill-header">
-                        <div class="skill-icon">
-                            <i [class]="skill.icon"></i>
-                        </div>
-                        <h3 class="skill-title">{{ skill.category }}</h3>
-                    </div>
-                </ng-template>
+<div class="col-12 justify-content-center flex flex-column">
+  <h1 class="text-3xl font-bold underline text-center mt-10 text-white">
+    Angular v19.1 + Tailwind CSS 3.4
+  </h1>
+</div>
+<h1 class="text-3xl font-bold underline">
+  Hello world!
+</h1>
 
-                <div class="skill-content">
-                    <p class="skill-description">{{ skill.description }}</p>
-
-                    <div class="skill-technologies">
-                        <span *ngFor="let tech of skill.technologies" class="tech-tag">
-                            {{ tech }}
-                        </span>
-                    </div>
-                </div>
-            </p-card>
-        </div>
+<section class="skills-section" pAnimateOnScroll
+  enterClass="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000" leaveClass="animate-leave fade-out-0">
+  <div class="skills-container">
+    <div class="skills-header">
+      <h2 class="skills-title text-white">專長</h2>
     </div>
+    <div class="skills-grid">
+      <p-card *ngFor="let skill of skills; let i = index" [header]="skill.category" class="skill-card"
+        [style.animation-delay.ms]="i * 200">
+
+        <ng-template pTemplate="header">
+          <div class="skill-header">
+            <div class="skill-icon">
+              <i [class]="skill.icon"></i>
+            </div>
+            <h3 class="skill-title">{{ skill.category }}</h3>
+          </div>
+        </ng-template>
+
+        <div class="skill-content">
+          <p class="skill-description">{{ skill.description }}</p>
+
+          <div class="skill-technologies">
+            <span *ngFor="let tech of skill.technologies" class="tech-tag">
+              {{ tech }}
+            </span>
+          </div>
+        </div>
+      </p-card>
+    </div>
+  </div>
 </section>
 
 <!-- 演示內容區域，讓頁面有足夠高度進行滾動 -->
 <div class="demo-content">
-    <div class="demo-text">
-        <h2>滾動查看背景變化效果</h2>
-        <p>繼續滾動以查看背景圖片的漸變效果</p>
-    </div>
+  <div class="demo-text">
+    <h2>滾動查看背景變化效果</h2>
+    <p>繼續滾動以查看背景圖片的漸變效果</p>
+  </div>
 </div>

@@ -80,7 +80,8 @@
 // Skills Section
 .skills-section {
   padding: 4rem 0;
-  position: relative;  overflow: hidden;
+  position: relative;
+  overflow: hidden;
 
   .skills-container {
     max-width: 1280px;
@@ -92,11 +93,13 @@
 
   .skills-header {
     text-align: center;
-    margin-bottom: 3rem;    .skills-title {
+    margin-bottom: 3rem;
+
+    .skills-title {
       font-family: $font-family-primary;
       font-weight: $font-weight-bold;
       font-size: clamp(2rem, 4vw, 3rem);
-      color: $color-gray-900;
+      // color: $color-gray-900;
       margin-bottom: 1rem;
       letter-spacing: $letter-spacing-wide;
     }
@@ -109,6 +112,7 @@
       margin: 0;
     }
   }
+
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -124,6 +128,7 @@
       gap: 2.5rem;
     }
   }
+
   // PrimeNG Card 樣式覆蓋
   .skill-card {
     height: 100%; // 確保每個 card 高度一致
@@ -155,7 +160,9 @@
         padding: 0;
         flex: 1; // 確保內容區域延展
       }
-    }    .skill-header {
+    }
+
+    .skill-header {
       display: flex;
       align-items: center;
       margin-bottom: 0; // 移除底部邊距，因為已在 p-card-body 中處理
@@ -186,7 +193,9 @@
         line-height: 1.4;
         flex: 1; // 讓標題占用剩餘空間
       }
-    }    .skill-content {
+    }
+
+    .skill-content {
       display: flex;
       flex-direction: column;
       flex: 1; // 確保內容區域填滿剩餘空間
