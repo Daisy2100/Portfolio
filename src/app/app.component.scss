@@ -1,0 +1,60 @@
+@use '../assets/scss/variables' as *;
+
+// 背景圖片容器
+.app-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  .app-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: opacity 0.3s ease;
+
+    &.app-bg-1 {
+      background-image: url('/assets/home/bg-1.jpg');
+      opacity: 1;
+      z-index: 1;
+    }
+
+    &.app-bg-2 {
+      background-image: url('/assets/home/bg-2.jpg');
+      opacity: 0;
+      z-index: 3;
+    }
+
+    &.app-bg-3 {
+      background-image: url('/assets/home/bg-3.jpg');
+      opacity: 0;
+      z-index: 2;
+    }
+  }
+}
+
+// 確保整個應用程式佔滿整個螢幕高度
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+// 為了確保 router-outlet 的內容能夠填滿可用空間
+:host ::ng-deep router-outlet + * {
+  flex: 1;
+}

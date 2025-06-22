@@ -1,14 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app/app.config';
+import { AppComponent } from './app/app.component';
 
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-
-import FontAwesomeIcon from "./utilities/fontawesome-icons";
-
-const app = createApp(App)
-
-app.component("FontAwesomeIcon", FontAwesomeIcon);
-app.use(router);
-app.mount("#app");
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));
