@@ -14,17 +14,7 @@
 <!-- 閃爍動畫元件 -->
 <app-flash-animation></app-flash-animation>
 
-<!-- 技能展示區域 -->
-
-<div class="col-12 justify-content-center flex flex-column">
-  <h1 class="text-3xl font-bold underline text-center mt-10 text-white">
-    Angular v19.1 + Tailwind CSS 3.4
-  </h1>
-</div>
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
-
+<!-- 技能 -->
 <section class="skills-section" pAnimateOnScroll
   enterClass="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000" leaveClass="animate-leave fade-out-0">
   <div class="skills-container">
@@ -54,14 +44,106 @@
           </div>
         </div>
       </p-card>
+    </div>  </div>
+</section>
+
+<!-- 閃爍動畫元件 -->
+<app-flash-animation></app-flash-animation>
+
+<!-- 工作經歷區域 -->
+<section class="experience-section py-16" pAnimateOnScroll
+  enterClass="animate-enter fade-in-10 slide-in-from-r-8 animate-duration-1000" leaveClass="animate-leave fade-out-0">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">工作經歷</h2>
+    </div>
+    <div class="timeline-container">
+      <p-timeline [value]="workExperience" align="alternate">
+        <ng-template pTemplate="marker" let-event>
+          <div class="w-12 h-12 bg-white rounded-full border-4 flex items-center justify-center shadow-lg" [style.border-color]="event.color">
+            <i [class]="event.icon" [style.color]="event.color" class="text-xl"></i>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="content" let-event>
+          <p-card class="mb-4 shadow-md">
+            <ng-template pTemplate="header">
+              <div class="bg-gray-100 p-4 flex justify-between items-center">
+                <div class="text-sm font-semibold text-blue-600">{{ event.period }}</div>
+                <div class="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium">{{ event.duration }}</div>
+              </div>
+            </ng-template>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-blue-600 mb-2">{{ event.title }}</h3>
+              <h4 class="text-lg font-medium text-gray-600 mb-4">{{ event.company }}</h4>
+
+              <div class="mb-4">
+                <h5 class="text-base font-semibold text-amber-600 mb-2">【工作內容】</h5>
+                <ul class="list-disc pl-6 space-y-1">
+                  <li *ngFor="let responsibility of event.responsibilities" class="text-gray-700">{{ responsibility }}</li>
+                </ul>
+              </div>
+
+              <div class="mb-4">
+                <h5 class="text-base font-semibold text-amber-600 mb-2">【專案成就】</h5>
+                <ul class="list-disc pl-6 space-y-1">
+                  <li *ngFor="let achievement of event.achievements" class="text-gray-700">{{ achievement }}</li>
+                </ul>
+              </div>
+            </div>
+          </p-card>
+        </ng-template>
+      </p-timeline>
     </div>
   </div>
 </section>
 
-<!-- 演示內容區域，讓頁面有足夠高度進行滾動 -->
-<div class="demo-content">
-  <div class="demo-text">
-    <h2>滾動查看背景變化效果</h2>
-    <p>繼續滾動以查看背景圖片的漸變效果</p>
+<!-- 閃爍動畫元件 -->
+<app-flash-animation></app-flash-animation>
+
+<!-- 學歷區域 -->
+<section class="education-section  py-16" pAnimateOnScroll
+  enterClass="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000" leaveClass="animate-leave fade-out-0">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">學歷</h2>
+    </div>
+    <div class="timeline-container">
+      <p-timeline [value]="education" align="alternate">
+        <ng-template pTemplate="marker" let-event>
+          <div class="w-12 h-12 bg-white rounded-full border-4 flex items-center justify-center shadow-lg" [style.border-color]="event.color">
+            <i [class]="event.icon" [style.color]="event.color" class="text-xl"></i>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="content" let-event>
+          <p-card class="mb-4 shadow-md">
+            <ng-template pTemplate="header">
+              <div class="bg-gray-100 p-4">
+                <div class="text-sm font-semibold text-blue-600">{{ event.period }}</div>
+              </div>
+            </ng-template>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-blue-600 mb-2">{{ event.title }}</h3>
+              <h4 class="text-lg font-medium text-gray-600 mb-2">{{ event.institution }}</h4>
+              <div class="text-gray-500 mb-4">{{ event.department }}</div>
+
+              <div class="mb-4" *ngIf="event.lab">
+                <div class="text-amber-600 font-medium mb-1">{{ event.lab }}</div>
+                <div class="text-gray-700">研究方向：{{ event.research }}</div>
+              </div>
+
+              <div *ngIf="event.project">
+                <h5 class="text-base font-semibold text-amber-600 mb-2">畢業專題：{{ event.project.title }}</h5>
+                <div class="flex flex-wrap gap-2">
+                  <span *ngFor="let tech of event.project.technologies"
+                        class="bg-gray-100 text-gray-700 px-3 py-1 rounded-lg text-sm font-medium border">
+                    {{ tech }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </p-card>
+        </ng-template>
+      </p-timeline>
+    </div>
   </div>
-</div>
+</section>
