@@ -12,14 +12,14 @@ $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
 // Font Sizes
-$font-size-xs: 0.6875rem;   // 11px
-$font-size-sm: 0.75rem;     // 12px
-$font-size-base: 0.875rem;  // 14px
-$font-size-lg: 1rem;        // 16px
-$font-size-xl: 1.25rem;     // 20px
-$font-size-2xl: 1.75rem;    // 28px
-$font-size-3xl: 2.25rem;    // 36px
-$font-size-4xl: 3rem;       // 48px
+$font-size-xs: 0.6875rem; // 11px
+$font-size-sm: 0.75rem; // 12px
+$font-size-base: 0.875rem; // 14px
+$font-size-lg: 1rem; // 16px
+$font-size-xl: 1.25rem; // 20px
+$font-size-2xl: 1.75rem; // 28px
+$font-size-3xl: 2.25rem; // 36px
+$font-size-4xl: 3rem; // 48px
 
 // Letter Spacing
 $letter-spacing-tight: -0.025em;
@@ -33,7 +33,7 @@ $color-black: #000000;
 $color-white: #ffffff;
 
 // Primary Colors
-$color-primary: #3b82f6;        // Blue-500
+$color-primary: #3b82f6; // Blue-500
 $color-primary-50: #eff6ff;
 $color-primary-100: #dbeafe;
 $color-primary-200: #bfdbfe;
@@ -58,12 +58,12 @@ $color-gray-800: #2d3748;
 $color-gray-900: #1a202c;
 
 // Dark Colors (for dark theme)
-$color-dark-700: #374151;      // Gray-700
-$color-dark-800: #1f2937;      // Gray-800
-$color-dark-900: #111827;      // Gray-900
+$color-dark-700: #374151; // Gray-700
+$color-dark-800: #1f2937; // Gray-800
+$color-dark-900: #111827; // Gray-900
 
 // Accent Colors
-$color-accent-primary: #10b981;   // Emerald-500
+$color-accent-primary: #10b981; // Emerald-500
 $color-accent-secondary: #f59e0b; // Amber-500
 
 // Transitions
@@ -72,12 +72,12 @@ $transition-normal: 0.3s ease;
 $transition-slow: 0.5s ease;
 
 // Spacing
-$spacing-xs: 0.25rem;   // 4px
-$spacing-sm: 0.5rem;    // 8px
-$spacing-md: 1rem;      // 16px
-$spacing-lg: 1.5rem;    // 24px
-$spacing-xl: 2rem;      // 32px
-$spacing-2xl: 3rem;     // 48px
+$spacing-xs: 0.25rem; // 4px
+$spacing-sm: 0.5rem; // 8px
+$spacing-md: 1rem; // 16px
+$spacing-lg: 1.5rem; // 24px
+$spacing-xl: 2rem; // 32px
+$spacing-2xl: 3rem; // 48px
 
 // Z-index
 $z-index-dropdown: 1000;
@@ -91,11 +91,11 @@ $z-index-tooltip: 1070;
 // Color helper functions using modern Sass syntax
 // 替代舊版 darken() 函數的現代化方法
 @function darken-color($color, $amount) {
-  @return color.adjust($color, $lightness: -$amount);
+    @return color.adjust($color, $lightness: -$amount);
 }
 
 @function lighten-color($color, $amount) {
-  @return color.adjust($color, $lightness: $amount);
+    @return color.adjust($color, $lightness: $amount);
 }
 
 // 常用的顏色變體

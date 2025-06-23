@@ -1,0 +1,10 @@
+<div *ngIf="show" class="intro-animation fixed inset-0 flex items-center justify-center bg-gray-900">
+    <span class="intro-title text-white text-6xl font-bold tracking-widest select-none z-30">
+        DAISY
+    </span>
+    <div class="intro-bg-white absolute inset-x-0 bottom-0 h-full bg-white z-10 transition-transform duration-700">
+    </div>
+    <div class="intro-bg-gray absolute inset-0 bg-gray-900 z-20 transition-transform duration-700"
+        (transitionend)="onAnimationEnd()">
+    </div>
+</div>

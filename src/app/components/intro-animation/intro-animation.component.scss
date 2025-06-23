@@ -1,0 +1,33 @@
+@use 'sass:color';
+@use '../../../assets/scss/variables' as *;
+
+
+.intro-animation {
+    @apply fixed inset-0  flex items-center justify-center bg-gray-900;
+
+    z-index: 1050;
+
+    .intro-title {
+        @apply text-white text-6xl font-bold tracking-widest select-none transition-opacity duration-700;
+
+        &.fade-out {
+            @apply opacity-0;
+        }
+    }
+
+    .intro-bg-gray {
+        @apply absolute inset-0 bg-gray-900 z-20 transition-transform duration-700;
+
+        &.slide-up {
+            transform: translateY(-100%);
+        }
+    }
+
+    .intro-bg-white {
+        @apply absolute inset-x-0 bottom-0 h-full bg-white z-10 transition-transform duration-700;
+
+        &.slide-up {
+            transform: translateY(-100%);
+        }
+    }
+}
