@@ -1,32 +1,138 @@
-<div class="about-container">
-  <section class="about-hero">
-    <div class="hero-content">
-      <h1 class="about-title">關於我們</h1>
-      <p class="about-subtitle">了解我們的故事與使命</p>
+<div class=" overflow-hidden bg-gradient-to-br  to-indigo-100">
+    <!-- Header Section -->
+    <div class="pt-20 pb-8 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h1 class="text-4xl font-bold text-white mb-4">關於我</h1>
+            <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mb-6"></div>
+            <p class="text-xl text-gray-100">專業 · 熱忱 · 創新</p>
+        </div>
     </div>
-  </section>
 
-  <section class="about-content">
-    <div class="content-wrapper">
-      <div class="about-section">
-        <h2>我們的使命</h2>
-        <p>致力於提供優質的服務與產品，為客戶創造最大價值。</p>
-      </div>
+    <!-- Content Section -->
+    <div class="flex-1 overflow-y-auto px-6 pb-8">
+        <div class="max-w-6xl mx-auto">
+            <!-- Main Profile Card -->
+            <p-card class="mb-8 shadow-xl bg-white rounded-xl border-0" pAnimateOnScroll
+                enterClass="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000"
+                leaveClass="animate-leave fade-out-0">
+                <ng-template pTemplate="header">
+                    <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-6 rounded-t-xl">
+                        <div class="flex items-center gap-4 text-white">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                                <i class="pi pi-user text-2xl"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl font-bold">林紫涵</h2>
+                                <p class="text-blue-100">全端工程師 · 4年+ 經驗</p>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+                <div class="p-1">
+                    <div class="text-lg text-gray-700 leading-relaxed space-y-4">
+                        <p class="flex items-start gap-3">
+                            <i class="pi pi-code text-blue-500 mt-1 flex-shrink-0"></i>
+                            <span>專精於 <strong>C#、.NET、Angular 與 Vue.js</strong> 等技術，具備完整的全端開發能力</span>
+                        </p>
+                        <p class="flex items-start gap-3">
+                            <i class="pi pi-users text-green-500 mt-1 flex-shrink-0"></i>
+                            <span>具備系統整合與跨部門協作能力，能與PM、SA團隊協作進行需求訪談與時程評估</span>
+                        </p>
+                        <p class="flex items-start gap-3">
+                            <i class="pi pi-cog text-purple-500 mt-1 flex-shrink-0"></i>
+                            <span>專長於解決複雜系統效能問題，如透過資料庫分區技術優化大量數據查詢</span>
+                        </p>
+                        <p class="flex items-start gap-3">
+                            <i class="pi pi-graduation-cap text-orange-500 mt-1 flex-shrink-0"></i>
+                            <span>目前就讀<strong>國立中興大學資訊工程系在職碩士</strong>，積極拓展AI與雲端技術領域</span>
+                        </p>
+                    </div>
+                </div>
+            </p-card>
 
-      <div class="about-section">
-        <h2>我們的願景</h2>
-        <p>成為業界領先的品牌，持續創新並追求卓越。</p>
-      </div>
+            <!-- Info Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-      <div class="about-section">
-        <h2>我們的價值觀</h2>
-        <ul>
-          <li>誠信為本</li>
-          <li>客戶至上</li>
-          <li>持續創新</li>
-          <li>團隊合作</li>
-        </ul>
-      </div>
+                <!-- Skills Card -->
+                <p-card class="shadow-lg bg-white rounded-xl border-0 mt-5" pAnimateOnScroll
+                    enterClass="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000"
+                    leaveClass="animate-leave fade-out-0">
+                    <ng-template pTemplate="header">
+                        <div class="bg-gradient-to-r from-purple-500 to-violet-600 p-4 rounded-t-xl">
+                            <div class="flex items-center gap-3 text-white">
+                                <i class="pi pi-star text-xl"></i>
+                                <span class="font-semibold text-lg">核心技能</span>
+                            </div>
+                        </div>
+                    </ng-template>
+                    <div class="p-1">
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                                <span class="text-gray-700">全端開發</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                                <span class="text-gray-700">系統整合</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                                <span class="text-gray-700">效能優化</span>
+                            </div>
+                        </div>
+                    </div>
+                </p-card>
+
+                <!-- Goals Card -->
+                <p-card class="shadow-lg bg-white rounded-xl border-0 mt-5" pAnimateOnScroll
+                    enterClass="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000"
+                    leaveClass="animate-leave fade-out-0">
+                    <ng-template pTemplate="header">
+                        <div class="bg-gradient-to-r from-orange-500 to-red-500 p-4 rounded-t-xl">
+                            <div class="flex items-center gap-3 text-white">
+                                <i class="pi pi-target text-xl"></i>
+                                <span class="font-semibold text-lg">職涯目標</span>
+                            </div>
+                        </div>
+                    </ng-template>
+                    <div class="p-1">
+                        <div class="space-y-3 text-gray-700">
+                            <div class="flex items-start gap-2">
+                                <i class="pi pi-arrow-right text-orange-500 mt-1 text-sm"></i>
+                                <span class="text-sm">持續學習新技術</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i class="pi pi-arrow-right text-orange-500 mt-1 text-sm"></i>
+                                <span class="text-sm">拓展AI領域知識</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i class="pi pi-arrow-right text-orange-500 mt-1 text-sm"></i>
+                                <span class="text-sm">創造更大價值</span>
+                            </div>
+                        </div>
+                    </div>
+                </p-card>
+
+                <!-- Contact Card -->
+                <p-card class="shadow-lg bg-white rounded-xl border-0 mt-5" pAnimateOnScroll
+                    enterClass="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000"
+                    leaveClass="animate-leave fade-out-0">
+                    <ng-template pTemplate="header">
+                        <div class="bg-gradient-to-r from-green-500 to-emerald-600 p-4 rounded-t-xl">
+                            <div class="flex items-center gap-3 text-white">
+                                <i class="pi pi-envelope text-xl"></i>
+                                <span class="font-semibold text-lg">聯絡方式</span>
+                            </div>
+                        </div>
+                    </ng-template>
+                    <div class="p-1">
+                        <div class="flex items-center gap-3 text-gray-700">
+                            <i class="pi pi-at text-green-500"></i>
+                            <span class="break-all">flin951753&#64;gmail.com</span>
+                        </div>
+                    </div>
+                </p-card>
+            </div>
+        </div>
     </div>
-  </section>
 </div>

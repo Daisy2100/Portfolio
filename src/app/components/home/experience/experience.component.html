@@ -13,7 +13,8 @@
                         [style.border-color]="event.color">
                         <i [class]="event.icon" [style.color]="event.color" class="text-xl"></i>
                     </div>
-                </ng-template> <ng-template pTemplate="content" let-event>
+                </ng-template>
+                <ng-template pTemplate="content" let-event>
                     <p-card class="mb-4 shadow-lg bg-white">
                         <ng-template pTemplate="header">
                             <div class="bg-gradient-to-r to-indigo-50 p-4 flex justify-between items-center border-b">
@@ -29,7 +30,8 @@
                                 <div class="mb-4">
                                     <h5 class="text-base font-semibold text-amber-600 mb-2">【工作內容】</h5>
                                     <ul class="list-disc pl-6 space-y-1">
-                                        <li *ngFor="let responsibility of event.responsibilities" class="text-gray-700">{{
+                                        <li *ngFor="let responsibility of event.responsibilities" class="text-gray-700">
+                                            {{
                                             responsibility }}</li>
                                     </ul>
                                 </div>
