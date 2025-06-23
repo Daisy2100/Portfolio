@@ -1,149 +1,30 @@
 <div class="hero-section">
-  <div class="hero-container">
-    <div class="hero-content">
-      <h1 class="hero-title">
-        INTO THE FUTURE.
-      </h1>
-      <p class="hero-subtitle">
-        Welcome to our portfolio showcase
-      </p>
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                INTO THE FUTURE.
+            </h1>
+            <p class="hero-subtitle">
+                Welcome to our portfolio showcase
+            </p>
+        </div>
     </div>
-  </div>
 </div>
 
 <!-- 閃爍動畫元件 -->
 <app-flash-animation></app-flash-animation>
 
 <!-- 技能 -->
-<section class="skills-section" pAnimateOnScroll
-  enterClass="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000" leaveClass="animate-leave fade-out-0">
-  <div class="skills-container">
-    <div class="skills-header">
-      <h2 class="skills-title text-white">專長</h2>
-    </div>
-    <div class="skills-grid">
-      <p-card *ngFor="let skill of skills; let i = index" [header]="skill.category" class="skill-card"
-        [style.animation-delay.ms]="i * 200">
-
-        <ng-template pTemplate="header">
-          <div class="skill-header">
-            <div class="skill-icon">
-              <i [class]="skill.icon"></i>
-            </div>
-            <h3 class="skill-title">{{ skill.category }}</h3>
-          </div>
-        </ng-template>
-
-        <div class="skill-content">
-          <p class="skill-description">{{ skill.description }}</p>
-
-          <div class="skill-technologies">
-            <span *ngFor="let tech of skill.technologies" class="tech-tag">
-              {{ tech }}
-            </span>
-          </div>
-        </div>
-      </p-card>
-    </div>  </div>
-</section>
+<app-skills [skills]="skills"></app-skills>
 
 <!-- 閃爍動畫元件 -->
 <app-flash-animation></app-flash-animation>
 
 <!-- 工作經歷區域 -->
-<section class="experience-section py-16" pAnimateOnScroll
-  enterClass="animate-enter fade-in-10 slide-in-from-r-8 animate-duration-1000" leaveClass="animate-leave fade-out-0">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-gray-800 mb-4">工作經歷</h2>
-    </div>
-    <div class="timeline-container">
-      <p-timeline [value]="workExperience" align="alternate">
-        <ng-template pTemplate="marker" let-event>
-          <div class="w-12 h-12 bg-white rounded-full border-4 flex items-center justify-center shadow-lg" [style.border-color]="event.color">
-            <i [class]="event.icon" [style.color]="event.color" class="text-xl"></i>
-          </div>
-        </ng-template>
-        <ng-template pTemplate="content" let-event>
-          <p-card class="mb-4 shadow-md">
-            <ng-template pTemplate="header">
-              <div class="bg-gray-100 p-4 flex justify-between items-center">
-                <div class="text-sm font-semibold text-blue-600">{{ event.period }}</div>
-                <div class="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium">{{ event.duration }}</div>
-              </div>
-            </ng-template>
-            <div class="p-6">
-              <h3 class="text-2xl font-bold text-blue-600 mb-2">{{ event.title }}</h3>
-              <h4 class="text-lg font-medium text-gray-600 mb-4">{{ event.company }}</h4>
-
-              <div class="mb-4">
-                <h5 class="text-base font-semibold text-amber-600 mb-2">【工作內容】</h5>
-                <ul class="list-disc pl-6 space-y-1">
-                  <li *ngFor="let responsibility of event.responsibilities" class="text-gray-700">{{ responsibility }}</li>
-                </ul>
-              </div>
-
-              <div class="mb-4">
-                <h5 class="text-base font-semibold text-amber-600 mb-2">【專案成就】</h5>
-                <ul class="list-disc pl-6 space-y-1">
-                  <li *ngFor="let achievement of event.achievements" class="text-gray-700">{{ achievement }}</li>
-                </ul>
-              </div>
-            </div>
-          </p-card>
-        </ng-template>
-      </p-timeline>
-    </div>
-  </div>
-</section>
+<app-experience [workExperience]="workExperience"></app-experience>
 
 <!-- 閃爍動畫元件 -->
 <app-flash-animation></app-flash-animation>
 
 <!-- 學歷區域 -->
-<section class="education-section  py-16" pAnimateOnScroll
-  enterClass="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000" leaveClass="animate-leave fade-out-0">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-gray-800 mb-4">學歷</h2>
-    </div>
-    <div class="timeline-container">
-      <p-timeline [value]="education" align="alternate">
-        <ng-template pTemplate="marker" let-event>
-          <div class="w-12 h-12 bg-white rounded-full border-4 flex items-center justify-center shadow-lg" [style.border-color]="event.color">
-            <i [class]="event.icon" [style.color]="event.color" class="text-xl"></i>
-          </div>
-        </ng-template>
-        <ng-template pTemplate="content" let-event>
-          <p-card class="mb-4 shadow-md">
-            <ng-template pTemplate="header">
-              <div class="bg-gray-100 p-4">
-                <div class="text-sm font-semibold text-blue-600">{{ event.period }}</div>
-              </div>
-            </ng-template>
-            <div class="p-6">
-              <h3 class="text-2xl font-bold text-blue-600 mb-2">{{ event.title }}</h3>
-              <h4 class="text-lg font-medium text-gray-600 mb-2">{{ event.institution }}</h4>
-              <div class="text-gray-500 mb-4">{{ event.department }}</div>
-
-              <div class="mb-4" *ngIf="event.lab">
-                <div class="text-amber-600 font-medium mb-1">{{ event.lab }}</div>
-                <div class="text-gray-700">研究方向：{{ event.research }}</div>
-              </div>
-
-              <div *ngIf="event.project">
-                <h5 class="text-base font-semibold text-amber-600 mb-2">畢業專題：{{ event.project.title }}</h5>
-                <div class="flex flex-wrap gap-2">
-                  <span *ngFor="let tech of event.project.technologies"
-                        class="bg-gray-100 text-gray-700 px-3 py-1 rounded-lg text-sm font-medium border">
-                    {{ tech }}
-                  </span>
-                </div>
-              </div>
-            </div>
-          </p-card>
-        </ng-template>
-      </p-timeline>
-    </div>
-  </div>
-</section>
+<app-education [education]="education"></app-education>

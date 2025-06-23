@@ -1,5 +1,67 @@
 @use 'scss/_variables' as *;
 
+/* Import PrimeIcons */
+@import "primeicons/primeicons.css";
+
+/* PrimeNG 動畫樣式 */
+// 淡入動畫
+.animate-enter {
+  animation-fill-mode: both;
+}
+
+.animate-leave {
+  animation-fill-mode: both;
+}
+
+.fade-in-10 {
+  animation-name: fadeIn;
+  opacity: 0;
+}
+
+.fade-out-0 {
+  animation-name: fadeOut;
+  opacity: 1;
+}
+
+.slide-in-from-l-8 {
+  animation-name: slideInLeft;
+  transform: translateX(-2rem);
+}
+
+.animate-duration-1000 {
+  animation-duration: 1000ms;
+}
+
+// 動畫定義
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 /* Global Styles */
 * {
   box-sizing: border-box;
