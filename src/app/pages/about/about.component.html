@@ -1,6 +1,6 @@
 <div class=" overflow-hidden bg-gradient-to-br  to-indigo-100">
     <!-- Header Section -->
-    <div class="pt-20 pb-8 text-center">
+    <div class="pt-20 pb-8 text-center" pAnimateOnScroll enterClass="animate-fade-in-up">
         <div class="max-w-4xl mx-auto px-6">
             <h1 class="text-4xl font-bold text-white mb-4">關於我</h1>
             <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mb-6"></div>
@@ -11,10 +11,9 @@
     <!-- Content Section -->
     <div class="flex-1 overflow-y-auto px-6 pb-8">
         <div class="max-w-6xl mx-auto">
+
             <!-- Main Profile Card -->
-            <p-card class="mb-8 shadow-xl bg-white rounded-xl border-0" pAnimateOnScroll
-                enterClass="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000"
-                leaveClass="animate-leave fade-out-0">
+            <p-card class=" rounded-xl border-0 mt-5" pAnimateOnScroll enterClass="animate-fade-in-up">
                 <ng-template pTemplate="header">
                     <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-6 rounded-t-xl">
                         <div class="flex items-center gap-4 text-white">
@@ -29,22 +28,22 @@
                     </div>
                 </ng-template>
                 <div class="p-1">
-                    <div class="text-lg text-gray-700 leading-relaxed space-y-4">
+                    <div class="space-y-3">
                         <p class="flex items-start gap-3">
                             <i class="pi pi-code text-blue-500 mt-1 flex-shrink-0"></i>
-                            <span>專精於 <strong>C#、.NET、Angular 與 Vue.js</strong> 等技術，具備完整的全端開發能力</span>
+                            <span class="text-gray-700">專精於 <strong>C#、.NET、Angular 與 Vue.js</strong> 等技術，具備完整的全端開發能力</span>
                         </p>
                         <p class="flex items-start gap-3">
                             <i class="pi pi-users text-green-500 mt-1 flex-shrink-0"></i>
-                            <span>具備系統整合與跨部門協作能力，能與PM、SA團隊協作進行需求訪談與時程評估</span>
+                            <span class="text-gray-700">具備系統整合與跨部門協作能力，能與PM、SA團隊協作進行需求訪談與時程評估</span>
                         </p>
                         <p class="flex items-start gap-3">
                             <i class="pi pi-cog text-purple-500 mt-1 flex-shrink-0"></i>
-                            <span>專長於解決複雜系統效能問題，如透過資料庫分區技術優化大量數據查詢</span>
+                            <span class="text-gray-700">專長於解決複雜系統效能問題，如透過資料庫分區技術優化大量數據查詢</span>
                         </p>
                         <p class="flex items-start gap-3">
                             <i class="pi pi-graduation-cap text-orange-500 mt-1 flex-shrink-0"></i>
-                            <span>目前就讀<strong>國立中興大學資訊工程系在職碩士</strong>，積極拓展AI與雲端技術領域</span>
+                            <span class="text-gray-700">目前就讀<strong>國立中興大學資訊工程系在職碩士</strong>，積極拓展AI與雲端技術領域</span>
                         </p>
                     </div>
                 </div>
@@ -54,8 +53,8 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                 <!-- Skills Card -->
-                <p-card class="shadow-lg bg-white rounded-xl border-0 mt-5" pAnimateOnScroll
-                    enterClass="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000"
+                <p-card class=" rounded-xl border-0 mt-5" pAnimateOnScroll
+                    enterClass="animate-fade-in-up"
                     leaveClass="animate-leave fade-out-0">
                     <ng-template pTemplate="header">
                         <div class="bg-gradient-to-r from-purple-500 to-violet-600 p-4 rounded-t-xl">
@@ -84,8 +83,8 @@
                 </p-card>
 
                 <!-- Goals Card -->
-                <p-card class="shadow-lg bg-white rounded-xl border-0 mt-5" pAnimateOnScroll
-                    enterClass="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000"
+                <p-card class=" rounded-xl border-0 mt-5" pAnimateOnScroll
+                    enterClass="animate-fade-in-up"
                     leaveClass="animate-leave fade-out-0">
                     <ng-template pTemplate="header">
                         <div class="bg-gradient-to-r from-orange-500 to-red-500 p-4 rounded-t-xl">
@@ -114,8 +113,8 @@
                 </p-card>
 
                 <!-- Contact Card -->
-                <p-card class="shadow-lg bg-white rounded-xl border-0 mt-5" pAnimateOnScroll
-                    enterClass="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000"
+                <p-card class=" rounded-xl border-0 mt-5" pAnimateOnScroll
+                    enterClass="animate-fade-in-up"
                     leaveClass="animate-leave fade-out-0">
                     <ng-template pTemplate="header">
                         <div class="bg-gradient-to-r from-green-500 to-emerald-600 p-4 rounded-t-xl">

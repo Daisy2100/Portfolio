@@ -1,17 +1,16 @@
-
 <!-- 動畫 -->
 <app-intro-animation *ngIf="showIntro"></app-intro-animation>
 
 <!-- 背景 -->
 <div class="app-background">
-  <div class="app-bg app-bg-1"></div>
-  <div class="app-bg app-bg-2"></div>
-  <div class="app-bg app-bg-3"></div>
+    <div class="app-bg app-bg-1"></div>
+    <div class="app-bg app-bg-2"></div>
+    <div class="app-bg app-bg-3"></div>
 </div>
 
 <app-navigation ngSkipHydration></app-navigation>
 
 <main>
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 </main>
 <app-footer></app-footer>

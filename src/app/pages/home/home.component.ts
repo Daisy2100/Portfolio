@@ -14,41 +14,41 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
     styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-        skills = [
-            {
-                category: 'Backend',
-                icon: 'pi pi-server',
-                description: '專精於後端系統架構設計，具備豐富的 .NET 框架開發經驗，能夠建構高效能、可擴展的 API 服務',
-                technologies: ['C#', '.NET 8', 'Entity Framework', 'OAuth2.0', 'Node.js', 'Express.js']
-            },
-            {
-                category: 'Frontend',
-                icon: 'pi pi-desktop',
-                description: '擅長現代化前端框架開發，熟悉響應式設計與用戶體驗優化，能夠打造直觀且高效的使用者介面',
-                technologies: ['Angular', 'Vue.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'SCSS']
-            },
-            {
-                category: 'Database',
-                icon: 'pi pi-database',
-                description: '具備完整的資料庫設計與優化能力，熟悉大數據處理與高可用性架構，能有效解決效能瓶頸問題',
-                technologies: ['MySQL', 'MSSQL', 'Redis', 'TimescaleDB', 'Stored Procedure', 'Partition', 'MHA']
-            },
-            {
-                category: 'DevOps & Others',
-                icon: 'pi pi-cog',
-                description: '擁有完整的 DevOps 流程管理經驗，熟悉容器化部署與雲端服務整合，提升開發與維運效率',
-                technologies: [
-                    'Docker',
-                    'Grafana',
-                    'Linux', 'Codepliot', 'GCP', 'Nginx', 'Git'
-                ]
-            }
-        ];
+    skills = [
+        {
+            category: 'Backend',
+            icon: 'pi pi-server',
+            description: '專精於後端系統架構設計，具備豐富的 .NET 框架開發經驗，能夠建構高效能、可擴展的 API 服務',
+            technologies: ['C#', '.NET 8', 'Entity Framework', 'OAuth2.0', 'Node.js', 'Express.js']
+        },
+        {
+            category: 'Frontend',
+            icon: 'pi pi-desktop',
+            description: '擅長現代化前端框架開發，熟悉響應式設計與用戶體驗優化，能夠打造直觀且高效的使用者介面',
+            technologies: ['Angular', 'Vue.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'SCSS']
+        },
+        {
+            category: 'Database',
+            icon: 'pi pi-database',
+            description: '具備完整的資料庫設計與優化能力，熟悉大數據處理與高可用性架構，能有效解決效能瓶頸問題',
+            technologies: ['MySQL', 'MSSQL', 'Redis', 'TimescaleDB', 'Stored Procedure', 'Partition', 'MHA']
+        },
+        {
+            category: 'DevOps & Others',
+            icon: 'pi pi-cog',
+            description: '擁有完整的 DevOps 流程管理經驗，熟悉容器化部署與雲端服務整合，提升開發與維運效率',
+            technologies: [
+                'Docker',
+                'Grafana',
+                'Linux', 'Codepliot', 'GCP', 'Nginx', 'Git'
+            ]
+        }
+    ];
 
     // 工作經歷
     workExperience = [
         {
-            period: '2021/07 - 現在',
+            period: '2021/04 - 現在',
             title: '全端工程師',
             company: '精誠資訊股份有限公司',
             duration: '3 years+',
@@ -59,7 +59,9 @@ export class HomeComponent {
                 '依需求開發API、維運'
             ],
             icon: 'pi pi-briefcase',
-            color: '#0d9488'
+            color: '#0d9488',
+            tags: ['C#', 'Entity Framework', 'Angular', 'Vue.js', 'Mysql', 'Mssql', 'Docker'],
+            detailRoute: '/work/systex'
         },
         {
             period: '2019/07 - 2021/04',
@@ -71,7 +73,9 @@ export class HomeComponent {
                 '使用 JQuery / HTML / CSS 串接購物車'
             ],
             icon: 'pi pi-desktop',
-            color: '#10b981'
+            color: '#10b981',
+            tags: ['jQuery', 'HTML', 'CSS', 'JavaScript'],
+            detailRoute: '/work/access'
         }
     ];
 

@@ -43,29 +43,29 @@ export class NavigationService {
                 path: '/about',
                 order: 1
             },
-            //   {
-            //     id: 'news',
-            //     displayName: '最新消息',
-            //     path: '/news',
-            //     order: 2,
-            //     hasChildren: true,
-            //     children: [
-            //       {
-            //         id: 'news-company',
-            //         displayName: '公司動態',
-            //         path: '/news/company',
-            //         order: 0,
-            //         parentId: 'news'
-            //       },
-            //       {
-            //         id: 'news-product',
-            //         displayName: '產品資訊',
-            //         path: '/news/product',
-            //         order: 1,
-            //         parentId: 'news'
-            //       }
-            //     ]
-            //   },
+            {
+                id: 'work',
+                displayName: '工作成果',
+                path: '/work',
+                order: 2,
+                hasChildren: true,
+                children: [
+                    {
+                        id: 'systex',
+                        displayName: '精誠資訊',
+                        path: '/work/systex',
+                        order: 0,
+                        parentId: 'work'
+                    },
+                    {
+                        id: 'access',
+                        displayName: 'ACCESS Taiwan',
+                        path: '/work/access',
+                        order: 1,
+                        parentId: 'work'
+                    }
+                ]
+            },
             //   {
             //     id: 'contact',
             //     displayName: '聯絡我們',

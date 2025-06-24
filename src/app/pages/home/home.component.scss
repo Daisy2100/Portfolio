@@ -1,263 +1,266 @@
 @use '../../assets/scss/_variables' as *;
 
 .hero-section {
-  min-height: 100vh;
-  position: relative;
-  font-family: $font-family-primary;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-
-  .hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-
-    .hero-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      transition: opacity 0.3s ease;
-    }
-  }
-
-  .hero-container {
-    width: 100%;
-    padding-bottom: 3rem;
+    min-height: 100vh;
     position: relative;
-    z-index: 10;
-
-    .hero-content {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      text-align: left;
-    }
-  }
-
-  .hero-title {
     font-family: $font-family-primary;
-    font-weight: $font-weight-light;
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    color: white;
-    letter-spacing: $letter-spacing-wide;
-    margin-bottom: 1rem;
-    line-height: 1.1;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
 
-    @media (min-width: 768px) {
-      font-size: clamp(3.5rem, 8vw, 6rem);
+    .hero-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            transition: opacity 0.3s ease;
+        }
     }
-  }
 
-  .hero-subtitle {
-    font-family: $font-family-primary;
-    font-weight: $font-weight-normal;
-    font-size: 1rem;
-    color: white;
-    line-height: 1.6;
-    max-width: 24rem;
-    margin: 0;
+    .hero-container {
+        width: 100%;
+        padding-bottom: 3rem;
+        position: relative;
+        z-index: 10;
 
-    @media (min-width: 768px) {
-      font-size: 1.125rem;
+        .hero-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: left;
+        }
     }
-  }
+
+    .hero-title {
+        font-family: $font-family-primary;
+        font-weight: $font-weight-light;
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        color: white;
+        letter-spacing: $letter-spacing-wide;
+        margin-bottom: 1rem;
+        line-height: 1.1;
+
+        @media (min-width: 768px) {
+            font-size: clamp(3.5rem, 8vw, 6rem);
+        }
+    }
+
+    .hero-subtitle {
+        font-family: $font-family-primary;
+        font-weight: $font-weight-normal;
+        font-size: 1rem;
+        color: white;
+        line-height: 1.6;
+        max-width: 24rem;
+        margin: 0;
+
+        @media (min-width: 768px) {
+            font-size: 1.125rem;
+        }
+    }
 }
 
 // Skills Section
 .skills-section {
-  padding: 4rem 0;
-  position: relative;
-  overflow: hidden;
-
-  .skills-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    padding: 4rem 0;
     position: relative;
-    z-index: 2;
-  }
+    overflow: hidden;
 
-  .skills-header {
-    text-align: center;
-    margin-bottom: 3rem;
-
-    .skills-title {
-      font-family: $font-family-primary;
-      font-weight: $font-weight-bold;
-      font-size: clamp(2rem, 4vw, 3rem);
-      // color: $color-gray-900;
-      margin-bottom: 1rem;
-      letter-spacing: $letter-spacing-wide;
+    .skills-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        position: relative;
+        z-index: 2;
     }
 
-    .skills-subtitle {
-      font-family: $font-family-primary;
-      font-weight: $font-weight-normal;
-      font-size: 1.125rem;
-      color: $color-gray-600;
-      margin: 0;
-    }
-  }
+    .skills-header {
+        text-align: center;
+        margin-bottom: 3rem;
 
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (min-width: 1024px) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2.5rem;
-    }
-  }
-
-  // PrimeNG Card 樣式覆蓋
-  .skill-card {
-    height: 100%; // 確保每個 card 高度一致
-
-    // 覆蓋 PrimeNG Card 預設樣式
-    ::ng-deep .p-card {
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 1rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      border: 1px solid $color-gray-200;
-      height: 100%; // 確保卡片填滿容器
-      display: flex;
-      flex-direction: column;
-
-      .p-card-header {
-        padding: 2rem 2rem 0 2rem;
-        border-bottom: none;
-        background: transparent;
-      }
-
-      .p-card-body {
-        padding: 1rem 2rem 2rem 2rem;
-        flex: 1; // 讓內容區域填滿剩餘空間
-        display: flex;
-        flex-direction: column;
-      }
-
-      .p-card-content {
-        padding: 0;
-        flex: 1; // 確保內容區域延展
-      }
-    }
-
-    .skill-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 0; // 移除底部邊距，因為已在 p-card-body 中處理
-
-      .skill-icon {
-        width: 3rem; // 調整 icon 大小
-        height: 3rem;
-        background: linear-gradient(135deg, $color-primary, $color-primary-darker);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 1rem;
-        flex-shrink: 0; // 防止 icon 被壓縮
-
-        i {
-          font-size: 1.25rem; // 調整 icon 字體大小
-          color: $color-white;
+        .skills-title {
+            font-family: $font-family-primary;
+            font-weight: $font-weight-bold;
+            font-size: clamp(2rem, 4vw, 3rem);
+            // color: $color-gray-900;
+            margin-bottom: 1rem;
+            letter-spacing: $letter-spacing-wide;
         }
-      }
 
-      .skill-title {
-        font-family: $font-family-primary;
-        font-weight: $font-weight-semibold;
-        font-size: 1.25rem;
-        color: $color-gray-900;
-        margin: 0;
-        line-height: 1.4;
-        flex: 1; // 讓標題占用剩餘空間
-      }
-    }
-
-    .skill-content {
-      display: flex;
-      flex-direction: column;
-      flex: 1; // 確保內容區域填滿剩餘空間
-
-      .skill-description {
-        font-family: $font-family-primary;
-        font-weight: $font-weight-normal;
-        font-size: 0.9rem;
-        color: $color-gray-600;
-        margin-bottom: 1.5rem;
-        line-height: 1.6;
-      }
-
-      .skill-technologies {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-top: auto; // 讓技術標籤推到底部
-
-        .tech-tag {
-          background: $color-gray-100;
-          color: $color-gray-700;
-          padding: 0.375rem 0.75rem;
-          border-radius: 0.5rem;
-          font-size: 0.8rem;
-          font-weight: $font-weight-medium;
-          border: 1px solid $color-gray-200;
+        .skills-subtitle {
+            font-family: $font-family-primary;
+            font-weight: $font-weight-normal;
+            font-size: 1.125rem;
+            color: $color-gray-600;
+            margin: 0;
         }
-      }
     }
-  }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+        }
+    }
+
+    // PrimeNG Card 樣式覆蓋
+    .skill-card {
+        height: 100%; // 確保每個 card 高度一致
+
+        // 覆蓋 PrimeNG Card 預設樣式
+        ::ng-deep .p-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid $color-gray-200;
+            height: 100%; // 確保卡片填滿容器
+            display: flex;
+            flex-direction: column;
+
+            .p-card-header {
+                padding: 2rem 2rem 0 2rem;
+                border-bottom: none;
+                background: transparent;
+            }
+
+            .p-card-body {
+                padding: 1rem 2rem 2rem 2rem;
+                flex: 1; // 讓內容區域填滿剩餘空間
+                display: flex;
+                flex-direction: column;
+            }
+
+            .p-card-content {
+                padding: 0;
+                flex: 1; // 確保內容區域延展
+            }
+        }
+
+        .skill-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0; // 移除底部邊距，因為已在 p-card-body 中處理
+
+            .skill-icon {
+                width: 3rem; // 調整 icon 大小
+                height: 3rem;
+                background: linear-gradient(135deg, $color-primary, $color-primary-darker);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 1rem;
+                flex-shrink: 0; // 防止 icon 被壓縮
+
+                i {
+                    font-size: 1.25rem; // 調整 icon 字體大小
+                    color: $color-white;
+                }
+            }
+
+            .skill-title {
+                font-family: $font-family-primary;
+                font-weight: $font-weight-semibold;
+                font-size: 1.25rem;
+                color: $color-gray-900;
+                margin: 0;
+                line-height: 1.4;
+                flex: 1; // 讓標題占用剩餘空間
+            }
+        }
+
+        .skill-content {
+            display: flex;
+            flex-direction: column;
+            flex: 1; // 確保內容區域填滿剩餘空間
+
+            .skill-description {
+                font-family: $font-family-primary;
+                font-weight: $font-weight-normal;
+                font-size: 0.9rem;
+                color: $color-gray-600;
+                margin-bottom: 1.5rem;
+                line-height: 1.6;
+            }
+
+            .skill-technologies {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                margin-top: auto; // 讓技術標籤推到底部
+
+                .tech-tag {
+                    background: $color-gray-100;
+                    color: $color-gray-700;
+                    padding: 0.375rem 0.75rem;
+                    border-radius: 0.5rem;
+                    font-size: 0.8rem;
+                    font-weight: $font-weight-medium;
+                    border: 1px solid $color-gray-200;
+                }
+            }
+        }
+    }
 }
 
 
 
 :host {
-  @keyframes slidedown-icon {
-    0% {
-      transform: translateY(0);
+    @keyframes slidedown-icon {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(20px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
     }
 
-    50% {
-      transform: translateY(20px);
+    .slidedown-icon {
+        animation: slidedown-icon;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
     }
 
-    100% {
-      transform: translateY(0);
+    .box {
+        background-image: radial-gradient(var(--primary-300), var(--primary-600));
+        border-radius: 50% !important;
+        color: var(--primary-color-text);
     }
-  }
-
-  .slidedown-icon {
-    animation: slidedown-icon;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-  }  .box {
-    background-image: radial-gradient(var(--primary-300), var(--primary-600));
-    border-radius: 50% !important;
-    color: var(--primary-color-text);
-  }
 }
 
 // 簡化的 Timeline 樣式 - 主要依賴 PrimeNG 預設樣式和 Tailwind CSS
 .experience-section,
 .education-section {
-  // 只保留必要的 Timeline 連接線樣式
-  ::ng-deep .p-timeline-event-connector {
-    background-color: #d1d5db !important; // Tailwind gray-300
-  }
+
+    // 只保留必要的 Timeline 連接線樣式
+    ::ng-deep .p-timeline-event-connector {
+        background-color: #d1d5db !important; // Tailwind gray-300
+    }
 }

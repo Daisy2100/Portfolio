@@ -1,0 +1,168 @@
+
+.systex-container {
+    min-height: 100vh;
+
+    .company-header {
+        background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+        color: white;
+
+        h1 {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    .timeline-section {
+        :host ::ng-deep .timeline-custom {
+            .p-timeline-event-marker {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+                i {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .p-timeline-event-connector {
+                background-color: #e5e7eb;
+            }
+
+            .p-timeline-event-content {
+                .timeline-content {
+                    .bg-white {
+                        border-left: 4px solid #0d9488;
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            transform: translateY(-2px);
+                            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .projects-section {
+        .project-card {
+            height: 100%;
+
+            :host ::ng-deep .p-card {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .p-card-body {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .p-card-content {
+                    flex: 1;
+                }
+            }
+
+            &:hover {
+                transform: translateY(-4px);
+            }
+        }
+
+        .project-header {
+            i {
+                transition: transform 0.3s ease;
+            }
+
+            &:hover i {
+                transform: scale(1.1);
+            }
+        }
+
+        .technologies-section {
+            border-top: 1px solid #e5e7eb;
+            padding-top: 1rem;
+        }
+    }
+}
+
+// Timeline marker 自定義樣式
+.timeline-marker {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    i {
+        font-size: 1.2rem;
+    }
+}
+
+// 動畫類別
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+// 響應式設計
+@media (max-width: 768px) {
+    .systex-container {
+        .company-header {
+            padding: 2rem 0;
+
+            .container {
+                .flex {
+                    flex-direction: column;
+                    text-align: center;
+
+                    i {
+                        margin-bottom: 1rem;
+                        margin-right: 0;
+                    }
+
+                    .text-left {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .timeline-section,
+        .projects-section {
+            padding: 2rem 0;
+        }
+
+        .projects-section {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+
+::ng-deep .p-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: none !important;
+}
+::ng-deep .p-timeline-event-connector {
+    background-color: #d1d5db !important; // Tailwind gray-300
+}
