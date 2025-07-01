@@ -25,7 +25,7 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 export class SystexComponent {
     companyInfo = {
         name: '精誠資訊股份有限公司',
-        period: '2021/04 - 現在',
+        period: '2022/04 - 現在',
         role: '全端工程師',
         duration: '3+ 年',
         icon: 'pi pi-briefcase',
@@ -129,7 +129,7 @@ export class SystexComponent {
         {
             name: 'Envision360 能源管理系統',
             role: '前端+後端',
-            period: '2022/05 ~ 2025/01',
+            period: '2023/05 ~ 2025/01',
             description: '能源管理系統，蒐集用電資訊並顯示至儀表板',
             responsibilities: [
                 '前後端系統開發',
@@ -149,7 +149,7 @@ export class SystexComponent {
         {
             name: '富鐿實業報工系統',
             role: '前端+後端',
-            period: '2021/10 ~ 2022/06',
+            period: '2022/10 ~ 2023/04',
             description: '企業內部報工管理系統，提升工作效率與管理品質',
             responsibilities: [
                 '前後端系統開發與維運',
@@ -167,7 +167,7 @@ export class SystexComponent {
         {
             name: '富鐿實業廠內訂單系統',
             role: '前端+後端',
-            period: '2021/04 ~ 2021/12',
+            period: '2022/04 ~ 2022/12',
             description: '廠內訂單管理系統，優化生產流程與訂單追蹤',
             responsibilities: [
                 '前後端系統開發與維運',
