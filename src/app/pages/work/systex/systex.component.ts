@@ -53,7 +53,7 @@ export class SystexComponent {
             status: '已完成'
         },
         {
-            name: '內部軟體開發整合',
+            name: '前後端開發框架整合',
             role: '前端+後端',
             period: '2024/12 ~ 2025/06',
             description: '整理目前專案的前後端，將內容討論並整理成公版，處理潛在的軟體風險，以利後續快速開發',
@@ -109,7 +109,7 @@ export class SystexComponent {
             status: '已完成'
         },
         {
-            name: '內政部建築中心能效平台-一案與二案',
+            name: '內政部建築中心多標章評估系統-一案與二案',
             role: '前端',
             period: '2024/09 ~ 2024/11',
             description: '根據用戶申請標章類型，協助客戶計算評估能效等級',
