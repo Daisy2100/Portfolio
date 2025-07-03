@@ -46,7 +46,7 @@ export class SystexComponent {
             ],
             technologies: {
                 frontend: ['Angular'],
-                backend: ['C#', 'ASP.NET Core'],
+                backend: ['C#', '.NET 8'],
                 database: ['MSSQL', 'Redis']
             },
             icon: 'pi pi-shield',
@@ -65,7 +65,7 @@ export class SystexComponent {
             ],
             technologies: {
                 frontend: ['Angular'],
-                backend: ['C#', 'ASP.NET Core'],
+                backend: ['C#', '.NET 8'],
                 database: ['MSSQL', 'Redis']
             },
             icon: 'pi pi-cog',
@@ -102,7 +102,7 @@ export class SystexComponent {
             ],
             technologies: {
                 frontend: ['Angular'],
-                backend: ['C#', 'ASP.NET Core'],
+                backend: ['C#', '.NET 8'],
                 database: ['MSSQL', 'Redis']
             },
             icon: 'pi pi-file',
@@ -120,7 +120,7 @@ export class SystexComponent {
             ],
             technologies: {
                 frontend: ['Angular'],
-                backend: ['C#', 'ASP.NET Core'],
+                backend: ['C#', '.NET 6'],
                 database: ['MSSQL', 'Redis']
             },
             icon: 'pi pi-chart-line',
