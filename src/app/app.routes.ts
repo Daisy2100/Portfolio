@@ -30,5 +30,27 @@ export const routes: Routes = [
             { path: 'access', component: AccessComponent }
         ]
     },
+    {
+        path: 'side-project',
+        children: [
+            {
+                path: '',
+                loadComponent: () => import('./pages/side-project/side-project.component').then(m => m.SideProjectComponent),
+                pathMatch: 'full'
+            },
+            {
+                path: '2025-crypto-exchange',
+                loadComponent: () => import('./pages/side-project/2025-crypto-exchange/2025-crypto-exchange.component').then(m => m.CryptoExchange2025Component)
+            },
+            {
+                path: '2024-license-plate',
+                loadComponent: () => import('./pages/side-project/2024-license-plate/2024-license-plate.component').then(m => m.LicensePlate2024Component)
+            },
+            {
+                path: '2022-date-picker',
+                loadComponent: () => import('./pages/side-project/2022-date-picker/2022-date-picker.component').then(m => m.DatePicker2022Component)
+            }
+        ]
+    },
     { path: 'contact', component: ContactComponent },
 ];

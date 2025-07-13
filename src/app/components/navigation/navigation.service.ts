@@ -66,11 +66,41 @@ export class NavigationService {
                     }
                 ]
             },
+            {
+                id: 'side-project',
+                displayName: 'Side Project',
+                path: '/side-project',
+                order: 3,
+                hasChildren: true,
+                children: [
+                    {
+                        id: '2025-crypto-exchange',
+                        displayName: '車牌吉凶分析',
+                        path: '/side-project/2025-crypto-exchange',
+                        order: 0,
+                        parentId: 'work'
+                    },
+                    {
+                        id: '2024-license-plate',
+                        displayName: '車牌吉凶分析',
+                        path: '/side-project/2024-license-plate',
+                        order: 0,
+                        parentId: 'work'
+                    },
+                    {
+                        id: '2022-date-picker',
+                        displayName: '日期選取器',
+                        path: '/side-project/2022-date-picker',
+                        order: 1,
+                        parentId: 'work'
+                    }
+                ]
+            },
             //   {
             //     id: 'contact',
             //     displayName: '聯絡我們',
             //     path: '/contact',
-            //     order: 3
+            //     order: 4
             //   }
         ];
     }
