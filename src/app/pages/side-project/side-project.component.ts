@@ -54,7 +54,7 @@ export class SideProjectComponent {
             icon: 'pi pi-desktop',
             color: '#10b981',
             tags: ['React', 'Next.js'],
-            detailRoute: '/work/access'
+            detailRoute: '/side-project/2025-cryptanalysis'
         },
         {
             period: '2024',

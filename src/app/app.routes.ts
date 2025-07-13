@@ -43,6 +43,10 @@ export const routes: Routes = [
                 loadComponent: () => import('./pages/side-project/2025-crypto-exchange/2025-crypto-exchange.component').then(m => m.CryptoExchange2025Component)
             },
             {
+                path: '2025-cryptanalysis',
+                loadComponent: () => import('./pages/side-project/2025-cryptanalysis/2025-cryptanalysis.component').then(m => m.Cryptanalysis2025Component)
+            },
+            {
                 path: '2024-license-plate',
                 loadComponent: () => import('./pages/side-project/2024-license-plate/2024-license-plate.component').then(m => m.LicensePlate2024Component)
             },

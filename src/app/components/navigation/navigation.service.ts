@@ -75,8 +75,15 @@ export class NavigationService {
                 children: [
                     {
                         id: '2025-crypto-exchange',
-                        displayName: '車牌吉凶分析',
+                        displayName: '交易媒合平台',
                         path: '/side-project/2025-crypto-exchange',
+                        order: 0,
+                        parentId: 'work'
+                    },
+                    {
+                        id: '2025-cryptanalysis',
+                        displayName: '密碼與信箱洩漏驗證器',
+                        path: '/side-project/2025-cryptanalysis',
                         order: 0,
                         parentId: 'work'
                     },
@@ -89,7 +96,7 @@ export class NavigationService {
                     },
                     {
                         id: '2022-date-picker',
-                        displayName: '日期選取器',
+                        displayName: '週期選取器',
                         path: '/side-project/2022-date-picker',
                         order: 1,
                         parentId: 'work'
