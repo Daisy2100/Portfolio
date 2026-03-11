@@ -26,12 +26,6 @@ jobs:
       - name: Build for GitHub Pages
         run: npm run build -- --configuration production --base-href /Portfolio/
 
-      - name: Rename index.csr.html to index.html (Angular SSR adjustment)
-        run: mv dist/browser/index.csr.html dist/browser/index.html
-
-      - name: Rename index.csr.html to index.html (Angular SSR adjustment)
-        run: mv dist/browser/index.csr.html dist/browser/index.html
-
       - name: Create 404.html
         run: cp dist/browser/index.html dist/browser/404.html
 
