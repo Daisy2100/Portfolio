@@ -1,0 +1,45 @@
+.wits-container {
+    min-height: 100vh;
+
+    .timeline-section {
+        :host ::ng-deep .timeline-custom {
+            .p-timeline-event-marker {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+                i {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .p-timeline-event-connector {
+                background-color: #e5e7eb;
+            }
+
+            .p-timeline-event-content {
+                .timeline-content {
+                    .bg-white {
+                        border-left: 4px solid #6366f1;
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            transform: translateY(-2px);
+                            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .projects-section {
+        .project-card {
+            transition: all 0.3s ease;
+        }
+    }
+}

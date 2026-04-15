@@ -27,10 +27,24 @@ export class WorkComponent {
     // 工作經歷
     workExperience = [
         {
-            period: '2022/04 - 現在',
-            title: '全端工程師',
+            period: '2025/08 - 現在',
+            title: 'Senior Engineer',
+            company: 'WITS',
+            duration: '入職中',
+            description: '負責系統開發與維護',
+            responsibilities: [
+                '負責系統開發與維護'
+            ],
+            icon: 'pi pi-briefcase',
+            color: '#6366f1',
+            tags: [],
+            detailRoute: '/work/wits'
+        },
+        {
+            period: '2022/04 - 2025/08',
+            title: 'Full Stack Engineer',
             company: '精誠資訊股份有限公司',
-            duration: '3 years+',
+            duration: '3 年 4 個月',
             description: '撰寫模組化及高可用的程式碼',
             responsibilities: [
                 '撰寫模組化及高可用的程式碼',
@@ -44,9 +58,9 @@ export class WorkComponent {
         },
         {
             period: '2020/08 - 2022/04',
-            title: '前端實習生',
+            title: 'Frontend Intern',
             company: 'ACCESS Taiwan(日商)',
-            duration: '1.75 years',
+            duration: '1 年 8 個月',
             description: '使用 JQuery / HTML / CSS 串接購物車',
             responsibilities: [
                 '使用 JQuery / HTML / CSS 串接購物車'

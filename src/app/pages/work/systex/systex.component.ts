@@ -25,9 +25,9 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 export class SystexComponent {
     companyInfo = {
         name: '精誠資訊股份有限公司',
-        period: '2022/04 - 現在',
-        role: '全端工程師',
-        duration: '3+ 年',
+        period: '2022/04 - 2025/08',
+        role: 'Full Stack Engineer',
+        duration: '3 年 4 個月',
         icon: 'pi pi-briefcase',
         color: '#0d9488'
     };

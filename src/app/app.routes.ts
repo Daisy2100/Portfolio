@@ -9,6 +9,7 @@ import { NewsIndustryComponent } from './pages/news/news-industry/news-industry.
 import { WorkComponent } from './pages/work/work.component';
 import { SystexComponent } from './pages/work/systex/systex.component';
 import { AccessComponent } from './pages/work/access/access.component';
+import { WitsComponent } from './pages/work/wits/wits.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -27,7 +28,8 @@ export const routes: Routes = [
         children: [
             { path: '', component: WorkComponent },
             { path: 'systex', component: SystexComponent },
-            { path: 'access', component: AccessComponent }
+            { path: 'access', component: AccessComponent },
+            { path: 'wits', component: WitsComponent }
         ]
     },
     {

@@ -25,9 +25,9 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 export class AccessComponent {
     companyInfo = {
         name: 'ACCESS Taiwan (日商)',
-        period: '2020/08 - 2021/04',
-        role: '前端實習生',
-        duration: '1.75 年',
+        period: '2020/08 - 2022/04',
+        role: 'Frontend Intern',
+        duration: '1 年 8 個月',
         icon: 'pi pi-desktop',
         color: '#10b981'
     };
@@ -35,7 +35,7 @@ export class AccessComponent {
     projects = [
         {
             name: '電商平台購物車系統',
-            role: '前端實習生',
+            role: 'Frontend Intern',
             period: '2020/08 - 2021/04',
             description: '負責電商平台的購物車功能開發與維護，使用傳統前端技術進行開發，學習基礎的前端開發技能與團隊協作經驗',
             responsibilities: [
