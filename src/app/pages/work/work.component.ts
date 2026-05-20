@@ -30,7 +30,7 @@ export class WorkComponent {
             period: '2025/08 - 現在',
             title: 'Senior Engineer',
             company: 'WITS',
-            duration: '入職中',
+            duration: '在職中',
             description: '負責系統開發與維護',
             responsibilities: [
                 '負責系統開發與維護'
