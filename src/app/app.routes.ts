@@ -41,6 +41,10 @@ export const routes: Routes = [
                 pathMatch: 'full'
             },
             {
+                path: 'primeleft-sepal-auth-hub',
+                loadComponent: () => import('./pages/side-project/primeleft-sepal-auth-hub/primeleft-sepal-auth-hub.component').then(m => m.PrimeleftSepalAuthHubComponent)
+            },
+            {
                 path: '2025-crypto-exchange',
                 loadComponent: () => import('./pages/side-project/2025-crypto-exchange/2025-crypto-exchange.component').then(m => m.CryptoExchange2025Component)
             },

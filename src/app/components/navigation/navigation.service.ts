@@ -51,17 +51,24 @@ export class NavigationService {
                 hasChildren: true,
                 children: [
                     {
+                        id: 'wits',
+                        displayName: '緯致科技股份有限公司',
+                        path: '/work/wits',
+                        order: 0,
+                        parentId: 'work'
+                    },
+                    {
                         id: 'systex',
                         displayName: '精誠資訊',
                         path: '/work/systex',
-                        order: 0,
+                        order: 1,
                         parentId: 'work'
                     },
                     {
                         id: 'access',
                         displayName: 'ACCESS Taiwan',
                         path: '/work/access',
-                        order: 1,
+                        order: 2,
                         parentId: 'work'
                     }
                 ]

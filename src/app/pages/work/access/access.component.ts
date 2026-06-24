@@ -62,18 +62,11 @@ export class AccessComponent {
     // Timeline 事件
     timelineEvents = [
         {
-            date: '2020/08',
-            title: '加入 ACCESS Taiwan',
-            description: '開始前端實習生職涯',
-            icon: 'pi pi-user-plus',
-            color: '#10b981'
-        },
-        {
-            date: '2020/08 - 2021/04',
-            title: '電商平台開發',
-            description: '負責購物車系統串接',
-            icon: 'pi pi-code',
-            color: '#3b82f6'
+            date: '2021/04',
+            title: '實習結業',
+            description: '完成實習，準備下一個職涯階段',
+            icon: 'pi pi-graduation-cap',
+            color: '#8b5cf6'
         },
         {
             date: '2020/10 - 2020/12',
@@ -83,11 +76,18 @@ export class AccessComponent {
             color: '#f59e0b'
         },
         {
-            date: '2021/04',
-            title: '實習結業',
-            description: '完成實習，準備下一個職涯階段',
-            icon: 'pi pi-graduation-cap',
-            color: '#8b5cf6'
+            date: '2020/08 - 2021/04',
+            title: '電商平台開發',
+            description: '負責購物車系統串接',
+            icon: 'pi pi-code',
+            color: '#3b82f6'
+        },
+        {
+            date: '2020/08',
+            title: '加入 ACCESS Taiwan',
+            description: '開始前端實習生職涯',
+            icon: 'pi pi-user-plus',
+            color: '#10b981'
         }
     ];
 

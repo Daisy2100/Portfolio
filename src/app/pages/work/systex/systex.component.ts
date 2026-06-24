@@ -185,14 +185,32 @@ export class SystexComponent {
     ];
 
     // Timeline 事件
-    timelineEvents = this.projects.map((project, index) => ({
-        date: project.period,
-        title: project.name,
-        role: project.role,
-        status: project.status,
-        icon: project.icon,
-        color: this.getStatusColor(project.status)
-    }));
+    timelineEvents = [
+        {
+            date: '2025/08',
+            title: '從精誠資訊離職',
+            role: 'Full Stack Engineer',
+            status: '已完成',
+            icon: 'pi pi-flag',
+            color: '#0d9488'
+        },
+        ...this.projects.map((project, index) => ({
+            date: project.period,
+            title: project.name,
+            role: project.role,
+            status: project.status,
+            icon: project.icon,
+            color: this.getStatusColor(project.status)
+        })),
+        {
+            date: '2022/04',
+            title: '加入精誠資訊',
+            role: 'Full Stack Engineer',
+            status: '已完成',
+            icon: 'pi pi-user-plus',
+            color: '#0d9488'
+        }
+    ];
 
     getStatusColor(status: string): string {
         switch (status) {

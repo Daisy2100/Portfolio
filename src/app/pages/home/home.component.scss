@@ -47,14 +47,14 @@
     .hero-title {
         font-family: $font-family-primary;
         font-weight: $font-weight-light;
-        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
         color: white;
         letter-spacing: $letter-spacing-wide;
         margin-bottom: 1rem;
         line-height: 1.1;
 
         @media (min-width: 768px) {
-            font-size: clamp(3.5rem, 8vw, 6rem);
+            font-size: clamp(2.5rem, 8vw, 6rem);
         }
     }
 

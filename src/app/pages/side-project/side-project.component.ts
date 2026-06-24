@@ -27,6 +27,23 @@ export class SideProjectComponent {
     // 工作經歷
     workExperience = [
         {
+            period: '2026',
+            title: 'Internal Platform / Auth System',
+            company: 'PrimeLeft / Sepal Auth Hub',
+            duration: 'Side Project',
+            description: '輕量化授權與服務權限平台，涵蓋模組化前端、授權中心、license key 驗證、service entitlement verification 與 Cloudflare serverless 部署。',
+            responsibilities: [
+                '設計 Sepal Auth Hub 作為輕量化授權中心，支援 license key、shared secret、Cloudflare Account ID 綁定與服務權限驗證',
+                '使用 Cloudflare Workers、Cloudflare D1、Hono、Drizzle ORM 與 Cloudflare CDN 建立 serverless application',
+                '建立 npm package 型態的 modular frontend modules，支援不同前端專案複用與快速整合',
+                '使用 ChatGPT、Claude、GitHub Copilot 輔助架構規劃、文件撰寫、程式碼檢查、重構與技術決策'
+            ],
+            icon: 'pi pi-shield',
+            color: '#6366f1',
+            tags: ['Cloudflare Workers', 'D1', 'Hono', 'Drizzle ORM', 'TypeScript', 'License Key', 'Service Entitlement', 'Modular Frontend', 'AI-assisted SDLC'],
+            detailRoute: '/side-project/primeleft-sepal-auth-hub'
+        },
+        {
             period: '2025',
             title: '開源項目',
             company: '交易媒合平台',

@@ -1,15 +1,64 @@
-<div class="hero-section">
-    <div class="hero-container">
-        <div class="hero-content">
-            <h1 class="hero-title">
-                INTO THE FUTURE.
-            </h1>
-            <p class="hero-subtitle">
-                Welcome to our portfolio showcase
-            </p>
-        </div>
+<section class="relative min-h-screen overflow-hidden text-white flex items-center justify-center">
+  <!-- Background Layers -->
+  <div class="absolute inset-0 pointer-events-none z-0">
+    <div class="absolute inset-0 bg-[#07111f]/75"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-[#07111f] via-[#07111f]/85 to-[#07111f]/40"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(56,189,248,0.22),transparent_35%)]"></div>
+  </div>
+
+  <main class="relative z-10 w-full mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-[1.15fr_0.85fr]">
+    <!-- Left Column -->
+    <div class="animate-fade-in-up mt-8 md:mt-0">
+      <p class="mb-5 text-sm font-medium uppercase tracking-[0.35em] text-cyan-300/80">
+        Internal Platform · Enterprise Systems · AI-assisted SDLC
+      </p>
+
+      <h1 class="max-w-4xl text-5xl font-semibold leading-tight tracking-tight md:text-7xl">
+        Senior Frontend
+        <span class="block text-white/70 mt-2">Engineer</span>
+      </h1>
+
+      <p class="mt-8 max-w-2xl text-lg leading-8 text-white/72 font-light tracking-wide">
+        具 3+ 年企業內部系統與平台開發經驗，主力於前端架構、權限流程、API 串接與系統整合。熟悉 Angular、Vue、TypeScript、Node.js、.NET 8、OAuth/JWT、Docker 與 GitHub Actions。
+      </p>
+
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a
+          routerLink="/work/wits"
+          class="rounded-full bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
+        >
+          View Projects
+        </a>
+        <a
+          routerLink="/about"
+          class="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white/85 transition hover:border-white/45 hover:bg-white/10"
+        >
+          About Me
+        </a>
+      </div>
     </div>
-</div>
+
+    <!-- Right Column (Cards) -->
+    <div class="rounded-3xl border border-white/12 bg-white/[0.06] p-6 shadow-2xl backdrop-blur-xl animate-fade-in-up" style="animation-delay: 0.2s;">
+      <div class="space-y-4">
+        <div class="rounded-2xl bg-white/[0.07] p-5 transition hover:bg-white/[0.1] hover:scale-[1.02] duration-300 border border-white/5">
+          <p class="text-sm text-cyan-200 font-medium">Frontend Architecture</p>
+          <p class="mt-2 text-white/70 text-sm">Angular / Vue / TypeScript / SCSS</p>
+        </div>
+
+        <div class="rounded-2xl bg-white/[0.07] p-5 transition hover:bg-white/[0.1] hover:scale-[1.02] duration-300 border border-white/5">
+          <p class="text-sm text-cyan-200 font-medium">Enterprise Integration</p>
+          <p class="mt-2 text-white/70 text-sm">OAuth2 / JWT / API Integration / Internal Platform</p>
+        </div>
+
+        <div class="rounded-2xl bg-white/[0.07] p-5 transition hover:bg-white/[0.1] hover:scale-[1.02] duration-300 border border-white/5">
+          <p class="text-sm text-cyan-200 font-medium">AI-assisted SDLC</p>
+          <p class="mt-2 text-white/70 text-sm">AI Tools / Automation / Developer Productivity</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
 
 <!-- 閃爍動畫元件 -->
 <app-flash-animation></app-flash-animation>
