@@ -188,7 +188,7 @@ export class SystexComponent {
     timelineEvents = [
         {
             date: '2025/08',
-            title: '從精誠資訊離職',
+            title: '畢業',
             role: 'Full Stack Engineer',
             status: '已完成',
             icon: 'pi pi-flag',
