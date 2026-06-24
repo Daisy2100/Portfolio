@@ -27,9 +27,9 @@ export class WitsComponent {
         name: 'WITS',
         period: '2025/08 - 現在',
         role: 'Senior Engineer',
-        duration: '入職中',
+        duration: '在職中',
         icon: 'pi pi-briefcase',
-        color: '#6366f1'
+        color: '#0d9488'
     };
 
     projects = [

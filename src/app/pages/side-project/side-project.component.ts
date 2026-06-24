@@ -41,22 +41,7 @@ export class SideProjectComponent {
             icon: 'pi pi-shield',
             color: '#6366f1',
             tags: ['Cloudflare Workers', 'D1', 'Hono', 'Drizzle ORM', 'TypeScript', 'License Key', 'Service Entitlement', 'Modular Frontend', 'AI-assisted SDLC'],
-            detailRoute: '/side-project/primeleft-sepal-auth-hub'
-        },
-        {
-            period: '2025',
-            title: '開源項目',
-            company: '交易媒合平台',
-            duration: '1 month',
-            description: '撰寫模組化及高可用的程式碼',
-            responsibilities: [
-                '與大學同學合作，開發開源項目',
-                '撰寫模組化及高可用的程式碼',
-            ],
-            icon: 'pi pi-briefcase',
-            color: '#0d9488',
-            tags: ['Angular19', 'Primeng', 'Tailwindcss', 'echarts'],
-            detailRoute: '/2025-crypto-exchange'
+            detailRoute: '/side-project/2026-primeleft'
         },
         {
             period: '2025',

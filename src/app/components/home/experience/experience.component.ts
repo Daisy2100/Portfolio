@@ -7,19 +7,7 @@ import { TimelineModule } from 'primeng/timeline';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { TagModule } from 'primeng/tag';
 import { ButtonModule } from 'primeng/button';
-
-interface WorkExperience {
-    period: string;
-    title: string;
-    company: string;
-    duration: string;
-    description: string;
-    responsibilities: string[];
-    icon: string;
-    color: string;
-    tags: string[];
-    detailRoute?: string; // 新增可選的路由屬性
-}
+import { WorkExperience } from '../../../data/work-experience';
 
 @Component({
     selector: 'app-experience',
@@ -29,6 +17,8 @@ interface WorkExperience {
     styleUrl: './experience.component.scss'
 })
 export class ExperienceComponent {
+    @Input() sectionTitle = '工作成果';
+    @Input() sectionSubtitle = '我的職業發展軌跡與專業成就';
     @Input() workExperience: WorkExperience[] = [];
 
     constructor(private router: Router) {}

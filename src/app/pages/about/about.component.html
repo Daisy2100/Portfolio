@@ -1,130 +1,135 @@
-<div class=" overflow-hidden bg-gradient-to-br  to-indigo-100">
-    <!-- Header Section -->
-    <div class="pt-20 pb-8 text-center" pAnimateOnScroll enterClass="animate-fade-in-up">
-        <div class="max-w-4xl mx-auto px-6">
-            <h1 class="text-4xl font-bold text-white mb-4">關於我</h1>
-            <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mb-6"></div>
-        </div>
-    </div>
+<section class="about-page min-h-screen text-white">
+    <div class="mx-auto max-w-6xl px-6 py-28 md:py-32">
+        <header class="grid gap-14 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start" pAnimateOnScroll
+            enterClass="animate-fade-in-up">
+            <div>
 
-    <!-- Content Section -->
-    <div class="flex-1 overflow-y-auto px-6 pb-8">
-        <div class="max-w-6xl mx-auto">
+                <div class="border-l border-white/18 pl-5 md:pl-7">
+                    <h1 class="max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+                        打造可維護的前端架構
+                    </h1>
 
-            <!-- Main Profile Card -->
-            <p-card class=" rounded-xl border-0 mt-5" pAnimateOnScroll enterClass="animate-fade-in-up">
-                <ng-template pTemplate="header">
-                    <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-6 rounded-t-xl">
-                        <div class="flex items-center gap-4 text-white">
-                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                                <i class="pi pi-user text-2xl"></i>
-                            </div>
-                            <div>
-                                <h2 class="text-2xl font-bold">林紫涵</h2>
-                                <p class="text-blue-100">Frontend-heavy Full-stack Engineer · 3 年以上企業內部系統開發經驗</p>
-                            </div>
-                        </div>
-                    </div>
-                </ng-template>
-                <div class="p-6">
-                    <div class="space-y-4 text-gray-700 leading-relaxed text-lg">
-                        <p>
-                            我是一名以前端為主、具備全端協作能力的軟體工程師。過去主要參與企業內部資訊系統開發，負責前端實作、API 整合、權限驗證、資料流程、系統維護與跨角色需求釐清。
-                        </p>
-                        <p>
-                            我熟悉 Angular、Vue、TypeScript、Node.js、.NET、OAuth/JWT、Docker、GitHub Actions 與雲端部署流程，並具備企業內部系統整合、模組化前端與權限平台設計經驗。
-                        </p>
-                        <p>
-                            除了正式工作，我也獨立開發 PrimeLeft / Sepal Auth Hub，從前端模組、後端 API、授權中心、license key 驗證、service entitlement verification 到 Cloudflare Workers / D1 部署皆有實作經驗。
-                        </p>
-                        <p>
-                            目前我正在往 AI-assisted SDLC、internal platform engineering、AI Agent / MCP 概念與企業級開發流程導入方向發展。
-                        </p>
+                    <p class="mt-6 max-w-2xl text-base leading-8 text-white/68 md:text-lg">
+                        串接權限流程、API 與內部平台，讓複雜的系統更容易交付與維護
+                    </p>
+
+                    <div class="about-meta mt-8">
+                        <span>Since Apr 2022</span>
+                        <span>Internal Platform</span>
+                        <span>System Integration</span>
                     </div>
                 </div>
-            </p-card>
-
-            <!-- Info Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-                <!-- Skills Card -->
-                <p-card class=" rounded-xl border-0 mt-5" pAnimateOnScroll
-                    enterClass="animate-fade-in-up"
-                    leaveClass="animate-leave fade-out-0">
-                    <ng-template pTemplate="header">
-                        <div class="bg-gradient-to-r from-purple-500 to-violet-600 p-4 rounded-t-xl">
-                            <div class="flex items-center gap-3 text-white">
-                                <i class="pi pi-star text-xl"></i>
-                                <span class="font-semibold text-lg">核心技能</span>
-                            </div>
-                        </div>
-                    </ng-template>
-                    <div class="p-4">
-                        <div class="space-y-3">
-                            <div class="flex items-center gap-2"><div class="w-2 h-2 bg-purple-500 rounded-full"></div><span class="text-gray-700">Frontend Architecture</span></div>
-                            <div class="flex items-center gap-2"><div class="w-2 h-2 bg-purple-500 rounded-full"></div><span class="text-gray-700">Full-stack Integration</span></div>
-                            <div class="flex items-center gap-2"><div class="w-2 h-2 bg-purple-500 rounded-full"></div><span class="text-gray-700">Internal Platform</span></div>
-                            <div class="flex items-center gap-2"><div class="w-2 h-2 bg-purple-500 rounded-full"></div><span class="text-gray-700">OAuth / Authorization</span></div>
-                            <div class="flex items-center gap-2"><div class="w-2 h-2 bg-purple-500 rounded-full"></div><span class="text-gray-700">AI-assisted SDLC</span></div>
-                            <div class="flex items-center gap-2"><div class="w-2 h-2 bg-purple-500 rounded-full"></div><span class="text-gray-700">Enterprise System Integration</span></div>
-                        </div>
-                    </div>
-                </p-card>
-
-                <!-- Goals Card -->
-                <p-card class=" rounded-xl border-0 mt-5" pAnimateOnScroll
-                    enterClass="animate-fade-in-up"
-                    leaveClass="animate-leave fade-out-0">
-                    <ng-template pTemplate="header">
-                        <div class="bg-gradient-to-r from-orange-500 to-red-500 p-4 rounded-t-xl">
-                            <div class="flex items-center gap-3 text-white">
-                                <i class="pi pi-target text-xl"></i>
-                                <span class="font-semibold text-lg">職涯目標</span>
-                            </div>
-                        </div>
-                    </ng-template>
-                    <div class="p-4">
-                        <div class="space-y-3 text-gray-700">
-                            <div class="flex items-start gap-2">
-                                <i class="pi pi-arrow-right text-orange-500 mt-1 text-sm"></i>
-                                <span class="text-sm">往半導體 IT R&D 發展</span>
-                            </div>
-                            <div class="flex items-start gap-2">
-                                <i class="pi pi-arrow-right text-orange-500 mt-1 text-sm"></i>
-                                <span class="text-sm">內部平台工程</span>
-                            </div>
-                            <div class="flex items-start gap-2">
-                                <i class="pi pi-arrow-right text-orange-500 mt-1 text-sm"></i>
-                                <span class="text-sm">AI 開發流程導入</span>
-                            </div>
-                            <div class="flex items-start gap-2">
-                                <i class="pi pi-arrow-right text-orange-500 mt-1 text-sm"></i>
-                                <span class="text-sm">企業級軟體架構</span>
-                            </div>
-                        </div>
-                    </div>
-                </p-card>
-
-                <!-- Contact Card -->
-                <p-card class=" rounded-xl border-0 mt-5" pAnimateOnScroll
-                    enterClass="animate-fade-in-up"
-                    leaveClass="animate-leave fade-out-0">
-                    <ng-template pTemplate="header">
-                        <div class="bg-gradient-to-r from-green-500 to-emerald-600 p-4 rounded-t-xl">
-                            <div class="flex items-center gap-3 text-white">
-                                <i class="pi pi-envelope text-xl"></i>
-                                <span class="font-semibold text-lg">聯絡方式</span>
-                            </div>
-                        </div>
-                    </ng-template>
-                    <div class="p-4">
-                        <div class="flex items-center gap-3 text-gray-700">
-                            <i class="pi pi-at text-green-500"></i>
-                            <span class="break-all">flin951753&#64;gmail.com</span>
-                        </div>
-                    </div>
-                </p-card>
             </div>
+
+            <aside class="about-panel ">
+                <p class="text-sm font-bold uppercase tracking-[0.22em] text-teal-700">Profile Snapshot</p>
+                <dl class="mt-6 grid gap-5">
+                    <div class="flex items-start justify-between gap-6 border-b border-slate-200 pb-4">
+                        <dt class="text-sm text-slate-500">Experience</dt>
+                        <dd class="text-right text-base font-semibold text-slate-950">{{ experienceYears }}+ Years</dd>
+                    </div>
+                    <div class="flex items-start justify-between gap-6 border-b border-slate-200 pb-4">
+                        <dt class="text-sm text-slate-500">Main Focus</dt>
+                        <dd class="text-right text-base font-semibold text-slate-950">Internal Platform</dd>
+                    </div>
+                    <div class="flex items-start justify-between gap-6">
+                        <dt class="text-sm text-slate-500">Stack</dt>
+                        <dd class="text-right text-base font-semibold text-slate-950">Angular / Vue / .NET</dd>
+                    </div>
+                </dl>
+            </aside>
+        </header>
+
+        <section class="about-summary mt-16" pAnimateOnScroll enterClass="animate-fade-in-up">
+            <p class="text-sm font-bold uppercase tracking-[0.22em] text-teal-700">Summary</p>
+            <div class="mt-5 grid gap-6 md:grid-cols-[0.82fr_1.18fr] md:items-start">
+                <h2 class="text-2xl font-semibold leading-snug tracking-tight text-slate-950 md:text-3xl">
+                    把複雜流程拆成清楚的介面、資料流與交付節奏
+                </h2>
+                <p class="text-base leading-8 text-slate-600">
+                    我具備 {{ experienceYears }}+ 年企業內部系統與平台開發經驗，主力在前端架構、權限流程、API 串接與跨系統整合重視可讀性、可維護性，以及讓團隊能穩定交付的工程習慣
+                </p>
+            </div>
+        </section>
+
+        <div class="mt-10 grid gap-5 md:grid-cols-3" pAnimateOnScroll enterClass="animate-fade-in-up">
+            <article class="about-card">
+                <div class="about-icon">
+                    <i class="pi pi-desktop"></i>
+                </div>
+                <h2>Frontend Architecture</h2>
+                <p>
+                    使用 Angular、Vue、TypeScript 與 SCSS 建立可重用元件、清楚狀態流與穩定頁面結構
+                </p>
+            </article>
+
+            <article class="about-card">
+                <div class="about-icon">
+                    <i class="pi pi-sitemap"></i>
+                </div>
+                <h2>Enterprise Integration</h2>
+                <p>
+                    處理 OAuth/JWT、API 串接、權限流程與內部平台整合，讓跨系統流程更順
+                </p>
+            </article>
+
+            <article class="about-card">
+                <div class="about-icon">
+                    <i class="pi pi-bolt"></i>
+                </div>
+                <h2>AI-assisted SDLC</h2>
+                <p>
+                    將 AI 工具與 Automation 放進文件、測試、重構與日常開發流程，提高交付效率
+                </p>
+            </article>
         </div>
+
+        <section class="mt-16 grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start" pAnimateOnScroll
+            enterClass="animate-fade-in-up">
+            <div>
+                <p class="text-sm font-bold uppercase tracking-[0.24em] text-teal-200/80">How I Work</p>
+                <h2 class="mt-4 text-3xl font-semibold tracking-tight text-white md:text-4xl">
+                    先把問題講清楚，再把系統做好
+                </h2>
+            </div>
+
+            <div class="grid gap-4">
+                <div class="about-principle">
+                    <span>01</span>
+                    <div>
+                        <h3>先釐清流程，再設計介面</h3>
+                        <p>整理使用者操作、權限條件與 API 邊界，降低後續返工成本</p>
+                    </div>
+                </div>
+                <div class="about-principle">
+                    <span>02</span>
+                    <div>
+                        <h3>用工程習慣支撐品質</h3>
+                        <p>透過元件化、型別、CI/CD 與 Docker，讓系統更容易交接與部署</p>
+                    </div>
+                </div>
+                <div class="about-principle">
+                    <span>03</span>
+                    <div>
+                        <h3>把新工具落到實際產出</h3>
+                        <p>把 AI 工具放進開發流程，而不是只停留在嘗鮮</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-contact mt-16" pAnimateOnScroll enterClass="animate-fade-in-up">
+            <div>
+                <p class="text-sm font-bold uppercase tracking-[0.24em] text-teal-700">Contact</p>
+                <h2 class="mt-3 text-2xl font-semibold tracking-tight text-slate-950 md:text-3xl">
+                    歡迎聊聊更多細節
+                </h2>
+            </div>
+            <a href="mailto:flin951753@gmail.com"
+                class="inline-flex items-center justify-center gap-2 rounded-full bg-teal-400 px-6 py-3.5 text-sm font-bold text-slate-950 shadow-lg shadow-teal-500/20 transition hover:-translate-y-0.5 hover:bg-teal-300 focus:outline-none focus:ring-2 focus:ring-teal-200 focus:ring-offset-2 focus:ring-offset-slate-950">
+                <i class="pi pi-envelope text-sm"></i>
+                flin951753&#64;gmail.com
+            </a>
+        </section>
     </div>
-</div>
+</section>

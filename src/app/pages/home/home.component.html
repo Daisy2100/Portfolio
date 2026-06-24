@@ -1,63 +1,83 @@
-<section class="relative min-h-screen overflow-hidden text-white flex items-center justify-center">
-  <!-- Background Layers -->
-  <div class="absolute inset-0 pointer-events-none z-0">
-    <div class="absolute inset-0 bg-[#07111f]/75"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-[#07111f] via-[#07111f]/85 to-[#07111f]/40"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(56,189,248,0.22),transparent_35%)]"></div>
-  </div>
+<section class="home-hero relative min-h-screen text-white flex flex-col pt-[12vh] lg:pt-[15vh]">
+    <main
+        class="relative z-10 w-full mx-auto max-w-6xl px-6 flex-1 flex flex-col justify-between pb-[15vh] lg:pb-[22vh]">
+        <!-- Top: Text Content -->
+        <div class="animate-fade-in-up max-w-5xl">
 
-  <main class="relative z-10 w-full mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-[1.15fr_0.85fr]">
-    <!-- Left Column -->
-    <div class="animate-fade-in-up mt-8 md:mt-0">
-      <p class="mb-5 text-sm font-medium uppercase tracking-[0.35em] text-cyan-300/80">
-        Internal Platform · Enterprise Systems · AI-assisted SDLC
-      </p>
+            <div class="border-l border-white/18 pl-5 md:pl-7">
 
-      <h1 class="max-w-4xl text-5xl font-semibold leading-tight tracking-tight md:text-7xl">
-        Senior Frontend
-        <span class="block text-white/70 mt-2">Engineer</span>
-      </h1>
+                <h1 class="max-w-4xl text-5xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl">
+                    Senior Frontend Engineer
+                </h1>
 
-      <p class="mt-8 max-w-2xl text-lg leading-8 text-white/72 font-light tracking-wide">
-        具 3+ 年企業內部系統與平台開發經驗，主力於前端架構、權限流程、API 串接與系統整合。熟悉 Angular、Vue、TypeScript、Node.js、.NET 8、OAuth/JWT、Docker 與 GitHub Actions。
-      </p>
+                <p class="mt-7 max-w-2xl text-base leading-8 text-white/68 md:text-lg">
+                    具 {{ experienceYears }}+ 年企業內部系統與平台開發經驗，主力於前端架構、權限流程、API 串接與系統整合。熟悉 Angular、Vue、TypeScript、Node.js、.NET 8、OAuth/JWT、Docker 與 GitHub Actions。
+                </p>
+            </div>
 
-      <div class="mt-10 flex flex-wrap gap-4">
-        <a
-          routerLink="/work/wits"
-          class="rounded-full bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
-        >
-          View Projects
-        </a>
-        <a
-          routerLink="/about"
-          class="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white/85 transition hover:border-white/45 hover:bg-white/10"
-        >
-          About Me
-        </a>
-      </div>
-    </div>
-
-    <!-- Right Column (Cards) -->
-    <div class="rounded-3xl border border-white/12 bg-white/[0.06] p-6 shadow-2xl backdrop-blur-xl animate-fade-in-up" style="animation-delay: 0.2s;">
-      <div class="space-y-4">
-        <div class="rounded-2xl bg-white/[0.07] p-5 transition hover:bg-white/[0.1] hover:scale-[1.02] duration-300 border border-white/5">
-          <p class="text-sm text-cyan-200 font-medium">Frontend Architecture</p>
-          <p class="mt-2 text-white/70 text-sm">Angular / Vue / TypeScript / SCSS</p>
+            <div class="mt-10 flex flex-wrap items-center gap-4">
+                <a routerLink="/work"
+                    class="group inline-flex items-center justify-center gap-2 rounded-full bg-teal-400 px-6 py-3.5 text-sm font-bold text-slate-950 shadow-lg shadow-teal-500/20 transition hover:-translate-y-0.5 hover:bg-teal-300 hover:shadow-teal-400/30 focus:outline-none focus:ring-2 focus:ring-teal-200 focus:ring-offset-2 focus:ring-offset-slate-950">
+                    View Works
+                    <i class="pi pi-arrow-right text-xs transition group-hover:translate-x-1"></i>
+                </a>
+                <a routerLink="/about"
+                    class="inline-flex items-center justify-center gap-2 rounded-full border border-white/45 bg-white/10 px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:border-white/70 hover:bg-white/16 focus:outline-none focus:ring-2 focus:ring-white/70 focus:ring-offset-2 focus:ring-offset-slate-950">
+                    About Me
+                </a>
+            </div>
         </div>
 
-        <div class="rounded-2xl bg-white/[0.07] p-5 transition hover:bg-white/[0.1] hover:scale-[1.02] duration-300 border border-white/5">
-          <p class="text-sm text-cyan-200 font-medium">Enterprise Integration</p>
-          <p class="mt-2 text-white/70 text-sm">OAuth2 / JWT / API Integration / Internal Platform</p>
-        </div>
+        <!-- Bottom: Expertise Strip -->
+        <div class="w-full animate-fade-in-up mt-auto" style="animation-delay: 0.2s;">
+            <div
+                class="grid gap-4 border-y border-white/12 bg-black/10 py-5 backdrop-blur-sm md:grid-cols-3 md:gap-0 md:divide-x md:divide-white/12">
 
-        <div class="rounded-2xl bg-white/[0.07] p-5 transition hover:bg-white/[0.1] hover:scale-[1.02] duration-300 border border-white/5">
-          <p class="text-sm text-cyan-200 font-medium">AI-assisted SDLC</p>
-          <p class="mt-2 text-white/70 text-sm">AI Tools / Automation / Developer Productivity</p>
+                <div class="group flex items-start gap-4 px-1 md:px-6">
+                    <span
+                        class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-teal-300/25 bg-teal-300/10 text-teal-200 transition group-hover:border-teal-300/55 group-hover:bg-teal-300/16">
+                        <i class="pi pi-desktop text-lg"></i>
+                    </span>
+                    <div>
+                        <p class="text-xs font-semibold uppercase tracking-[0.28em] text-teal-200/80">Frontend</p>
+                        <h3 class="mt-2 text-base font-semibold tracking-wide text-white">Architecture</h3>
+                        <p class="mt-2 text-sm leading-6 text-white/62">
+                            Angular / Vue / TypeScript / SCSS
+                        </p>
+                    </div>
+                </div>
+
+                <div class="group flex items-start gap-4 px-1 md:px-6">
+                    <span
+                        class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-teal-300/25 bg-teal-300/10 text-teal-200 transition group-hover:border-teal-300/55 group-hover:bg-teal-300/16">
+                        <i class="pi pi-sitemap text-lg"></i>
+                    </span>
+                    <div>
+                        <p class="text-xs font-semibold uppercase tracking-[0.28em] text-teal-200/80">Enterprise</p>
+                        <h3 class="mt-2 text-base font-semibold tracking-wide text-white">Integration</h3>
+                        <p class="mt-2 text-sm leading-6 text-white/62">
+                            OAuth2 / JWT / API / Internal Platform
+                        </p>
+                    </div>
+                </div>
+
+                <div class="group flex items-start gap-4 px-1 md:px-6">
+                    <span
+                        class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-teal-300/25 bg-teal-300/10 text-teal-200 transition group-hover:border-teal-300/55 group-hover:bg-teal-300/16">
+                        <i class="pi pi-bolt text-lg"></i>
+                    </span>
+                    <div>
+                        <p class="text-xs font-semibold uppercase tracking-[0.28em] text-teal-200/80">Workflow</p>
+                        <h3 class="mt-2 text-base font-semibold tracking-wide text-white">AI-assisted SDLC</h3>
+                        <p class="mt-2 text-sm leading-6 text-white/62">
+                            AI Tools / Automation / Dev Productivity
+                        </p>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
-    </div>
-  </main>
+    </main>
 </section>
 
 <!-- 閃爍動畫元件 -->
@@ -65,9 +85,6 @@
 
 <!-- 技能 -->
 <app-skills [skills]="skills"></app-skills>
-
-<!-- 閃爍動畫元件 -->
-<app-flash-animation></app-flash-animation>
 
 <!-- 工作經歷區域 -->
 <app-experience [workExperience]="workExperience"></app-experience>

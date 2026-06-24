@@ -1,7 +1,11 @@
 <div class="work-container">
     <!-- 公司列表 -->
     <section class="companies-section py-16 ">
-        <!-- 工作經歷區域 -->
-        <app-experience [workExperience]="workExperience"></app-experience>
+        <!-- Side Project 區域 -->
+        <app-experience
+            sectionTitle="Side Project"
+            sectionSubtitle="個人專案、開源實作與技術探索"
+            [workExperience]="workExperience">
+        </app-experience>
     </section>
 </div>

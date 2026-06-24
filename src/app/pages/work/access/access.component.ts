@@ -36,7 +36,7 @@ export class AccessComponent {
         {
             name: '電商平台購物車系統',
             role: 'Frontend Intern',
-            period: '2020/08 - 2021/04',
+            period: '2020/08 - 2022/04',
             description: '負責電商平台的購物車功能開發與維護，使用傳統前端技術進行開發，學習基礎的前端開發技能與團隊協作經驗',
             responsibilities: [
                 '使用 jQuery / HTML / CSS 串接購物車',
@@ -62,21 +62,21 @@ export class AccessComponent {
     // Timeline 事件
     timelineEvents = [
         {
-            date: '2021/04',
+            date: '2022/04',
             title: '實習結業',
             description: '完成實習，準備下一個職涯階段',
             icon: 'pi pi-graduation-cap',
             color: '#8b5cf6'
         },
         {
-            date: '2020/10 - 2020/12',
+            date: '2021/10 - 2021/12',
             title: 'UI/UX',
             description: '複數購物車 UIUX設計',
             icon: 'pi pi-shopping-cart',
             color: '#f59e0b'
         },
         {
-            date: '2020/08 - 2021/04',
+            date: '2020/08 - 2022/04',
             title: '電商平台開發',
             description: '負責購物車系統串接',
             icon: 'pi pi-code',

@@ -81,32 +81,32 @@ export class NavigationService {
                 hasChildren: true,
                 children: [
                     {
-                        id: '2025-crypto-exchange',
-                        displayName: '交易媒合平台',
-                        path: '/side-project/2025-crypto-exchange',
+                        id: '2026-primeleft',
+                        displayName: 'PrimeLeft',
+                        path: '/side-project/2026-primeleft',
                         order: 0,
-                        parentId: 'work'
+                        parentId: 'side-project'
                     },
                     {
                         id: '2025-cryptanalysis',
                         displayName: '密碼與信箱洩漏驗證器',
                         path: '/side-project/2025-cryptanalysis',
-                        order: 0,
-                        parentId: 'work'
+                        order: 1,
+                        parentId: 'side-project'
                     },
                     {
                         id: '2024-license-plate',
                         displayName: '車牌吉凶分析',
                         path: '/side-project/2024-license-plate',
-                        order: 0,
-                        parentId: 'work'
+                        order: 2,
+                        parentId: 'side-project'
                     },
                     {
                         id: '2022-date-picker',
                         displayName: '週期選取器',
                         path: '/side-project/2022-date-picker',
-                        order: 1,
-                        parentId: 'work'
+                        order: 3,
+                        parentId: 'side-project'
                     }
                 ]
             },
