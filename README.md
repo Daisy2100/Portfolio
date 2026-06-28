@@ -1,210 +1,157 @@
-# Portfolio Template - Angular 19 專案
+# Daisy 個人作品集
 
-一個使用 Angular 19 和 PrimeNG 19 建構的現代響應式作品集模板，具備完整的導航系統和模組化架構。
+這是我的個人作品集網站，用來整理前端工程經歷、工作案例與 Side Projects。
 
-## 🚀 技術規格
+- 正式網站：[portfolio.daisy2100.com](https://portfolio.daisy2100.com/)
+- 前端框架：Angular 19
+- 部署平台：Cloudflare Workers / Static Assets
 
-- **Angular**: 19.2.0
-- **PrimeNG**: 19.1.3
-- **TypeScript**: 5.7.2
-- **SCSS**: 支援現代化樣式架構
-- **SSR**: 支援伺服器端渲染 (Angular Universal)
+## 專案特色
 
-## 📋 功能特色
+- 支援桌面與行動裝置的響應式版面
+- 展示工作經歷與專案案例
+- 共用的 Side Project 詳情頁元件
+- Side Project 路由採用延遲載入
+- 使用 PrimeNG 元件與滾動動畫
+- Angular Router 換頁時自動回到頁面頂端
+- 整合 Cloudflare 部署流程
 
-### 🎨 UI/UX 設計
-- ✅ 響應式設計，支援桌面版和行動版
-- ✅ 現代化的樣式系統，使用 SCSS 變數管理
-- ✅ PrimeNG 元件庫整合
-- ✅ 自訂字型和顏色主題系統
+## 技術棧
 
-### 🧭 導航系統
-- ✅ 動態導航元件，支援自訂 Logo
-- ✅ 響應式側邊欄 (行動版)
-- ✅ 載入狀態指示器
-- ✅ 活動路由狀態顯示
-- ✅ 可配置的選單項目
+| 分類 | 使用技術 |
+| --- | --- |
+| 前端框架 | Angular 19 |
+| 程式語言 | TypeScript 5.7 |
+| UI 元件 | PrimeNG 19、PrimeIcons |
+| 樣式 | SCSS、Tailwind CSS 3 |
+| 建置 | Angular browser build，保留 SSR 基礎架構 |
+| 部署 | Cloudflare Workers、Wrangler |
+| 測試 | Jasmine、Karma |
 
-### 📄 頁面結構
-- ✅ 首頁 (Home)
-- ✅ 關於 (About)
-- ✅ 新聞 (News)
-- ✅ 聯絡 (Contact)
+## 頁面路由
 
-### 🏗️ 架構特點
-- ✅ 獨立元件 (Standalone Components)
-- ✅ 模組化服務架構
-- ✅ TypeScript 嚴格模式
-- ✅ 現代化路由配置
+| 路由 | 說明 |
+| --- | --- |
+| `/` | 首頁與個人專業概覽 |
+| `/about` | 關於我 |
+| `/work` | 工作經歷 |
+| `/work/wits` | WITS 專案案例 |
+| `/work/systex` | SYSTEX 專案案例 |
+| `/work/access` | ACCESS Taiwan 專案案例 |
+| `/side-project` | Side Project 列表 |
+| `/side-project/2026-primeleft` | PrimeLeft / Sepal Auth Hub |
+| `/side-project/2025-cryptanalysis` | 密碼分析學習專案 |
+| `/side-project/2024-license-plate` | 車牌查詢工具 |
+| `/side-project/2022-date-picker` | Date Picker 專案 |
 
-## 🛠️ 開發環境設置
+## PrimeLeft Repository 說明
 
-### 系統需求
-- Node.js 18.18.0 或更高版本
-- npm 或 yarn 套件管理器
-- Angular CLI 19.2.15
+PrimeLeft / Sepal Auth Hub 由多個 repositories 組成：
 
-### 安裝專案
+- Sepal Auth Hub Core
+- Sepal Auth Hub
+- PrimeLeft Frontend
+- PrimeLeft Backend
+
+以上 repositories 目前皆未公開。作品頁僅展示系統邊界、技術選型與各服務責任，不提供原始碼連結。
+
+## 開始使用
+
+### 環境需求
+
+- Node.js 20 或更新版本
+- npm
+
+### 安裝套件
 
 ```bash
-# 克隆專案
-git clone <repository-url>
-cd template-angular
-
-# 安裝相依套件
 npm install
 ```
 
-## 🚦 開發指令
-
-### 啟動開發伺服器
+### 啟動開發環境
 
 ```bash
 npm start
-# 或
-ng serve
 ```
 
-專案將在 `http://localhost:4200/` 啟動，並支援熱重載功能。
+啟動後開啟 <http://localhost:4200/>。修改原始碼時，開發伺服器會自動重新載入。
 
-### 建構專案
+### 正式環境建置
 
 ```bash
-# 開發建構
 npm run build
-
-# 生產建構
-ng build --configuration production
 ```
 
-建構結果將輸出到 `dist/portfolio` 目錄。
-
-### 開發監視模式
-
-```bash
-npm run watch
-```
-
-在監視模式下，檔案變更時會自動重新建構。
+建置結果會輸出至 `dist/browser/`。
 
 ### 執行測試
 
 ```bash
-# 單元測試
 npm test
-
-# 程式碼覆蓋率測試
-ng test --code-coverage
 ```
 
-## 📁 專案結構
+### 本機預覽 Cloudflare 版本
 
+請先完成 Angular 建置，再啟動 Wrangler：
+
+```bash
+npm run build
+npm run preview
 ```
+
+## 部署
+
+Wrangler 會依照 `wrangler.jsonc` 的設定，發布 `dist/browser/` 內的檔案。
+
+```bash
+npm run build
+npm run deploy
+```
+
+部署前需在本機設定 Cloudflare 驗證資訊，或提供 `CLOUDFLARE_API_TOKEN` 環境變數。請勿將任何憑證提交至 repository。
+
+## 專案結構
+
+```text
 src/
 ├── app/
-│   ├── components/           # 共用元件
-│   │   └── navigation/       # 導航元件
-│   │       ├── navigation.component.ts
-│   │       ├── navigation.service.ts
-│   │       └── README.md     # 導航元件文件
-│   ├── pages/               # 頁面元件
-│   │   ├── home/            # 首頁
-│   │   ├── about/           # 關於頁面
-│   │   ├── news/            # 新聞頁面
-│   │   └── contact/         # 聯絡頁面
-│   ├── services/            # 共用服務
-│   ├── models/              # 資料模型
-│   ├── enums/               # 列舉定義
-│   ├── app.component.*      # 根元件
-│   ├── app.config.ts        # 應用程式配置
-│   └── app.routes.ts        # 路由配置
+│   ├── components/
+│   │   ├── footer/                 # 頁尾
+│   │   ├── navigation/             # 導覽列
+│   │   ├── side-project-detail/    # Side Project 共用詳情頁
+│   │   └── home/                   # 首頁區塊元件
+│   ├── data/                       # 靜態資料
+│   ├── pages/
+│   │   ├── about/                  # 關於我
+│   │   ├── home/                   # 首頁
+│   │   ├── news/                   # 新聞頁面
+│   │   ├── side-project/           # Side Projects
+│   │   └── work/                   # 工作經歷與案例
+│   ├── app.component.*             # 根元件
+│   ├── app.config.ts               # 應用程式設定
+│   └── app.routes.ts               # 路由設定
 ├── assets/
-│   ├── styles.scss          # 全域樣式
-│   └── scss/
-│       └── _variables.scss  # SCSS 變數定義
-└── environments/            # 環境配置
+│   ├── home/                       # 首頁圖片
+│   ├── scss/                       # 共用 SCSS
+│   └── styles.scss                 # 全域樣式
+├── environments/                  # 環境設定
+└── main.ts                         # 瀏覽器進入點
 ```
 
-## 🎨 樣式架構
+## 可用指令
 
-### SCSS 變數系統
-專案使用完整的 SCSS 變數系統，定義於 `src/assets/scss/_variables.scss`：
+| 指令 | 用途 |
+| --- | --- |
+| `npm start` | 啟動 Angular 開發伺服器 |
+| `npm run build` | 建立正式環境版本 |
+| `npm run watch` | 以開發模式持續監看並建置 |
+| `npm test` | 執行單元測試 |
+| `npm run preview` | 在本機預覽 Cloudflare 部署版本 |
+| `npm run deploy` | 使用 Wrangler 部署目前的 browser build |
 
-- **字型系統**: 主要和次要字型家族定義
-- **字重**: 從 light (300) 到 bold (700)
-- **字體大小**: 從 xs (11px) 到 4xl (48px)
-- **顏色系統**: Primary、Gray 色階完整定義
-- **間距和佈局**: 標準化間距系統
+## 相關文件
 
-### 使用現代 @use 語法
-
-```scss
-@use 'scss/_variables' as *;
-
-.my-component {
-  font-family: $font-family-primary;
-  color: $color-primary-500;
-}
-```
-
-## 🧩 核心元件
-
-### 導航元件 (NavigationComponent)
-- **位置**: `src/app/components/navigation/`
-- **功能**: 響應式導航、側邊欄、載入狀態
-- **自訂**: 支援 `logoText` 輸入屬性
-- **服務**: `NavigationService` 管理選單項目
-
-詳細使用說明請參考：`src/app/components/navigation/README.md`
-
-## 🔧 配置檔案
-
-- **angular.json**: Angular CLI 專案配置
-- **tsconfig.json**: TypeScript 編譯器配置
-- **package.json**: 專案相依性和腳本
-- **postcss.config.js**: PostCSS 配置
-
-## 📝 開發規範
-
-### 元件開發
-1. 使用 PrimeNG 作為基礎 UI 元件庫
-2. 當樣式無法符合需求時，使用自訂 SCSS
-3. 所有新元件使用 Standalone Components 架構
-
-### 樣式開發
-1. 使用 SCSS 變數化處理所有可配置參數
-2. 使用現代的 `@use` 語法取代 `@import`
-3. 遵循 BEM 命名規範
-
-### TypeScript
-- 啟用嚴格模式 (`strict: true`)
-- 使用明確的型別定義
-- 遵循 Angular 編碼風格指南
-
-## 🚀 部署
-
-### 生產建構
-```bash
-ng build --configuration production
-```
-
-### SSR 建構
-```bash
-ng build --configuration production
-npm run serve:ssr:portfolio
-```
-
-## 📞 技術支援
-
-如需技術支援或有任何問題，請參考：
 - [Angular 官方文件](https://angular.dev/)
-- [PrimeNG 文件](https://primeng.org/)
-- [專案 Issues](repository-issues-url)
-
-## 📄 授權條款
-
-本專案使用 MIT 授權條款。詳情請參閱 LICENSE 檔案。
-
----
-
-*本專案使用 Angular CLI 19.2.15 建立*
+- [PrimeNG 官方文件](https://primeng.org/)
+- [Tailwind CSS 官方文件](https://tailwindcss.com/)
+- [Cloudflare Wrangler 文件](https://developers.cloudflare.com/workers/wrangler/)

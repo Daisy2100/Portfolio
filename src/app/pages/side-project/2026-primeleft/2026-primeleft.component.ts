@@ -52,7 +52,7 @@ export class Primeleft2026Component {
         primary: true
       }
     ],
-    repositoryNote: 'auth-hub 已公開；其餘 repository 僅展示系統邊界與各自責任。',
+    repositoryNote: '所有 repository 皆未公開，此處僅展示系統邊界與各自責任。',
     repositories: [
       {
         name: 'Sepal Auth Hub Core',
@@ -65,9 +65,8 @@ export class Primeleft2026Component {
         name: 'Sepal Auth Hub',
         type: 'Verification Service',
         description: '獨立的驗證服務，負責 token 驗證、服務權限、帳號綁定與授權有效期限。',
-        visibility: 'Public',
-        icon: 'pi pi-key',
-        url: 'https://github.com/sepal-lab/auth-hub'
+        visibility: 'Private',
+        icon: 'pi pi-key'
       },
       {
         name: 'PrimeLeft Frontend',

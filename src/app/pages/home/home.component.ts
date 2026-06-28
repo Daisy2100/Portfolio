@@ -37,7 +37,7 @@ export class HomeComponent {
             category: 'Frontend',
             icon: 'pi pi-desktop',
             description: '熟悉現代化前端框架與企業內部系統開發，能依需求建立可維護、可擴充的前端架構，並與後端 API、權限流程與資料流程整合。',
-            technologies: ['Angular', 'Vue.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'SCSS']
+            technologies: ['Angular', 'Vue.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'SCSS', 'Storybook']
         },
         {
             category: 'Backend & API Integration',
