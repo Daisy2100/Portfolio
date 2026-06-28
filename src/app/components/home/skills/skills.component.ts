@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardModule } from 'primeng/card';
-import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 interface Skill {
     category: string;
@@ -13,7 +12,7 @@ interface Skill {
 @Component({
     selector: 'app-skills',
     standalone: true,
-    imports: [CommonModule, CardModule, AnimateOnScrollModule],
+    imports: [CommonModule, CardModule],
     templateUrl: './skills.component.html',
     styleUrl: './skills.component.scss'
 })

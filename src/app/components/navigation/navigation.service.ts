@@ -59,7 +59,7 @@ export class NavigationService {
                     },
                     {
                         id: 'systex',
-                        displayName: '精誠資訊',
+                        displayName: '精誠資訊股份有限公司',
                         path: '/work/systex',
                         order: 1,
                         parentId: 'work'

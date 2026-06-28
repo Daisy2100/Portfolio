@@ -8,7 +8,10 @@
 .skill-card {
     ::ng-deep .p-card {
         height: 100%;
-        transition: all 0.3s ease;
+        transition:
+            transform 0.3s ease,
+            background-color 0.3s ease,
+            box-shadow 0.3s ease;
         border: 1px solid rgba(255, 255, 255, 0.72);
         border-radius: 1.25rem;
         background: rgba(255, 255, 255, 0.72);

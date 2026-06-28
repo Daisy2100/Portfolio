@@ -24,7 +24,7 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 })
 export class WitsComponent {
     companyInfo = {
-        name: 'WITS',
+        name: '緯致科技股份有限公司(原緯創軟體)',
         period: '2025/08 - 現在',
         role: 'Senior Engineer',
         duration: '在職中',
@@ -34,18 +34,17 @@ export class WitsComponent {
 
     projects = [
         {
-            name: '企業內部前端系統與元件庫開發',
-            role: 'Senior Frontend Engineer',
+            name: '企業內部 UI 元件庫建置',
+            role: 'Senior Software Engineer',
             period: '2025/08 - 現在',
-            description: '參與企業內部系統前端開發，負責 Vue.js 元件庫建置、Storybook 導入與 Monorepo 架構維護。',
+            description: '負責建置企業內部 Vue.js UI 元件庫，並導入 Storybook 進行元件展示、測試與文件管理。',
             responsibilities: [
-                '使用 Vue.js 與 TypeScript 開發與維護前端功能與互動流程',
+                '使用 Vue.js 與 TypeScript 開發與維護共用 UI 元件',
                 '建置企業內部共用前端 UI 元件庫，提升跨專案開發效率',
-                '導入 Storybook 管理與展示元件，確保元件視覺一致性與可用性',
-                '於 Monorepo 架構下進行開發與維護，優化前端程式碼共用與版控流程'
+                '導入 Storybook 管理與展示元件，確保元件視覺一致性與可用性'
             ],
             technologies: {
-                frontend: ['Vue.js', 'TypeScript', 'Storybook', 'Monorepo'],
+                frontend: ['Vue.js', 'TypeScript', 'Storybook'],
                 backend: [],
                 database: []
             },
@@ -53,8 +52,29 @@ export class WitsComponent {
             status: '進行中',
             achievements: [
                 '成功建置並導入共用元件庫，降低跨專案重複開發成本',
-                '建立 Storybook 元件文件，提升設計與開發團隊協作效率',
-                '熟悉 Monorepo 架構下的前端專案管理與開發流程'
+                '建立 Storybook 元件文件，提升設計與開發團隊協作效率'
+            ]
+        },
+        {
+            name: '企業內部 Monorepo 前端架構開發',
+            role: 'Senior Software Engineer',
+            period: '2026/06 - 現在',
+            description: '參與企業內部前端 Monorepo 架構的開發與維護，整合跨專案共用程式碼與開發流程。',
+            responsibilities: [
+                '使用 Vue.js 與 TypeScript 開發與維護企業內部前端功能',
+                '於 Monorepo 架構下整合跨專案共用套件與程式碼',
+            ],
+            technologies: {
+                frontend: ['Vue.js', 'TypeScript', 'Monorepo', 'Git'],
+                backend: [],
+                database: []
+            },
+            icon: 'pi pi-sitemap',
+            status: '進行中',
+            achievements: [
+                '提升跨專案程式碼與共用套件的可維護性',
+                '優化 Monorepo 架構下的前端開發與版控流程',
+                '累積 Monorepo 前端專案管理與開發經驗'
             ]
         }
     ];
@@ -64,12 +84,12 @@ export class WitsComponent {
         {
             date: '現在',
             title: '持續開發與維護中',
-            role: 'Senior Frontend Engineer',
+            role: 'Senior Software Engineer',
             status: '進行中',
             icon: 'pi pi-star',
             color: '#6366f1'
         },
-        ...this.projects.map((project, index) => ({
+        ...this.projects.slice().reverse().map((project) => ({
             date: project.period,
             title: project.name,
             role: project.role,
@@ -80,7 +100,7 @@ export class WitsComponent {
         {
             date: '2025/08/18',
             title: '加入緯致科技',
-            role: 'Senior Frontend Engineer',
+            role: 'Senior Software Engineer',
             status: '已完成',
             icon: 'pi pi-user-plus',
             color: '#6366f1'
