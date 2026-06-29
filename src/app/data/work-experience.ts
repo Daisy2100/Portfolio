@@ -15,7 +15,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     {
         period: '2025/08 - 現在',
         title: 'Senior Software Engineer',
-        company: '緯致科技股份有限公司 — 華邦電駐點專案',
+        company: '緯致科技股份有限公司',
         duration: '在職中',
         description: '參與企業內部系統前端開發，專注於 Vue.js、TypeScript、UI 元件庫建置、Storybook 導入與 Monorepo 架構維護。',
         responsibilities: [

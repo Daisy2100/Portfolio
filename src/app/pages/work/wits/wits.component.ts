@@ -26,7 +26,7 @@ export class WitsComponent {
     companyInfo = {
         name: '緯致科技股份有限公司(原緯創軟體)',
         period: '2025/08 - 現在',
-        role: 'Senior Engineer',
+        role: 'Senior Software Engineer',
         duration: '在職中',
         icon: 'pi pi-briefcase',
         color: '#0d9488'
