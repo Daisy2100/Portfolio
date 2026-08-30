@@ -1,10 +1,12 @@
 import { provideServerRendering } from '@angular/ssr';
 import { mergeApplicationConfig, ApplicationConfig } from '@angular/core';
+import { provideClientHydration } from '@angular/platform-browser';
 import { appConfig } from './app.config';
 
 const serverConfig: ApplicationConfig = {
     providers: [
-        provideServerRendering()
+        provideServerRendering(),
+        provideClientHydration()
     ]
 };
 

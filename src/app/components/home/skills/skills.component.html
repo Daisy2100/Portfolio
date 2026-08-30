@@ -10,8 +10,8 @@
     <!-- 技能卡片網格 -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
       @for (skill of skills; track skill) {
-        <p-card class="skill-card h-full">
-          <ng-template pTemplate="header">
+        <p-card styleClass="skill-card h-full">
+          <ng-template #header>
             <div class="flex items-center gap-4 p-6 pb-4">
                         <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center
                                     bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg">
