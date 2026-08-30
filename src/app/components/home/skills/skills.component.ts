@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { CardModule } from 'primeng/card';
 
 interface Skill {
@@ -12,7 +12,7 @@ interface Skill {
 @Component({
     selector: 'app-skills',
     standalone: true,
-    imports: [CommonModule, CardModule],
+    imports: [CardModule],
     templateUrl: './skills.component.html',
     styleUrl: './skills.component.scss'
 })

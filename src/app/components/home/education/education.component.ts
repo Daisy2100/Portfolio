@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { CardModule } from 'primeng/card';
 import { TimelineModule } from 'primeng/timeline';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
@@ -23,7 +23,7 @@ interface Education {
 @Component({
     selector: 'app-education',
     standalone: true,
-    imports: [CommonModule, CardModule, TimelineModule, AnimateOnScrollModule, TagModule],
+    imports: [CardModule, TimelineModule, AnimateOnScrollModule, TagModule],
     templateUrl: './education.component.html',
     styleUrl: './education.component.scss'
 })

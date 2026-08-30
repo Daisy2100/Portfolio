@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterModule } from '@angular/router';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
@@ -11,14 +11,13 @@ import { ExperienceComponent } from '../../components/home/experience/experience
     selector: 'app-side-project',
     standalone: true,
     imports: [
-        CommonModule,
-        RouterModule,
-        CardModule,
-        ButtonModule,
-        TagModule,
-        AnimateOnScrollModule,
-        ExperienceComponent
-    ],
+    RouterModule,
+    CardModule,
+    ButtonModule,
+    TagModule,
+    AnimateOnScrollModule,
+    ExperienceComponent
+],
     templateUrl: './side-project.component.html',
     styleUrls: ['./side-project.component.scss']
 })

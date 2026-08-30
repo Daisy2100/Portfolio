@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-flash-animation',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './flash-animation.component.html',
   styleUrl: './flash-animation.component.scss'
 })

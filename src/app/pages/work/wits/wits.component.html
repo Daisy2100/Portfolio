@@ -1,174 +1,184 @@
 <div class="wits-container">
 
-    <!-- Header Section -->
-    <div class="pt-20 pb-8 text-center animate-fade-in-up">
-        <div class="max-w-4xl mx-auto px-6">
-            <h1 class="text-4xl font-bold text-white mb-4">{{ companyInfo.name }}</h1>
+  <!-- Header Section -->
+  <div class="pt-20 pb-8 text-center animate-fade-in-up">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-4xl font-bold text-white mb-4">{{ companyInfo.name }}</h1>
 
-            <div class="flex flex-wrap gap-3 text-center justify-center mb-6">
-                <p-tag [value]="companyInfo.role" [style]="{'background-color': companyInfo.color}"
-                    class="font-medium"></p-tag>
-                <p-tag value="{{ companyInfo.duration }}" severity="info" class="font-medium"></p-tag>
-                <p-tag value="{{ companyInfo.period }}" severity="secondary" class="font-medium"></p-tag>
-            </div>
-        </div>
+      <div class="flex flex-wrap gap-3 text-center justify-center mb-6">
+        <p-tag [value]="companyInfo.role" [style]="{'background-color': companyInfo.color}"
+        class="font-medium"></p-tag>
+        <p-tag value="{{ companyInfo.duration }}" severity="info" class="font-medium"></p-tag>
+        <p-tag value="{{ companyInfo.period }}" severity="secondary" class="font-medium"></p-tag>
+      </div>
     </div>
+  </div>
 
-    <!-- 專案時間軸 -->
-    <section class="timeline-section py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-white mb-12 animate-fade-in-up">
-                專案時間軸
-            </h2>
+  <!-- 專案時間軸 -->
+  <section class="timeline-section py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-white mb-12 animate-fade-in-up">
+        專案時間軸
+      </h2>
 
-            <div class="max-w-4xl mx-auto animate-fade-in-up">
-                <p-timeline
-                    [value]="timelineEvents"
-                    layout="vertical"
-                    align="alternate"
-                    styleClass="timeline-custom"
-                >
-                    <ng-template pTemplate="marker" let-event>
-                        <div class="timeline-marker" [style.background-color]="event.color">
-                            <i [class]="event.icon" class="text-white"></i>
-                        </div>
-                    </ng-template>
-
-                    <ng-template pTemplate="content" let-event>
-                        <div class="timeline-content">
-                            <div class="bg-white p-4 rounded-lg shadow-md">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="font-bold text-gray-800">{{ event.title }}</h4>
-                                    <p-tag
-                                        [value]="event.status"
-                                        [severity]="getStatusSeverity(event.status)"
-                                        class="ml-2"
-                                    ></p-tag>
-                                </div>
-                                <p class="text-gray-600 text-sm mb-1">{{ event.role }}</p>
-                                <p class="text-gray-500 text-xs">{{ event.date }}</p>
-                            </div>
-                        </div>
-                    </ng-template>
-                </p-timeline>
+      <div class="max-w-4xl mx-auto animate-fade-in-up">
+        <p-timeline
+          [value]="timelineEvents"
+          layout="vertical"
+          align="alternate"
+          styleClass="timeline-custom"
+          >
+          <ng-template pTemplate="marker" let-event>
+            <div class="timeline-marker" [style.background-color]="event.color">
+              <i [class]="event.icon" class="text-white"></i>
             </div>
-        </div>
-    </section>
+          </ng-template>
 
-    <!-- 專案經驗 -->
-    <section class="projects-section py-16" *ngIf="projects.length > 0">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-white mb-12" pAnimateOnScroll enterClass="animate-fade-in-up" leaveClass="animate-leave fade-out-0">
-                專案經驗
-            </h2>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div
-                    *ngFor="let project of projects; trackBy: trackByProjectName; let i = index"
-                    class="project-card"
-                    pAnimateOnScroll
-                    enterClass="animate-fade-in-up"
-                    leaveClass="animate-leave fade-out-0"
-                >
-                    <p-card
-                        [style]="{'height': '100%'}"
-                        styleClass="shadow-lg hover:shadow-xl transition-all duration-300 border-0"
-                    >
-                        <ng-template pTemplate="header">
-                            <div class="project-header p-6 pb-0">
-                                <div class="flex items-start justify-between mb-4">
-                                    <div class="flex items-center">
-                                        <i [class]="project.icon" class="text-2xl mr-3 text-indigo-500"></i>
-                                        <div>
-                                            <h3 class="text-xl font-bold text-gray-800 mb-1">{{ project.name }}</h3>
-                                            <p class="text-gray-500 text-sm">{{ project.period }}</p>
-                                        </div>
-                                    </div>
-                                    <p-tag
-                                        [value]="project.status"
-                                        [severity]="getStatusSeverity(project.status)"
-                                    ></p-tag>
-                                </div>
-
-                                <p-tag
-                                    *ngIf="project.role"
-                                    [value]="project.role"
-                                    severity="info"
-                                    class="font-medium mb-4"
-                                ></p-tag>
-                            </div>
-                        </ng-template>
-
-                        <div class="project-content px-6 pb-6">
-                            <div class="mb-6">
-                                <h4 class="text-sm font-semibold text-gray-700 mb-2">專案描述：</h4>
-                                <p class="text-gray-600 leading-relaxed text-sm">{{ project.description }}</p>
-                            </div>
-
-                            <div class="mb-6">
-                                <h4 class="text-sm font-semibold text-gray-700 mb-3">主要工作內容：</h4>
-                                <ul class="list-disc list-inside space-y-1">
-                                    <li *ngFor="let responsibility of project.responsibilities"
-                                        class="text-gray-600 text-sm">
-                                        {{ responsibility }}
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="technologies-section mb-6">
-                                <h4 class="text-sm font-semibold text-gray-700 mb-3">使用技術：</h4>
-
-                                <div *ngIf="project.technologies.frontend && project.technologies.frontend.length > 0" class="mb-3">
-                                    <span class="text-xs font-medium text-blue-600 block mb-2">前端：</span>
-                                    <div class="flex flex-wrap gap-1">
-                                        <span
-                                            *ngFor="let tech of project.technologies.frontend"
-                                            class="inline-block bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs font-medium"
-                                        >
-                                            {{ tech }}
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div *ngIf="project.technologies.backend && project.technologies.backend.length > 0" class="mb-3">
-                                    <span class="text-xs font-medium text-green-600 block mb-2">後端：</span>
-                                    <div class="flex flex-wrap gap-1">
-                                        <span
-                                            *ngFor="let tech of project.technologies.backend"
-                                            class="inline-block bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium"
-                                        >
-                                            {{ tech }}
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div *ngIf="project.technologies.database && project.technologies.database.length > 0">
-                                    <span class="text-xs font-medium text-purple-600 block mb-2">資料庫：</span>
-                                    <div class="flex flex-wrap gap-1">
-                                        <span
-                                            *ngFor="let tech of project.technologies.database"
-                                            class="inline-block bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs font-medium"
-                                        >
-                                            {{ tech }}
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="achievements-section" *ngIf="project.achievements && project.achievements.length > 0">
-                                <h4 class="text-sm font-semibold text-gray-700 mb-3">主要成果：</h4>
-                                <ul class="list-disc list-inside space-y-1">
-                                    <li *ngFor="let achievement of project.achievements"
-                                        class="text-gray-600 text-sm">
-                                        {{ achievement }}
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </p-card>
+          <ng-template pTemplate="content" let-event>
+            <div class="timeline-content">
+              <div class="bg-white p-4 rounded-lg shadow-md">
+                <div class="flex justify-between items-start mb-2">
+                  <h4 class="font-bold text-gray-800">{{ event.title }}</h4>
+                  <p-tag
+                    [value]="event.status"
+                    [severity]="getStatusSeverity(event.status)"
+                    class="ml-2"
+                  ></p-tag>
                 </div>
+                <p class="text-gray-600 text-sm mb-1">{{ event.role }}</p>
+                <p class="text-gray-500 text-xs">{{ event.date }}</p>
+              </div>
             </div>
+          </ng-template>
+        </p-timeline>
+      </div>
+    </div>
+  </section>
+
+  <!-- 專案經驗 -->
+  @if (projects.length > 0) {
+    <section class="projects-section py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-white mb-12" pAnimateOnScroll enterClass="animate-fade-in-up" leaveClass="animate-leave fade-out-0">
+          專案經驗
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          @for (project of projects; track trackByProjectName(i, project); let i = $index) {
+            <div
+              class="project-card"
+              pAnimateOnScroll
+              enterClass="animate-fade-in-up"
+              leaveClass="animate-leave fade-out-0"
+              >
+              <p-card
+                [style]="{'height': '100%'}"
+                styleClass="shadow-lg hover:shadow-xl transition-all duration-300 border-0"
+                >
+                <ng-template pTemplate="header">
+                  <div class="project-header p-6 pb-0">
+                    <div class="flex items-start justify-between mb-4">
+                      <div class="flex items-center">
+                        <i [class]="project.icon" class="text-2xl mr-3 text-indigo-500"></i>
+                        <div>
+                          <h3 class="text-xl font-bold text-gray-800 mb-1">{{ project.name }}</h3>
+                          <p class="text-gray-500 text-sm">{{ project.period }}</p>
+                        </div>
+                      </div>
+                      <p-tag
+                        [value]="project.status"
+                        [severity]="getStatusSeverity(project.status)"
+                      ></p-tag>
+                    </div>
+                    @if (project.role) {
+                      <p-tag
+                        [value]="project.role"
+                        severity="info"
+                        class="font-medium mb-4"
+                      ></p-tag>
+                    }
+                  </div>
+                </ng-template>
+                <div class="project-content px-6 pb-6">
+                  <div class="mb-6">
+                    <h4 class="text-sm font-semibold text-gray-700 mb-2">專案描述：</h4>
+                    <p class="text-gray-600 leading-relaxed text-sm">{{ project.description }}</p>
+                  </div>
+                  <div class="mb-6">
+                    <h4 class="text-sm font-semibold text-gray-700 mb-3">主要工作內容：</h4>
+                    <ul class="list-disc list-inside space-y-1">
+                      @for (responsibility of project.responsibilities; track responsibility) {
+                        <li
+                          class="text-gray-600 text-sm">
+                          {{ responsibility }}
+                        </li>
+                      }
+                    </ul>
+                  </div>
+                  <div class="technologies-section mb-6">
+                    <h4 class="text-sm font-semibold text-gray-700 mb-3">使用技術：</h4>
+                    @if (project.technologies.frontend && project.technologies.frontend.length > 0) {
+                      <div class="mb-3">
+                        <span class="text-xs font-medium text-blue-600 block mb-2">前端：</span>
+                        <div class="flex flex-wrap gap-1">
+                          @for (tech of project.technologies.frontend; track tech) {
+                            <span
+                              class="inline-block bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs font-medium"
+                              >
+                              {{ tech }}
+                            </span>
+                          }
+                        </div>
+                      </div>
+                    }
+                    @if (project.technologies.backend && project.technologies.backend.length > 0) {
+                      <div class="mb-3">
+                        <span class="text-xs font-medium text-green-600 block mb-2">後端：</span>
+                        <div class="flex flex-wrap gap-1">
+                          @for (tech of project.technologies.backend; track tech) {
+                            <span
+                              class="inline-block bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium"
+                              >
+                              {{ tech }}
+                            </span>
+                          }
+                        </div>
+                      </div>
+                    }
+                    @if (project.technologies.database && project.technologies.database.length > 0) {
+                      <div>
+                        <span class="text-xs font-medium text-purple-600 block mb-2">資料庫：</span>
+                        <div class="flex flex-wrap gap-1">
+                          @for (tech of project.technologies.database; track tech) {
+                            <span
+                              class="inline-block bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs font-medium"
+                              >
+                              {{ tech }}
+                            </span>
+                          }
+                        </div>
+                      </div>
+                    }
+                  </div>
+                  @if (project.achievements && project.achievements.length > 0) {
+                    <div class="achievements-section">
+                      <h4 class="text-sm font-semibold text-gray-700 mb-3">主要成果：</h4>
+                      <ul class="list-disc list-inside space-y-1">
+                        @for (achievement of project.achievements; track achievement) {
+                          <li
+                            class="text-gray-600 text-sm">
+                            {{ achievement }}
+                          </li>
+                        }
+                      </ul>
+                    </div>
+                  }
+                </div>
+              </p-card>
+            </div>
+          }
         </div>
+      </div>
     </section>
+  }
 
 </div>

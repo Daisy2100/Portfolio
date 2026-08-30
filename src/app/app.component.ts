@@ -2,12 +2,12 @@ import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { NgIf } from '@angular/common';
+
 import { IntroAnimationComponent } from './components/intro-animation/intro-animation.component';
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet, NavigationComponent, FooterComponent, NgIf, IntroAnimationComponent],
+    imports: [RouterOutlet, NavigationComponent, FooterComponent, IntroAnimationComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })

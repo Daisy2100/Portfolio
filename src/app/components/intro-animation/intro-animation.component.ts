@@ -1,11 +1,11 @@
 import { Component, OnInit, Renderer2, Output, EventEmitter } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
     selector: 'app-intro-animation',
     templateUrl: './intro-animation.component.html',
     styleUrls: ['./intro-animation.component.scss'],
-    imports: [CommonModule]
+    imports: []
 })
 
 export class IntroAnimationComponent implements OnInit {

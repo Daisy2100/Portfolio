@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterModule } from '@angular/router';
 import { FlashAnimationComponent } from '../../components/flash-animation/flash-animation.component';
 import { SkillsComponent } from '../../components/home/skills/skills.component';
@@ -11,7 +11,7 @@ import { WORK_EXPERIENCE } from '../../data/work-experience';
 @Component({
     selector: 'app-home',
     standalone: true,
-    imports: [CommonModule, RouterModule, FlashAnimationComponent, SkillsComponent, ExperienceComponent, EducationComponent, AnimateOnScrollModule],
+    imports: [RouterModule, FlashAnimationComponent, SkillsComponent, ExperienceComponent, EducationComponent, AnimateOnScrollModule],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss'
 })

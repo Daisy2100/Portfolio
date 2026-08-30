@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -40,7 +40,7 @@ export interface SideProjectDetail {
 @Component({
     selector: 'app-side-project-detail',
     standalone: true,
-    imports: [CommonModule, RouterModule],
+    imports: [RouterModule],
     templateUrl: './side-project-detail.component.html',
     styleUrl: './side-project-detail.component.scss'
 })

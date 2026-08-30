@@ -3,13 +3,13 @@ import { RouterModule } from '@angular/router';
 import { DrawerModule } from 'primeng/drawer';
 import { ButtonModule } from 'primeng/button';
 import { MenuModule } from 'primeng/menu';
-import { CommonModule } from '@angular/common';
+
 import { NavigationService, NavigationItem } from './navigation.service';
 
 @Component({
     selector: 'app-navigation',
     standalone: true,
-    imports: [RouterModule, DrawerModule, ButtonModule, MenuModule, CommonModule],
+    imports: [RouterModule, DrawerModule, ButtonModule, MenuModule],
     templateUrl: './navigation.component.html',
     styleUrl: './navigation.component.scss'
 })

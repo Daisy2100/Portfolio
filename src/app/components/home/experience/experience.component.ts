@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { CardModule } from 'primeng/card';
@@ -12,7 +12,7 @@ import { WorkExperience } from '../../../data/work-experience';
 @Component({
     selector: 'app-experience',
     standalone: true,
-    imports: [CommonModule, RouterModule, CardModule, TimelineModule, AnimateOnScrollModule, TagModule, ButtonModule],
+    imports: [RouterModule, CardModule, TimelineModule, AnimateOnScrollModule, TagModule, ButtonModule],
     templateUrl: './experience.component.html',
     styleUrl: './experience.component.scss'
 })
