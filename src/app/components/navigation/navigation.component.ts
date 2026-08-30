@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SidebarModule } from 'primeng/sidebar';
+import { DrawerModule } from 'primeng/drawer';
 import { ButtonModule } from 'primeng/button';
 import { MenuModule } from 'primeng/menu';
 import { CommonModule } from '@angular/common';
@@ -9,7 +9,7 @@ import { NavigationService, NavigationItem } from './navigation.service';
 @Component({
     selector: 'app-navigation',
     standalone: true,
-    imports: [RouterModule, SidebarModule, ButtonModule, MenuModule, CommonModule],
+    imports: [RouterModule, DrawerModule, ButtonModule, MenuModule, CommonModule],
     templateUrl: './navigation.component.html',
     styleUrl: './navigation.component.scss'
 })

@@ -223,10 +223,10 @@ export class SystexComponent {
         }
     }
 
-    getStatusSeverity(status: string): string {
+    getStatusSeverity(status: string): 'success' | 'secondary' | 'info' | 'warn' | 'danger' | 'contrast' {
         switch (status) {
             case '進行中':
-                return 'warning';
+                return 'warn';
             case '已完成':
                 return 'success';
             default:
