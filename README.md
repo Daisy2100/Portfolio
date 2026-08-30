@@ -3,7 +3,7 @@
 這是我的個人作品集網站，用來整理前端工程經歷、工作案例與 Side Projects。
 
 - 正式網站：[portfolio.daisy2100.com](https://portfolio.daisy2100.com/)
-- 前端框架：Angular 19
+- 前端框架：Angular 22
 - 部署平台：Cloudflare Workers / Static Assets
 
 ## 專案特色
@@ -12,7 +12,7 @@
 - 展示工作經歷與專案案例
 - 共用的 Side Project 詳情頁元件
 - Side Project 路由採用延遲載入
-- 使用 PrimeNG 元件與滾動動畫
+- 使用 PrimeNG 22 元件與現代化 Control Flow Block 語法
 - Angular Router 換頁時自動回到頁面頂端
 - 整合 Cloudflare 部署流程
 
@@ -20,11 +20,11 @@
 
 | 分類 | 使用技術 |
 | --- | --- |
-| 前端框架 | Angular 19 |
-| 程式語言 | TypeScript 5.7 |
-| UI 元件 | PrimeNG 19、PrimeIcons |
+| 前端框架 | Angular 22 |
+| 程式語言 | TypeScript 6.0 |
+| UI 元件 | PrimeNG 22、PrimeIcons |
 | 樣式 | SCSS、Tailwind CSS 3 |
-| 建置 | Angular browser build，保留 SSR 基礎架構 |
+| 建置 | Angular application build，保留 SSR 基礎架構 |
 | 部署 | Cloudflare Workers、Wrangler |
 | 測試 | Jasmine、Karma |
 
@@ -59,7 +59,7 @@ PrimeLeft / Sepal Auth Hub 由多個 repositories 組成：
 
 ### 環境需求
 
-- Node.js 20 或更新版本
+- Node.js 24 或更新版本 (建議 v24.15.0+)
 - npm
 
 ### 安裝套件
