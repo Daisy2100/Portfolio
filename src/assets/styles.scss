@@ -102,3 +102,11 @@ body {
     color: $color-gray-900;
     background-color: $color-white;
 }
+
+/* Suppress PrimeUI License Banner */
+#p-license-host {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
