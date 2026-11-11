@@ -1,5 +1,6 @@
 @use 'sass:color';
 @use '../../../assets/scss/variables' as *;
+@reference "../../../styles.css";
 
 
 .intro-animation {

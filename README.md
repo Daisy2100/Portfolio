@@ -23,7 +23,7 @@
 | 前端框架 | Angular 22 |
 | 程式語言 | TypeScript 6.0 |
 | UI 元件 | PrimeNG 22、PrimeIcons |
-| 樣式 | SCSS、Tailwind CSS 3 |
+| 樣式 | SCSS、Tailwind CSS 4 |
 | 建置 | Angular application build，保留 SSR 基礎架構 |
 | 部署 | Cloudflare Workers、Wrangler |
 | 測試 | Jasmine、Karma |
@@ -40,9 +40,9 @@
 | `/work/access` | ACCESS Taiwan 專案案例 |
 | `/side-project` | Side Project 列表 |
 | `/side-project/2026-primeleft` | PrimeLeft / Sepal Auth Hub |
-| `/side-project/2025-cryptanalysis` | 密碼分析學習專案 |
-| `/side-project/2024-license-plate` | 車牌查詢工具 |
-| `/side-project/2022-date-picker` | Date Picker 專案 |
+| `/side-project/2025-cryptanalysis` | 密碼與信箱洩漏驗證器 |
+| `/side-project/2024-license-plate` | 車牌吉凶分析 |
+| `/side-project/2022-date-picker` | 週期選取器 |
 
 ## PrimeLeft Repository 說明
 
@@ -135,6 +135,8 @@ src/
 │   ├── scss/                       # 共用 SCSS
 │   └── styles.scss                 # 全域樣式
 ├── environments/                  # 環境設定
+├── styles.css                      # Tailwind CSS 進入點
+├── tailwind-v3-colors.css          # 沿用 Tailwind v3 色票，維持升級前的配色
 └── main.ts                         # 瀏覽器進入點
 ```
 
