@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 import { LicensePlate2024Component } from './2024-license-plate.component';
 
 describe('LicensePlate2024Component', () => {
@@ -7,7 +8,8 @@ describe('LicensePlate2024Component', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LicensePlate2024Component]
+      imports: [LicensePlate2024Component],
+      providers: [provideRouter([])]
     })
     .compileComponents();
 
