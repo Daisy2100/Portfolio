@@ -36,25 +36,25 @@ export class HomeComponent {
         {
             category: 'Frontend',
             icon: 'pi pi-desktop',
-            description: '熟悉現代化前端框架與企業內部系統開發，能依需求建立可維護、可擴充的前端架構，並與後端 API、權限流程與資料流程整合。',
+            description: '以 Angular 與 Vue 開發企業系統，擅長把複雜的權限與資料流程，整理成好維護的元件與頁面結構；也建置過共用 UI 元件庫與 Storybook 文件。',
             technologies: ['Angular', 'Vue.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'SCSS', 'Storybook']
         },
         {
             category: 'Backend & API Integration',
             icon: 'pi pi-server',
-            description: '具備全端協作與後端 API 開發經驗，能設計與串接 REST API、處理 OAuth/JWT 權限驗證、資料流程與企業內部系統整合。',
+            description: '使用 .NET 8 與 Express.js 設計 REST API，實作過 OAuth 2.0 單一登入與 AD 整合登入，能獨立完成從 API 到前端的完整功能。',
             technologies: ['C#', '.NET 8', 'Entity Framework', 'Node.js', 'Express.js', 'OAuth2.0', 'JWT', 'REST API']
         },
         {
             category: 'Database',
             icon: 'pi pi-database',
-            description: '具備關聯式資料庫設計、查詢、資料流程整合與效能調整經驗，能支援企業內部系統的資料存取、報表需求與後端服務整合。',
+            description: '負責關聯式資料庫的設計、查詢與效能調整，處理過 IoT 電表資料與客製化報表，也熟悉 Redis、TimescaleDB 等不同類型的資料儲存。',
             technologies: ['MySQL', 'MSSQL', 'Redis', 'TimescaleDB', 'Stored Procedure', 'Partition']
         },
         {
             category: 'DevOps / Cloud / AI-assisted SDLC',
             icon: 'pi pi-cog',
-            description: '具備容器化部署、版本控管、CI/CD 與雲端服務整合經驗，並能使用 AI 工具輔助需求拆解、重構、debug 與文件整理。',
+            description: '以 Docker、GitHub Actions 與 Cloudflare Workers 建立自動化部署流程，並將 AI 工具實際用在需求拆解、重構、除錯與文件整理。',
             technologies: ['Docker', 'Nginx', 'Linux', 'Git', 'GitHub Actions', 'GCP', 'Cloudflare Workers', 'GitHub Copilot', 'ChatGPT', 'Claude']
         }
     ];

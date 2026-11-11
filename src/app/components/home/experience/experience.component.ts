@@ -17,8 +17,8 @@ import { WorkExperience } from '../../../data/work-experience';
     styleUrl: './experience.component.scss'
 })
 export class ExperienceComponent {
-    @Input() sectionTitle = '工作成果';
-    @Input() sectionSubtitle = '我的職業發展軌跡與專業成就';
+    @Input() sectionTitle = '工作經歷';
+    @Input() sectionSubtitle = '從前端實習到企業前端基礎建設';
     @Input() workExperience: WorkExperience[] = [];
 
     constructor(private router: Router) {}

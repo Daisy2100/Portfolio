@@ -36,11 +36,11 @@ export class AccessComponent {
             name: '電商平台購物車系統',
             role: 'Frontend Intern',
             period: '2020/08 - 2022/04',
-            description: '負責電商平台的購物車功能開發與維護，使用傳統前端技術進行開發，學習基礎的前端開發技能與團隊協作經驗',
+            description: '在學期間加入日商團隊，負責電商平台購物車功能的開發與維護，也是我踏入前端開發的起點。',
             responsibilities: [
-                '使用 jQuery / HTML / CSS 串接購物車',
-                '購物車功能開發與維護',
-                '前端頁面樣式調整',
+                '使用 jQuery、HTML 與 CSS 開發購物車流程',
+                '維護購物車功能並修正問題',
+                '調整前端頁面樣式與互動細節'
             ],
             technologies: {
                 frontend: ['jQuery', 'HTML', 'CSS', 'JavaScript'],
@@ -50,10 +50,9 @@ export class AccessComponent {
             icon: 'pi pi-shopping-cart',
             status: '已完成',
             achievements: [
-                '成功完成購物車核心功能開發',
-                '學習並熟悉前端開發基礎技術',
-                '培養團隊協作與溝通能力',
-                '建立良好的代碼撰寫習慣'
+                '完成購物車核心功能的開發',
+                '打下 HTML、CSS 與 JavaScript 的前端基礎',
+                '在日商團隊中累積跨文化協作經驗'
             ]
         }
     ];
